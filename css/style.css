@@ -141,7 +141,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 .nav__drop-menu a:hover { color: var(--white); background: rgba(255,255,255,0.06); }
 
 /* Right side */
-.nav__right { display: flex; align-items: center; justify-content: flex-end; gap: 12px; }
+.nav__right { display: flex; align-items: center; justify-content: flex-end; gap: 12px; grid-column: 3; }
 .nav__order-btn {
   display: inline-flex; align-items: center;
   padding: 8px 20px; border-radius: 3px;
@@ -680,22 +680,44 @@ body { scroll-padding-top: 72px; }
   .hero__content { grid-template-columns: 1fr; gap: 40px; }
   .hero__visual { order: -1; }
   .hero__panel-wrap { max-width: 200px; }
+  /* Hero: auto-height so content is never clipped and evidence strip doesn't bleed in */
+  .hero { height: auto; min-height: 100vh; }
+  .hero__inner { align-items: flex-start; padding-top: 0; }
+  .hero__dots { bottom: 20px; }
+  /* Evidence strip: hide decorative dividers when wrapping */
+  .evidence-strip__inner { gap: 16px; }
+  .evidence-strip__divider { display: none; }
+  /* Tighter section spacing */
+  .section { padding: 56px 0; }
+  .page-hero { padding: 100px 0 48px; }
+  .cta-band { padding: 64px 24px; }
+  .calc-section { padding: 32px 24px; }
   .features-grid { grid-template-columns: 1fr 1fr; }
   .testimonials-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
   .calc-grid { grid-template-columns: 1fr; }
   .calc-results { grid-template-columns: 1fr; }
   .footer__grid { grid-template-columns: 1fr; }
-  .section { padding: 64px 0; }
   .research-study__header { flex-direction: column; }
   .research-study__body { padding: 24px; }
 }
 
 @media (max-width: 560px) {
+  .container { padding: 0 16px; }
+  .container--narrow { padding: 0 16px; }
   .audience-grid { grid-template-columns: 1fr; }
   .evidence-grid { grid-template-columns: 1fr; }
   .features-grid { grid-template-columns: 1fr; }
-  .hero__stats { gap: 20px; }
+  .stats-row { grid-template-columns: 1fr 1fr; }
+  .hero__stats { gap: 12px; }
   .hero__ctas { flex-direction: column; }
-  .section { padding: 48px 0; }
+  .hero__ctas .btn { width: 100%; justify-content: center; }
+  .section { padding: 40px 0; }
+  .page-hero { padding: 88px 0 40px; }
+  .cta-band { padding: 48px 16px; }
+  .calc-section { padding: 24px 16px; }
+  .footer__grid { gap: 32px; }
+  .research-study__body { padding: 16px; }
+  .research-study__header { padding: 20px; }
+  .section__h2 { font-size: clamp(1.4em, 7vw, 1.9em); }
 }

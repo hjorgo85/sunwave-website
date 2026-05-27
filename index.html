@@ -230,10 +230,14 @@
 <style>
 @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(7px)} }
 @media(max-width:768px){
-  .hero__text { padding: 110px 0 80px; }
+  .hero__text { padding: 82px 0 60px; }
   .hero__h1 { font-size: clamp(1.9em, 8vw, 2.8em); }
   .hero__stats { flex-wrap: wrap; gap: 16px; border-top: none; padding-top: 0; }
   .hero__stat { border-right: none; margin-right: 0; padding-right: 0; flex: 0 0 calc(50% - 8px); }
+}
+@media(max-width:560px){
+  .hero__text { padding: 78px 0 48px; }
+  .hero__stat { flex: 0 0 calc(50% - 6px); }
 }
 </style>
 
