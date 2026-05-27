@@ -683,10 +683,12 @@ body { scroll-padding-top: 72px; }
   /* Hero: auto-height so content is never clipped and evidence strip doesn't bleed in */
   .hero { height: auto; min-height: 100vh; }
   .hero__inner { align-items: flex-start; padding-top: 0; }
-  .hero__dots { bottom: 20px; }
-  /* Evidence strip: hide decorative dividers when wrapping */
-  .evidence-strip__inner { gap: 16px; }
+  .hero__dots { bottom: 16px; }
+  .hero__scroll { display: none; }
+  /* Evidence strip: stack items cleanly, hide dividers that cause huge gaps when wrapping */
+  .evidence-strip__inner { flex-direction: column; align-items: center; gap: 20px; padding: 0 24px; }
   .evidence-strip__divider { display: none; }
+  .evidence-strip__label { margin-bottom: 4px; }
   /* Tighter section spacing */
   .section { padding: 56px 0; }
   .page-hero { padding: 100px 0 48px; }
