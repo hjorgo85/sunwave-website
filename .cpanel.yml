@@ -2,4 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/sealifee/sunwaveswitzerland.com/
-    - /bin/cp -R %HOME%/repository/. $DEPLOYPATH
+    - /usr/local/cpanel/3rdparty/bin/git pull origin main
+    - /bin/cp -R . $DEPLOYPATH
