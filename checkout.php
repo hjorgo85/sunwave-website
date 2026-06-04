@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $qty     = max(1, min(50, intval($_POST['qty'] ?? 1)));
         $lang    = ($_POST['lang'] ?? 'en') === 'de' ? 'de' : 'en';
 
-        if (!$name || !filter_var($email, FILTER_VALIDATE_EMAIL) || !$address || !$city || !$postal) {
+        if (!$name || !filter_var($email, FILTER_VALIDATE_EMAIL) || !$address || !$city || !$postal || !$canton) {
             $post_error = $lang === 'de'
                 ? 'Bitte füllen Sie alle Pflichtfelder aus.'
                 : 'Please fill in all required fields.';
@@ -104,7 +104,7 @@ $txt = $is_de ? [
     'f_address'   => 'Strasse und Hausnummer *',
     'f_city'      => 'Ort *',
     'f_postal'    => 'Postleitzahl *',
-    'f_canton'    => 'Kanton',
+    'f_canton'    => 'Kanton *',
     'order_h'     => 'Bestellübersicht',
     'product_lbl' => 'SunWave Ceramica',
     'finish_lbl'  => 'Oberfläche',
@@ -129,7 +129,7 @@ $txt = $is_de ? [
     'f_address'   => 'Street address *',
     'f_city'      => 'City *',
     'f_postal'    => 'Postal code *',
-    'f_canton'    => 'Canton',
+    'f_canton'    => 'Canton *',
     'order_h'     => 'Order summary',
     'product_lbl' => 'SunWave Ceramica',
     'finish_lbl'  => 'Finish',
@@ -255,8 +255,8 @@ $txt = $is_de ? [
           </div>
           <div class="ck-field">
             <label for="canton"><?= $txt['f_canton'] ?></label>
-            <select id="canton" name="canton">
-              <option value="">—</option>
+            <select id="canton" name="canton" required>
+              <option value="">— <?= $is_de ? 'Bitte wählen' : 'Please select' ?> —</option>
               <?php
               $cantons = ['AG','AI','AR','BE','BL','BS','FR','GE','GL','GR','JU','LU','NE','NW','OW','SG','SH','SO','SZ','TG','TI','UR','VD','VS','ZG','ZH'];
               $sel = $_POST['canton'] ?? '';
