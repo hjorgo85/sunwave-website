@@ -38,9 +38,40 @@ window.addEventListener('scroll', () => {
 });
 
 /* ── Mobile nav toggle ── */
-document.querySelector('.nav__hamburger')?.addEventListener('click', () => {
-  document.querySelector('.nav__mobile')?.classList.toggle('open');
-});
+(function () {
+  const hamburger = document.querySelector('.nav__hamburger');
+  const mobileMenu = document.querySelector('.nav__mobile');
+  const mobileLang = document.querySelector('.mobile-lang');
+
+  function closeMobileMenu() {
+    mobileMenu?.classList.remove('open');
+    mobileLang?.classList.remove('open');
+    hamburger?.classList.remove('open');
+  }
+
+  hamburger?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = mobileMenu?.classList.toggle('open');
+    hamburger?.classList.toggle('open', isOpen);
+  });
+
+  // Close when any mobile link is tapped
+  mobileMenu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
+  });
+
+  // Close on outside tap
+  document.addEventListener('click', (e) => {
+    if (mobileMenu?.classList.contains('open') && !e.target.closest('.nav')) {
+      closeMobileMenu();
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMobileMenu();
+  });
+})();
 
 /* ── Dropdown hover intent ── */
 document.querySelectorAll('.nav__drop').forEach(drop => {
