@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/sealifee/sunwaveswitzerland.com/
+    - /bin/cp -R %HOME%/repository/. $DEPLOYPATH
