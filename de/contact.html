@@ -1,0 +1,590 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-59C235NYBZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-59C235NYBZ');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="../images/logo.webp">
+  <title>Kontakt SunWave Switzerland — Kostenloses Angebot</title>
+  <meta name="description" content="Fordern Sie ein persönliches Infrarotheizungs-Angebot für Ihr Schweizer Zuhause, Hotel oder Büro an. Paneel-Anzahl, Jahresersparnis und Amortisierungsdauer — innerhalb von 24 Stunden.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .contact-hero {
+      padding: 140px 0 80px;
+      background: var(--dark);
+      text-align: center;
+    }
+    .contact-hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .contact-hero h1 span { color: var(--gold); }
+    .contact-hero p {
+      max-width: 560px;
+      margin: 0 auto;
+      color: rgba(255,255,255,0.65);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .contact-main {
+      padding: 80px 0 100px;
+      background: var(--off-white);
+    }
+    .contact-grid {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 56px;
+      align-items: start;
+    }
+
+    /* Form */
+    .contact-form-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.07);
+    }
+    .contact-form-card h2 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+    .contact-form-card .form-sub {
+      font-size: 0.88rem;
+      color: #888;
+      margin-bottom: 32px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #444;
+      margin-bottom: 6px;
+    }
+    .form-group label span { color: var(--gold); }
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-family: inherit;
+      color: var(--dark);
+      background: #fff;
+      transition: border-color 0.2s;
+      box-sizing: border-box;
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      outline: none;
+      border-color: var(--gold);
+    }
+    .form-select { appearance: none; cursor: pointer; }
+    .form-textarea { resize: vertical; min-height: 100px; }
+    .form-submit {
+      width: 100%;
+      padding: 16px;
+      background: var(--gold);
+      color: var(--dark);
+      font-size: 1.05rem;
+      font-weight: 800;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-family: inherit;
+      transition: background 0.2s, transform 0.2s;
+      margin-top: 8px;
+    }
+    .form-submit:hover { background: var(--gold-hover); transform: translateY(-1px); }
+    .form-note {
+      font-size: 0.75rem;
+      color: #aaa;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 32px;
+    }
+    .form-success__icon { font-size: 3rem; margin-bottom: 16px; }
+    .form-success h3 { font-size: 1.3rem; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+    .form-success p { font-size: 0.9rem; color: #666; line-height: 1.6; }
+
+    /* Sidebar */
+    .contact-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .info-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+    .info-card h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .info-card h3 .icon { font-size: 1.2rem; }
+    .info-card p, .info-card li {
+      font-size: 0.85rem;
+      color: #555;
+      line-height: 1.6;
+    }
+    .info-card ul { list-style: none; padding: 0; margin: 0; }
+    .info-card ul li {
+      padding: 7px 0;
+      border-bottom: 1px solid #f5f5f5;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .info-card ul li:last-child { border-bottom: none; }
+    .info-card ul li::before { content: '✓'; color: var(--gold); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .dark-cta-card {
+      background: var(--dark);
+      border-radius: 16px;
+      padding: 28px;
+      color: #fff;
+    }
+    .dark-cta-card h3 { font-size: 1rem; font-weight: 700; color: var(--gold); margin-bottom: 8px; }
+    .dark-cta-card p { font-size: 0.85rem; color: rgba(255,255,255,0.65); line-height: 1.6; margin-bottom: 20px; }
+    .dark-cta-card a {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--dark);
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .dark-cta-card a:hover { background: var(--gold-hover); }
+
+    @media (max-width: 1024px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      .contact-sidebar { flex-direction: row; flex-wrap: wrap; }
+      .info-card, .dark-cta-card { flex: 1 1 260px; }
+    }
+    @media (max-width: 640px) {
+      .form-row { grid-template-columns: 1fr; }
+      .contact-sidebar { flex-direction: column; }
+    }
+  </style>
+  <link rel="canonical" href="https://sunwaveswitzerland.com/de/contact.html">
+  <meta property="og:title" content="Kontakt SunWave Switzerland — Kostenloses Angebot">
+  <meta property="og:description" content="Fordern Sie ein persönliches Infrarotheizungs-Angebot für Ihr Schweizer Zuhause, Hotel oder Büro an. Paneel-Anzahl, Jahresersparnis und Amortisierungsdauer — innerhalb von 24 Stunden.">
+  <meta property="og:url" content="https://sunwaveswitzerland.com/de/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://sunwaveswitzerland.com/images/hero-banner-1.webp">
+  <meta property="og:site_name" content="SunWave Switzerland">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kontakt SunWave Switzerland — Kostenloses Angebot">
+  <meta name="twitter:description" content="Fordern Sie ein persönliches Infrarotheizungs-Angebot für Ihr Schweizer Zuhause, Hotel oder Büro an. Paneel-Anzahl, Jahresersparnis und Amortisierungsdauer — innerhalb von 24 Stunden.">
+  <meta name="twitter:image" content="https://sunwaveswitzerland.com/images/hero-banner-1.webp">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SunWave Switzerland",
+  "alternateName": "Lumia Technologies GmbH",
+  "url": "https://sunwaveswitzerland.com",
+  "logo": "https://sunwaveswitzerland.com/images/logo.webp",
+  "telephone": "+41767637490",
+  "email": "info@sunwaveswitzerland.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Glaserbergstrasse 27",
+    "addressLocality": "Basel",
+    "postalCode": "4056",
+    "addressCountry": "CH"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact SunWave Switzerland",
+  "url": "https://sunwaveswitzerland.com/contact.html",
+  "description": "Request a free personalised heating quote from SunWave Switzerland."
+}
+  </script>
+  <link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/contact.html">
+  <link rel="alternate" hreflang="de" href="https://sunwaveswitzerland.com/de/contact.html">
+  <link rel="alternate" hreflang="x-default" href="https://sunwaveswitzerland.com/contact.html">
+<style>
+  .nav__lang{display:flex;align-items:center;gap:2px;margin-left:10px}
+  .nav__lang-btn{font-size:.68rem;font-weight:700;letter-spacing:.06em;color:rgba(255,255,255,.45);text-decoration:none;padding:3px 7px;border-radius:3px;border:1px solid rgba(255,255,255,.18);transition:all .2s}
+  a.nav__lang-btn:hover,.nav__lang-btn.lang-active{color:var(--gold);border-color:var(--gold);background:rgba(245,197,24,.08)}
+  .nav__lang-sep{color:rgba(255,255,255,.2);font-size:.7rem;padding:0 1px}
+  .mobile-lang{display:none;align-items:center;gap:6px;padding:12px 20px;border-top:1px solid rgba(255,255,255,.1);margin-top:4px}
+  .mobile-lang a,.mobile-lang span{font-size:.8rem;font-weight:700;color:rgba(255,255,255,.5);text-decoration:none;padding:4px 10px;border-radius:4px;border:1px solid rgba(255,255,255,.15)}
+  .mobile-lang a:hover,.mobile-lang .lang-active{color:var(--gold);border-color:var(--gold)}
+  @media(max-width:768px){.nav__lang{display:none}.mobile-lang{display:flex}}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <img src="../images/logo.webp" alt="SunWave Switzerland" style="height:44px;display:block;border-radius:6px;">
+    </a>
+    <div class="nav__links">
+      <a href="product.html">Das Paneel</a>
+      <a href="research.html">Forschung</a>
+      <div class="nav__drop">
+        <button class="nav__drop-btn">Für &#9662;</button>
+        <div class="nav__drop-menu" id="nav-drop-menu">
+          <a href="for-solar.html">Solar-Installateure</a>
+          <a href="for-hotels.html">Hotels &amp; Gastronomie</a>
+          <a href="for-homes.html">Schweizer Haushalte</a>
+          <a href="for-offices.html">Büro &amp; Gewerbe</a>
+        </div>
+      </div>
+      <a href="index.html#calculator">Rechner</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Kontakt</a>
+    </div>
+    <div class="nav__right">
+      <a href="product.html" class="nav__order-btn">Jetzt bestellen</a>
+      <div class="nav__lang">
+        <a href="../contact.html" class="nav__lang-btn">EN</a>
+        <span class="nav__lang-sep">|</span>
+        <span class="nav__lang-btn lang-active">DE</span>
+      </div>
+      <button class="nav__hamburger" id="nav-hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav__mobile" id="nav-mobile">
+    <a href="product.html">Das Paneel</a>
+    <a href="research.html">Forschung</a>
+    <a href="for-solar.html">Solar-Installateure</a>
+    <a href="for-hotels.html">Hotels &amp; Gastronomie</a>
+    <a href="for-homes.html">Schweizer Haushalte</a>
+    <a href="for-offices.html">Büro &amp; Gewerbe</a>
+    <a href="index.html#calculator">Rechner</a>
+    <a href="blog/index.html">Blog</a>
+    <a href="contact.html">Kontakt</a>
+    <a href="product.html" class="nav__mobile-order">Jetzt bestellen</a>
+  </div>
+  <div class="mobile-lang">
+    <a href="../contact.html">EN</a>
+    <span class="lang-active">DE</span>
+  </div>
+</nav>
+
+<section class="contact-hero">
+  <h1>Get a <span>Free Quote</span></h1>
+  <p>Beschreiben Sie Ihren Raum und wir senden Ihnen innerhalb von 24 Stunden eine personalisierte Paneel-Anzahl, Kapitalkosten, Jahresersparnisschätzung und Amodertisierungsdauer.</p>
+</section>
+
+<section class="contact-main">
+  <div class="contact-grid">
+
+    <!-- Form -->
+    <div class="contact-form-card">
+      <h2>Angebot anfragen</h2>
+      <p class="form-sub">Wir antwoderten innerhalb von 24 Stunden, meist deutlich früher.</p>
+
+      <form id="contact-form" onsubmit="submitContactForm(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cf-name">Name <span>*</span></label>
+            <input class="form-input" type="text" id="cf-name" placeholder="Ihr Name" required>
+          </div>
+          <div class="form-group">
+            <label for="cf-email">E-Mail <span>*</span></label>
+            <input class="form-input" type="email" id="cf-email" placeholder="your@email.com" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cf-phone">Telefon</label>
+            <input class="form-input" type="tel" id="cf-phone" placeholder="+41 79 123 45 67">
+          </div>
+          <div class="form-group">
+            <label for="cf-canton">Kanton</label>
+            <select class="form-select" id="cf-canton">
+              <option value="">Kanton auswählen...</option>
+              <option>Zurich (ZH)</option>
+              <option>Bern (BE)</option>
+              <option>Lucerne (LU)</option>
+              <option>Uri (UR)</option>
+              <option>Schwyz (SZ)</option>
+              <option>Obwalden (OW)</option>
+              <option>Nidwalden (NW)</option>
+              <option>Glarus (GL)</option>
+              <option>Zug (ZG)</option>
+              <option>Fribourg (FR)</option>
+              <option>Solothurn (SO)</option>
+              <option>Basel-Stadt (BS)</option>
+              <option>Basel-Landschaft (BL)</option>
+              <option>Schaffhausen (SH)</option>
+              <option>Appenzell Ausserrhoden (AR)</option>
+              <option>Appenzell Innerrhoden (AI)</option>
+              <option>St. Gallen (SG)</option>
+              <option>Graubünden (GR)</option>
+              <option>Aargau (AG)</option>
+              <option>Thurgau (TG)</option>
+              <option>Ticino (TI)</option>
+              <option>Vaud (VD)</option>
+              <option>Valais (VS)</option>
+              <option>Neuchâtel (NE)</option>
+              <option>Geneva (GE)</option>
+              <option>Jura (JU)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="cf-type">Ich frage an als...</label>
+          <select class="form-select" id="cf-type">
+            <option value="">Auswählen...</option>
+            <option>Hausbesitzer / Mieter</option>
+            <option>Solar- / PV-Installateur</option>
+            <option>Hotel- oder Gastronomiebetreiber</option>
+            <option>Büro- / Gewerbeobjektverwalter</option>
+            <option>Architekt oder Innenarchitekt</option>
+            <option>Elektriker / Installateur</option>
+            <option>Sonstiges</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cf-area">Wohnfläche (m²)</label>
+            <input class="form-input" type="number" id="cf-area" placeholder="e.g. 80">
+          </div>
+          <div class="form-group">
+            <label for="cf-system">Aktuelles Heizsystem</label>
+            <select class="form-select" id="cf-system">
+              <option value="">Auswählen...</option>
+              <option>Gas boiler</option>
+              <option>Gas-Brennwertkessel</option>
+              <option>Ölheizung</option>
+              <option>Elektrische Heizung (Speicher oder Paneel)</option>
+              <option>Wärmepumpe</option>
+              <option>Fernwärme</option>
+              <option>Keine Heizung (Neubau)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="cf-message">Nachricht / Fragen</label>
+          <textarea class="form-textarea" id="cf-message" placeholder="Tell us anything helpful: your insulation quality, whether you have solar panels, specific rooms you want to heat, timeline, etc."></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">Angebotsanfrage senden</button>
+        <p class="form-note">Kein Spam. Wir verwenden diese Informationen nur zur Erstellung Ihres persönlichen Angebots.</p>
+      </form>
+
+      <div class="form-success" id="form-success">
+        <div class="form-success__icon">&#10003;</div>
+        <h3>Angebotsanfrage gesendet!</h3>
+        <p>Wir prüfen Ihre Informationen und senden Ihnen innerhalb von 24 Stunden eine personalisierte Paneel-Anzahl, Sparschätzung und Preisgestaltung (meist deutlich früher).</p>
+        <p style="margin-top:12px;">In der Zwischenzeit können Sie <a href="index.html#calculator" style="color:var(--gold);">unseren Sparrechner nutzen</a> oder <a href="research.html" style="color:var(--gold);">die unabhängigen Prüfberichte lesen</a>.</p>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="contact-sidebar">
+      <div class="info-card">
+        <h3>What happens next</h3>
+        <ul>
+          <li>We review your flooder area, current system, and canton</li>
+          <li>Calculate the exact panel count and capital cost</li>
+          <li>Estimate annual CHF saving and payback period</li>
+          <li>Send a personalised quote by email within 24 hours</li>
+          <li>No obligation — no pressure to buy</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>Prefer to speak directly?</h3>
+        <p>Kontakt us by email at any time. We respond in English, German (DE), French (FR), and Italian (IT).</p>
+        <p style="margin-top:12px; font-weight:600; color:var(--dark);">info@sunwaveswitzerland.com</p>
+      </div>
+
+      <div class="info-card">
+        <h3>Lieferung &amp; delivery</h3>
+        <ul>
+          <li>CHF 35 delivery anywhere in Switzerland (Swiss Post PostPac Prioderity)</li>
+          <li>Ships from Swiss warehouse within 3–5 business days</li>
+          <li>All cantons including Ticino and Graubünden</li>
+          <li>Panels arrive packaged — replacement guaranteed if damaged</li>
+        </ul>
+      </div>
+
+      <div class="dark-cta-card">
+        <h3>Not sure how many panels you need?</h3>
+        <p>Use our free savings calculatoder — enter your flooder area, current system, and insulation quality to get an instant estimate of panels needed, annual saving, and payback period.</p>
+        <a href="index.html#calculator">Open Calculatoder</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo" style="display:flex;align-items:center;gap:8px">
+          <img src="../images/logo.webp" alt="SunWave Switzerland" style="height:36px;display:block;border-radius:4px;">
+        </div>
+        <p class="footer__tagline">Schweizer Distributoder von SunWave Ceramica Keramik-Infrarotheizpaneelen. MuKEn-konform. BSRIA-getestet. Fraunhofer-zertifiziert.<br>Lieferung in alle Schweizer Kantone.</p>
+        <div class="footer__contact">
+          <a href="mailto:info@sunwaveswitzerland.com">info@sunwaveswitzerland.com</a><br>
+          <a href="tel:+41767637490">+41 76 763 74 90</a><br>
+          Glaserbergstrasse 27, 4056 Basel
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Produkt</h4>
+        <ul>
+          <li><a href="product.html">SunWave Ceramica</a></li>
+          <li><a href="product.html#variants">Design-Varianten</a></li>
+          <li><a href="product.html#specs">Vollständige Spezifikationen</a></li>
+          <li><a href="product.html#order">Jetzt bestellen</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Wissen</h4>
+        <ul>
+          <li><a href="research.html">Forschung &amp; Belege</a></li>
+          <li><a href="research.html">MuKEn-Leitfaden</a></li>
+          <li><a href="research.html">Wie Infrarot funktioniert</a></li>
+          <li><a href="index.html#calculator">Sparrechner</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Für</h4>
+        <ul>
+          <li><a href="for-solar.html">Solar-Installateure</a></li>
+          <li><a href="for-hotels.html">Hotels</a></li>
+          <li><a href="for-homes.html">Schweizer Haushalte</a></li>
+          <li><a href="for-offices.html">Büro</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Rechtliches</h4>
+        <ul>
+          <li><a href="legal.html">Impressum</a></li>
+          <li><a href="terms.html">AGB</a></li>
+          <li><a href="returns.html">Rückgabebedingungen</a></li>
+          <li><a href="shipping.html">Lieferung</a></li>
+          <li><a href="privacy.html">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div>&copy; 2026 SunWave Switzerland &mdash; Lumia Technologies GmbH &mdash; sunwaveswitzerland.com</div>
+      <div class="footer__certs">
+        <span class="footer__cert-tag">CE</span>
+        <span class="footer__cert-tag">ISO 9001</span>
+        <span class="footer__cert-tag">BSRIA Getestet</span>
+        <span class="footer__cert-tag">Fraunhofer WKI</span>
+        <span class="footer__cert-tag">MuKEn Konform</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+  /* Pre-fill from URL params (from product page order button) */
+  (function() {
+    const p = new URLSearchParams(window.location.search);
+    if (p.get('product')) {
+      const msg = document.getElementById('cf-message');
+      if (msg) {
+        const parts = [];
+        if (p.get('product')) parts.push('Product: ' + p.get('product'));
+        if (p.get('finish')) parts.push('Finish: ' + p.get('finish'));
+        if (p.get('qty')) parts.push('Quantity: ' + p.get('qty'));
+        if (p.get('thermostat') === 'basic') parts.push('Add smart thermostat: Yes');
+        msg.value = parts.join('\n');
+      }
+    }
+  })();
+
+  function submitContactForm(e) {
+    e.preventDefault();
+    const btn = document.querySelector('.form-submit');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    const form = document.getElementById('contact-form');
+    const data = new FormData();
+    data.append('name',    document.getElementById('cf-name').value);
+    data.append('email',   document.getElementById('cf-email').value);
+    data.append('phone',   document.getElementById('cf-phone').value);
+    data.append('canton',  document.getElementById('cf-canton').value);
+    data.append('type',    document.getElementById('cf-type').value);
+    data.append('area',    document.getElementById('cf-area').value);
+    data.append('system',  document.getElementById('cf-system').value);
+    data.append('message', document.getElementById('cf-message').value);
+
+    fetch('../send-mail.php', { method: 'POST', body: data })
+      .then(r => r.json())
+      .then(res => {
+        if (res.success) {
+          form.style.display = 'none';
+          document.getElementById('form-success').style.display = 'block';
+          window.scrollTo({ top: document.querySelector('.contact-form-card').offsetTop - 100, behavior: 'smooth' });
+        } else {
+          btn.disabled = false;
+          btn.textContent = 'Angebotsanfrage senden';
+          alert('Something went wrong. Please email us directly at info@sunwaveswitzerland.com');
+        }
+      })
+      .catch(() => {
+        btn.disabled = false;
+        btn.textContent = 'Angebotsanfrage senden';
+        alert('Something went wrong. Please email us directly at info@sunwaveswitzerland.com');
+      });
+  }
+</script>
+</body>
+</html>

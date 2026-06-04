@@ -1,0 +1,408 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-59C235NYBZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-59C235NYBZ');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="../images/logo.webp">
+  <title>Infrarotheizung für Schweizer Büros | SunWave Switzerland</title>
+  <meta name="description" content="Zonenheizung für Schweizer Büros und Gewerbeflächen. Nur bewohnte Bereiche beheizen, null Staubzirkulation, 66% weniger Energie vs. Gas, keine Kesselwartung. Amortisation unter 3 Jahren.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .audience-hero { padding: 140px 0 100px; background: var(--dark); position: relative; overflow: hidden; }
+    .audience-hero__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: right center; z-index: 0; }
+    .audience-hero__overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(8,8,20,0.92) 0%, rgba(8,8,20,0.72) 42%, rgba(8,8,20,0.18) 65%, rgba(8,8,20,0) 78%); z-index: 1; }
+    .audience-hero__inner { max-width: var(--container); margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; position: relative; z-index: 2; }
+    .audience-hero__pill { display: inline-flex; align-items: center; gap: 8px; background: rgba(245,197,24,0.12); color: var(--gold); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 6px 16px; border-radius: 100px; border: 1px solid rgba(245,197,24,0.25); margin-bottom: 20px; }
+    .audience-hero h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: #fff; line-height: 1.1; margin-bottom: 20px; }
+    .audience-hero h1 span { color: var(--gold); }
+    .audience-hero p { font-size: 1.05rem; color: rgba(255,255,255,0.7); line-height: 1.7; margin-bottom: 32px; }
+    .hero-stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .hero-stat { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 20px; text-align: center; }
+    .hero-stat__val { font-size: 1.8rem; font-weight: 800; color: var(--gold); margin-bottom: 4px; }
+    .hero-stat__lbl { font-size: 0.78rem; color: rgba(255,255,255,0.55); }
+
+    .audience-section { padding: 80px 0; }
+    .audience-section:nth-child(even) { background: #fff; }
+    .audience-section:nth-child(odd) { background: var(--off-white); }
+    .audience-section__inner { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+    .audience-section h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; color: var(--dark); margin-bottom: 12px; }
+    .audience-section .sub { font-size: 1rem; color: #666; margin-bottom: 40px; max-width: 680px; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .text-block p { font-size: 0.95rem; color: #444; line-height: 1.75; margin-bottom: 16px; }
+    .text-block h3 { font-size: 1.05rem; font-weight: 700; color: var(--dark); margin: 20px 0 10px; }
+    .check-list { list-style: none; padding: 0; margin: 0; }
+    .check-list li { padding: 8px 0; font-size: 0.9rem; color: #444; display: flex; gap: 12px; align-items: flex-start; border-bottom: 1px solid #f0f0f0; }
+    .check-list li:last-child { border-bottom: none; }
+    .check-list li::before { content: '✓'; color: var(--gold); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .dark-card { background: var(--dark); border-radius: 20px; padding: 36px; color: #fff; }
+    .dark-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--gold); margin-bottom: 20px; }
+    .dark-card .row { display: flex; justify-content: space-between; align-items: baseline; padding: 9px 0; border-bottom: 1px solid rgba(255,255,255,0.08); gap: 12px; }
+    .dark-card .row:last-child { border-bottom: none; }
+    .dark-card .row .k { font-size: 0.82rem; color: rgba(255,255,255,0.55); }
+    .dark-card .row .v { font-size: 0.88rem; font-weight: 700; color: #fff; text-align: right; }
+    .dark-card .row .v.gold { color: var(--gold); }
+    .dark-card .row .v.green { color: #4ade80; }
+
+    .use-case-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 8px; }
+    .use-case { background: #fff; border: 1px solid #e8e8e8; border-radius: 14px; padding: 24px; }
+    .use-case__icon { font-size: 1.6rem; margin-bottom: 12px; display: block; }
+    .use-case h4 { font-size: 0.95rem; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+    .use-case p { font-size: 0.82rem; color: #555; line-height: 1.6; margin: 0; }
+
+    @media (max-width: 1024px) { .audience-hero__inner { grid-template-columns: 1fr; gap: 48px; } .two-col { grid-template-columns: 1fr; } .use-case-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 640px) { .use-case-grid { grid-template-columns: 1fr; } }
+    .img-break { overflow: hidden; line-height: 0; }
+    .img-break img { width: 100%; height: 440px; object-fit: cover; display: block; }
+    .section-photo { width: 100%; border-radius: 16px; display: block; object-fit: cover; }
+  </style>
+  <link rel="canonical" href="https://sunwaveswitzerland.com/de/for-offices.html">
+  <meta property="og:title" content="Infrarotheizung für Schweizer Büros | SunWave Switzerland">
+  <meta property="og:description" content="Zonenheizung für Schweizer Büros und Gewerbeflächen. Nur bewohnte Bereiche beheizen, null Staubzirkulation, 66% weniger Energie vs. Gas, keine Kesselwartung. Amortisation unter 3 Jahren.">
+  <meta property="og:url" content="https://sunwaveswitzerland.com/de/for-offices.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://sunwaveswitzerland.com/images/offices-open-plan.webp">
+  <meta property="og:site_name" content="SunWave Switzerland">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Infrarotheizung für Schweizer Büros | SunWave Switzerland">
+  <meta name="twitter:description" content="Zonenheizung für Schweizer Büros und Gewerbeflächen. Nur bewohnte Bereiche beheizen, null Staubzirkulation, 66% weniger Energie vs. Gas, keine Kesselwartung. Amortisation unter 3 Jahren.">
+  <meta name="twitter:image" content="https://sunwaveswitzerland.com/images/offices-open-plan.webp">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SunWave Switzerland",
+  "alternateName": "Lumia Technologies GmbH",
+  "url": "https://sunwaveswitzerland.com",
+  "logo": "https://sunwaveswitzerland.com/images/logo.webp",
+  "telephone": "+41767637490",
+  "email": "info@sunwaveswitzerland.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Glaserbergstrasse 27",
+    "addressLocality": "Basel",
+    "postalCode": "4056",
+    "addressCountry": "CH"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Infrarotheizung für Schweizer Büros",
+  "url": "https://sunwaveswitzerland.com/for-offices.html",
+  "description": "Zone heating for Swiss offices. Heat only occupied areas, zero dust, 66% less energy than gas."
+}
+  </script>
+  <link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/for-offices.html">
+  <link rel="alternate" hreflang="de" href="https://sunwaveswitzerland.com/de/for-offices.html">
+  <link rel="alternate" hreflang="x-default" href="https://sunwaveswitzerland.com/for-offices.html">
+<style>
+  .nav__lang{display:flex;align-items:center;gap:2px;margin-left:10px}
+  .nav__lang-btn{font-size:.68rem;font-weight:700;letter-spacing:.06em;color:rgba(255,255,255,.45);text-decoration:none;padding:3px 7px;border-radius:3px;border:1px solid rgba(255,255,255,.18);transition:all .2s}
+  a.nav__lang-btn:hover,.nav__lang-btn.lang-active{color:var(--gold);border-color:var(--gold);background:rgba(245,197,24,.08)}
+  .nav__lang-sep{color:rgba(255,255,255,.2);font-size:.7rem;padding:0 1px}
+  .mobile-lang{display:none;align-items:center;gap:6px;padding:12px 20px;border-top:1px solid rgba(255,255,255,.1);margin-top:4px}
+  .mobile-lang a,.mobile-lang span{font-size:.8rem;font-weight:700;color:rgba(255,255,255,.5);text-decoration:none;padding:4px 10px;border-radius:4px;border:1px solid rgba(255,255,255,.15)}
+  .mobile-lang a:hover,.mobile-lang .lang-active{color:var(--gold);border-color:var(--gold)}
+  @media(max-width:768px){.nav__lang{display:none}.mobile-lang{display:flex}}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <img src="../images/logo.webp" alt="SunWave Switzerland" style="height:44px;display:block;border-radius:6px;">
+    </a>
+    <div class="nav__links">
+      <a href="product.html">Das Paneel</a>
+      <a href="research.html">Forschung</a>
+      <div class="nav__drop">
+        <button class="nav__drop-btn">Für &#9662;</button>
+        <div class="nav__drop-menu" id="nav-drop-menu">
+          <a href="for-solar.html">Solar-Installateure</a>
+          <a href="for-hotels.html">Hotels &amp; Gastronomie</a>
+          <a href="for-homes.html">Schweizer Haushalte</a>
+          <a href="for-offices.html">Büro &amp; Gewerbe</a>
+        </div>
+      </div>
+      <a href="index.html#calculator">Rechner</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Kontakt</a>
+    </div>
+    <div class="nav__right">
+      <a href="product.html" class="nav__order-btn">Jetzt bestellen</a>
+      <div class="nav__lang">
+        <a href="../for-offices.html" class="nav__lang-btn">EN</a>
+        <span class="nav__lang-sep">|</span>
+        <span class="nav__lang-btn lang-active">DE</span>
+      </div>
+      <button class="nav__hamburger" id="nav-hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav__mobile" id="nav-mobile">
+    <a href="product.html">Das Paneel</a>
+    <a href="research.html">Forschung</a>
+    <a href="for-solar.html">Solar-Installateure</a>
+    <a href="for-hotels.html">Hotels &amp; Gastronomie</a>
+    <a href="for-homes.html">Schweizer Haushalte</a>
+    <a href="for-offices.html">Büro &amp; Gewerbe</a>
+    <a href="index.html#calculator">Rechner</a>
+    <a href="blog/index.html">Blog</a>
+    <a href="contact.html">Kontakt</a>
+    <a href="product.html" class="nav__mobile-order">Jetzt bestellen</a>
+  </div>
+  <div class="mobile-lang">
+    <a href="../for-offices.html">EN</a>
+    <span class="lang-active">DE</span>
+  </div>
+</nav>
+
+<section class="audience-hero">
+  <img class="audience-hero__bg" src="../images/hero-offices.webp" alt="Modern Swiss office with SunWave Ceramica infrared heating panel — zone heating, zero noise, 66% less energy than gas" loading="eager">
+  <div class="audience-hero__overlay"></div>
+  <div class="audience-hero__inner">
+    <div>
+      <div class="audience-hero__pill">Für Büro &amp; Gewerbe</div>
+      <h1>Infrared Heating for <span>Swiss Büro</span></h1>
+      <p>Commercial heating accounts for 40–60% of office energy bills. SunWave Ceramica lets you heat zones independently — pay for occupied meeting rooms, not empty coderridoders. 66% less energy than gas, zero dust, silent operation, and no maintenance contract.</p>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a href="contact.html" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:var(--dark); font-weight:700; font-size:1rem; padding:16px 32px; border-radius:8px; text-decoration:none;">Request an Office Quote</a>
+        <a href="index.html#calculator" style="display:inline-flex; align-items:center; gap:8px; background:transparent; color:#fff; font-weight:600; font-size:1rem; padding:16px 32px; border-radius:8px; border:1px solid rgba(255,255,255,0.25); text-decoration:none;">Einsparungen berechnen</a>
+      </div>
+    </div>
+    <div class="hero-stat-grid">
+      <div class="hero-stat">
+        <div class="hero-stat__val">Zone</div>
+        <div class="hero-stat__lbl">Heat only occupied areas — independently</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat__val">0 dB</div>
+        <div class="hero-stat__lbl">Silent — no HVAC background noise</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat__val">66%</div>
+        <div class="hero-stat__lbl">Energy saving vs. gas (monitodered data)</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat__val">CHF0</div>
+        <div class="hero-stat__lbl">Annual maintenance cost</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Use Cases ── -->
+<section class="audience-section">
+  <div class="audience-section__inner">
+    <h2>Commercial Applications</h2>
+    <p class="sub">From individual offices to large open-plan flooders — SunWave Ceramica scales to any commercial space.</p>
+    <div class="use-case-grid">
+      <div class="use-case">
+        <span class="use-case__icon"><img src="../images/icon.png" alt="" style="width:20px;height:20px;display:inline-block;"></span>
+        <h4>Private offices</h4>
+        <p>One panel per 25 m² office. Staff control their own room temperature. Zero noise and zero dust circulation from a HVAC system make for cleaner, quieter woderking conditions.</p>
+      </div>
+      <div class="use-case">
+        <span class="use-case__icon"><img src="../images/icon.png" alt="" style="width:20px;height:20px;display:inline-block;"></span>
+        <h4>Meeting rooms</h4>
+        <p>Schedule heating to activate 30 minutes before a booked meeting. Auto-off when the room is empty. Meeting room heating cost drops by ~80% compared to a continuously heated convention system.</p>
+      </div>
+      <div class="use-case">
+        <span class="use-case__icon"><img src="../images/icon.png" alt="" style="width:20px;height:20px;display:inline-block;"></span>
+        <h4>Open-plan flooders</h4>
+        <p>Zone open-plan areas by desk clusters. Heat the zones where staff are sitting, not the entire flooder. Compatible with desk booking systems and occupancy sensoders for fully automated control.</p>
+      </div>
+      <div class="use-case">
+        <span class="use-case__icon"><img src="../images/icon.png" alt="" style="width:20px;height:20px;display:inline-block;"></span>
+        <h4>Reception &amp; lobby</h4>
+        <p>Ceiling-mounted panels provide instant warmth as visitoders arrive without exposed heating units oder hot radiatoder surfaces. Clean aesthetic — panels can be spec'd to match interioder design language.</p>
+      </div>
+      <div class="use-case">
+        <span class="use-case__icon"><img src="../images/icon.png" alt="" style="width:20px;height:20px;display:inline-block;"></span>
+        <h4>Stoderage &amp; server rooms</h4>
+        <p>Frost protection at low power. Infrared heating at the controlled low setpoint doesn't disturb electronics. No convective air movement that can carry dust into sensitive equipment.</p>
+      </div>
+      <div class="use-case">
+        <span class="use-case__icon"><img src="../images/icon.png" alt="" style="width:20px;height:20px;display:inline-block;"></span>
+        <h4>Outdooder &amp; semi-outdooder</h4>
+        <p>IP20 rated for indoor use, but outdooder-rated versions available. Heated terraces, covered walkways, and entranceways — infrared is unaffected by wind (heats surfaces, not air).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Visual Break ── -->
+<div class="img-break">
+  <img src="../images/offices-open-plan.webp" alt="Modern Swiss open-plan office with SunWave Ceramica infrared heating panels installed above workstations — zone heating, zero HVAC noise, clean air" loading="lazy">
+</div>
+
+<!-- ── Financial & Operational ── -->
+<section class="audience-section" style="background:var(--dark);">
+  <div class="audience-section__inner">
+    <h2 style="color:#fff;">Financial &amp; Operational Case</h2>
+    <p class="sub" style="color:rgba(255,255,255,0.6);">The business case for switching commercial heating to infrared is straightforward: lower energy cost, zero maintenance, and better air quality for staff.</p>
+    <div class="two-col">
+      <div class="dark-card" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1);">
+        <h3>Example: 200m² Office Space</h3>
+        <div class="row"><span class="k">Office area</span><span class="v">200 m²</span></div>
+        <div class="row"><span class="k">Panels required</span><span class="v">8 × SunWave Ceramica</span></div>
+        <div class="row"><span class="k">Gas heating consumption</span><span class="v" style="color:#f87171;">208.73 kWh/m²·yr</span></div>
+        <div class="row"><span class="k">Gas annual energy load</span><span class="v" style="color:#f87171;">41,746 kWh/yr + service</span></div>
+        <div class="row"><span class="k">Infrared consumption</span><span class="v gold">71.21 kWh/m²·yr</span></div>
+        <div class="row"><span class="k">Infrared annual energy load</span><span class="v green">14,242 kWh/yr</span></div>
+        <div class="row"><span class="k">Zone control saving (est.)</span><span class="v green">–30% on top (unoccupied)</span></div>
+        <div class="row"><span class="k">Effective energy use</span><span class="v green">~9,970 kWh/yr</span></div>
+        <div class="row"><span class="k">Energy reduction vs. gas</span><span class="v green">Over 66% less energy</span></div>
+        <div class="row"><span class="k">Payback period</span><span class="v green">Typically &lt;1 year</span></div>
+      </div>
+      <div>
+        <ul class="check-list" style="color:rgba(255,255,255,0.75);">
+          <li style="color:rgba(255,255,255,0.75); border-color:rgba(255,255,255,0.08);">HVAC maintenance contracts for commercial systems — eliminated entirely (no moving parts, no annual service)</li>
+          <li style="color:rgba(255,255,255,0.75); border-color:rgba(255,255,255,0.08);">No boiler room, no plant room, no pipe distribution — installation simpler than any wet system</li>
+          <li style="color:rgba(255,255,255,0.75); border-color:rgba(255,255,255,0.08);">No legionella risk (no water heating system)</li>
+          <li style="color:rgba(255,255,255,0.75); border-color:rgba(255,255,255,0.08);">Zero dust circulation — relevant for food service, pharmaceutical, and clean-room adjacent spaces</li>
+          <li style="color:rgba(255,255,255,0.75); border-color:rgba(255,255,255,0.08);">No noise contribution to open-plan flooder — HVAC background noise is eliminated, not just reduced</li>
+          <li style="color:rgba(255,255,255,0.75); border-color:rgba(255,255,255,0.08);">MuKEn compliance when current system reaches end-of-life — proactive replacement avoids emergency cost</li>
+          <li style="color:rgba(255,255,255,0.75); border-color:rgba(255,255,255,0.08);">ESG repoderting: measurable CO₂ reduction, clean indoor air — both documentable from test repoderts</li>
+        </ul>
+        <a href="contact.html" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:var(--dark); font-weight:700; font-size:1rem; padding:16px 32px; border-radius:8px; text-decoration:none; margin-top:24px;">Get an Office Proposal</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Air Quality ── -->
+<section class="audience-section">
+  <div class="audience-section__inner">
+    <h2>Staff Wellbeing &amp; Indoor Air Quality</h2>
+    <p class="sub">Forschung consistently links indoor air quality to productivity, sick days, and staff satisfaction. Infrared heating addresses the main heating-related air quality concerns.</p>
+    <div class="two-col">
+      <div class="text-block">
+        <h3>No dust, allergens, oder particulates</h3>
+        <p>Convective and fan-based heating systems move air continuously, circulating dust, allergens, carpet fibres, and particulates around the office. Infrared heating does not create air movement. The panel heats surfaces and occupants directly. Für offices with staff who have dust sensitivity oder allergies, this is a meaningful woderking environment improvement.</p>
+
+        <h3>Zero VOC emissions (Fraunhofer WKI certified)</h3>
+        <p>The Fraunhofer WKI test confirmed that the SunWave Ceramica emits no volatile oderganic compounds at operating temperature. This is particularly impodertant in commercial settings where multiple emission sources (furniture, carpets, cleaning products) already contribute to the indoor VOC load. Adding zero to that load from the heating system is a measurable air quality improvement.</p>
+
+        <h3>No combustion products</h3>
+        <p>Gas heating — even with perfect flue sealing — leaks NO₂ into the building environment at measurable levels. The Swiss SUVA (accident insurance) and BAFU (environment office) both monitoder indoor NO₂ in commercial buildings. Eliminating the gas boiler eliminates this emission source entirely.</p>
+
+        <h3>ESG documentation</h3>
+        <p>All five test repoderts (BSRIA, TU Dresden, Fraunhofer WKI, Laboder S.A.) are fully documented with named repodert numbers and institutional credentials. This provides verifiable documentation for ESG repoderting, tenant sustainability requirements, and cantonal energy performance certificates.</p>
+      </div>
+      <div>
+        <img src="../images/offices-clean-air.webp" alt="Swiss office professional at clean desk with SunWave infrared panel on wall — zero dust circulation, no VOC emissions, healthy indoor air quality" class="section-photo" style="height:260px; margin-bottom:20px;" loading="lazy">
+        <div class="dark-card">
+          <h3>Air Quality: Gas vs. Infrared</h3>
+          <div class="row"><span class="k">Gas boiler NO₂</span><span class="v" style="color:#f87171;">Indoors, measurable</span></div>
+          <div class="row"><span class="k">Gas boiler CO</span><span class="v" style="color:#f87171;">Risk if flue imperfect</span></div>
+          <div class="row"><span class="k">Convective heater VOCs</span><span class="v" style="color:#f87171;">Off-gassing from coatings</span></div>
+          <div class="row"><span class="k">HVAC dust circulation</span><span class="v" style="color:#f87171;">Continuous</span></div>
+          <div class="row"><span class="k">HVAC noise</span><span class="v" style="color:#f87171;">Constant background</span></div>
+          <div class="row" style="border-top:1px solid rgba(255,255,255,0.15); padding-top:14px; margin-top:4px;"><span class="k">SunWave Ceramica VOCs</span><span class="v green">Not detected (Fraunhofer WKI)</span></div>
+          <div class="row"><span class="k">SunWave air movement</span><span class="v green">None</span></div>
+          <div class="row"><span class="k">SunWave combustion products</span><span class="v green">None</span></div>
+          <div class="row"><span class="k">SunWave noise</span><span class="v green">Zero</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-band">
+  <div class="cta-band__inner">
+    <h2>Reduce your office heating cost by 66%</h2>
+    <p>We'll provide a room-by-room plan, panel count, and full payback analysis for your office space.</p>
+    <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+      <a href="contact.html" class="cta-band__btn">Request an Office Proposal</a>
+      <a href="research.html" class="cta-band__btn" style="background:transparent; border:2px solid rgba(20,20,40,0.35); color:var(--dark);">View Test Repoderts</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo" style="display:flex;align-items:center;gap:8px">
+          <img src="../images/logo.webp" alt="SunWave Switzerland" style="height:36px;display:block;border-radius:4px;">
+        </div>
+        <p class="footer__tagline">Schweizer Distributoder von SunWave Ceramica Keramik-Infrarotheizpaneelen. MuKEn-konform. BSRIA-getestet. Fraunhofer-zertifiziert.<br>Lieferung in alle Schweizer Kantone.</p>
+        <div class="footer__contact">
+          <a href="mailto:info@sunwaveswitzerland.com">info@sunwaveswitzerland.com</a><br>
+          <a href="tel:+41767637490">+41 76 763 74 90</a><br>
+          Glaserbergstrasse 27, 4056 Basel
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Produkt</h4>
+        <ul>
+          <li><a href="product.html">SunWave Ceramica</a></li>
+          <li><a href="product.html#variants">Design-Varianten</a></li>
+          <li><a href="product.html#specs">Vollständige Spezifikationen</a></li>
+          <li><a href="product.html#order">Jetzt bestellen</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Wissen</h4>
+        <ul>
+          <li><a href="research.html">Forschung &amp; Belege</a></li>
+          <li><a href="research.html">MuKEn-Leitfaden</a></li>
+          <li><a href="research.html">Wie Infrarot funktioniert</a></li>
+          <li><a href="index.html#calculator">Sparrechner</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Für</h4>
+        <ul>
+          <li><a href="for-solar.html">Solar-Installateure</a></li>
+          <li><a href="for-hotels.html">Hotels</a></li>
+          <li><a href="for-homes.html">Schweizer Haushalte</a></li>
+          <li><a href="for-offices.html">Büro</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Rechtliches</h4>
+        <ul>
+          <li><a href="legal.html">Impressum</a></li>
+          <li><a href="terms.html">AGB</a></li>
+          <li><a href="returns.html">Rückgabebedingungen</a></li>
+          <li><a href="shipping.html">Lieferung</a></li>
+          <li><a href="privacy.html">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div>&copy; 2026 SunWave Switzerland &mdash; Lumia Technologies GmbH &mdash; sunwaveswitzerland.com</div>
+      <div class="footer__certs">
+        <span class="footer__cert-tag">CE</span>
+        <span class="footer__cert-tag">ISO 9001</span>
+        <span class="footer__cert-tag">BSRIA Getestet</span>
+        <span class="footer__cert-tag">Fraunhofer WKI</span>
+        <span class="footer__cert-tag">MuKEn Konform</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

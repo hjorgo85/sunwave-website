@@ -1,0 +1,435 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-59C235NYBZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-59C235NYBZ');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="../images/logo.webp">
+  <title>Infrarotheizung für Hotels | SunWave Switzerland</title>
+  <meta name="description" content="Geräuschlose Keramik-Infrarotheizung für Schweizer Hotels und Chalets. Kein Lüftergeräusch, kein Staub, individuelle Raumsteuerung, neun Designer-Varianten. Bis zu 66% weniger Energie.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .audience-hero {
+      padding: 140px 0 100px;
+      background: var(--dark);
+      position: relative;
+      overflow: hidden;
+    }
+    .audience-hero__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: right center; z-index: 0; }
+    .audience-hero__overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(8,8,20,0.92) 0%, rgba(8,8,20,0.72) 42%, rgba(8,8,20,0.18) 65%, rgba(8,8,20,0) 78%); z-index: 1; }
+    .audience-hero__inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    .audience-hero__pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(245,197,24,0.12);
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      border: 1px solid rgba(245,197,24,0.25);
+      margin-bottom: 20px;
+    }
+    .audience-hero h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: #fff; line-height: 1.1; margin-bottom: 20px; }
+    .audience-hero h1 span { color: var(--gold); }
+    .audience-hero p { font-size: 1.05rem; color: rgba(255,255,255,0.7); line-height: 1.7; margin-bottom: 32px; }
+    .hero-stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .hero-stat { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 20px; text-align: center; }
+    .hero-stat__val { font-size: 1.8rem; font-weight: 800; color: var(--gold); margin-bottom: 4px; }
+    .hero-stat__lbl { font-size: 0.78rem; color: rgba(255,255,255,0.55); }
+
+    .audience-section { padding: 80px 0; }
+    .audience-section:nth-child(even) { background: #fff; }
+    .audience-section:nth-child(odd) { background: var(--off-white); }
+    .audience-section__inner { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+    .audience-section h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; color: var(--dark); margin-bottom: 12px; }
+    .audience-section .sub { font-size: 1rem; color: #666; margin-bottom: 40px; max-width: 680px; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .text-block p { font-size: 0.95rem; color: #444; line-height: 1.75; margin-bottom: 16px; }
+    .text-block h3 { font-size: 1.05rem; font-weight: 700; color: var(--dark); margin: 20px 0 10px; }
+    .check-list { list-style: none; padding: 0; margin: 0; }
+    .check-list li { padding: 8px 0; font-size: 0.9rem; color: #444; display: flex; gap: 12px; align-items: flex-start; border-bottom: 1px solid #f0f0f0; }
+    .check-list li:last-child { border-bottom: none; }
+    .check-list li::before { content: '✓'; color: var(--gold); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+    .dark-card { background: var(--dark); border-radius: 20px; padding: 36px; color: #fff; }
+    .dark-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--gold); margin-bottom: 20px; }
+    .dark-card .row { display: flex; justify-content: space-between; align-items: baseline; padding: 9px 0; border-bottom: 1px solid rgba(255,255,255,0.08); gap: 12px; }
+    .dark-card .row:last-child { border-bottom: none; }
+    .dark-card .row .k { font-size: 0.82rem; color: rgba(255,255,255,0.55); }
+    .dark-card .row .v { font-size: 0.88rem; font-weight: 700; color: #fff; text-align: right; }
+    .dark-card .row .v.gold { color: var(--gold); }
+    .dark-card .row .v.green { color: #4ade80; }
+
+    .variant-showcase {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 8px;
+    }
+    .variant-tile {
+      border-radius: 12px;
+      aspect-ratio: 2/1;
+      display: flex;
+      align-items: flex-end;
+      padding: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+    .variant-tile span { font-size: 0.72rem; font-weight: 700; color: rgba(0,0,0,0.55); letter-spacing: 0.04em; }
+    .vt-white { background: linear-gradient(160deg, #f5f5f2, #d8d8d4); }
+    .vt-mont { background: linear-gradient(160deg, #f0efe9, #d4d3cc); }
+    .vt-stone { background: linear-gradient(160deg, #d8d0c4, #b8ae9e); }
+    .vt-slate { background: linear-gradient(160deg, #4a4a52, #2a2a32); }
+    .vt-slate span { color: rgba(255,255,255,0.6); }
+    .vt-sky { background: linear-gradient(160deg, #c8d8e8, #9fb5cc); }
+    .vt-jura { background: linear-gradient(160deg, #e8e0d0, #ccc0a8); }
+
+    .guest-benefit {
+      background: #fff;
+      border-radius: 14px;
+      border: 1px solid #e8e8e8;
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+    .guest-benefit h4 { font-size: 0.95rem; font-weight: 700; color: var(--dark); margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+    .guest-benefit p { font-size: 0.85rem; color: #555; line-height: 1.6; margin: 0; }
+
+    @media (max-width: 1024px) {
+      .audience-hero__inner { grid-template-columns: 1fr; gap: 48px; }
+      .two-col { grid-template-columns: 1fr; }
+      .variant-showcase { grid-template-columns: repeat(2, 1fr); }
+    }
+    .img-break { overflow: hidden; line-height: 0; }
+    .img-break img { width: 100%; height: 440px; object-fit: cover; display: block; }
+    .section-photo { width: 100%; border-radius: 16px; display: block; object-fit: cover; }
+  </style>
+  <link rel="canonical" href="https://sunwaveswitzerland.com/de/for-hotels.html">
+  <meta property="og:title" content="Infrarotheizung für Hotels | SunWave Switzerland">
+  <meta property="og:description" content="Geräuschlose Keramik-Infrarotheizung für Schweizer Hotels und Chalets. Kein Lüftergeräusch, kein Staub, individuelle Raumsteuerung, neun Designer-Varianten. Bis zu 66% weniger Energie.">
+  <meta property="og:url" content="https://sunwaveswitzerland.com/de/for-hotels.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://sunwaveswitzerland.com/images/hotels-luxury-suite.webp">
+  <meta property="og:site_name" content="SunWave Switzerland">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Infrarotheizung für Hotels | SunWave Switzerland">
+  <meta name="twitter:description" content="Geräuschlose Keramik-Infrarotheizung für Schweizer Hotels und Chalets. Kein Lüftergeräusch, kein Staub, individuelle Raumsteuerung, neun Designer-Varianten. Bis zu 66% weniger Energie.">
+  <meta name="twitter:image" content="https://sunwaveswitzerland.com/images/hotels-luxury-suite.webp">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SunWave Switzerland",
+  "alternateName": "Lumia Technologies GmbH",
+  "url": "https://sunwaveswitzerland.com",
+  "logo": "https://sunwaveswitzerland.com/images/logo.webp",
+  "telephone": "+41767637490",
+  "email": "info@sunwaveswitzerland.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Glaserbergstrasse 27",
+    "addressLocality": "Basel",
+    "postalCode": "4056",
+    "addressCountry": "CH"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Infrarotheizung für Schweizer Hotels",
+  "url": "https://sunwaveswitzerland.com/for-hotels.html",
+  "description": "Silent ceramic infrared heating for Swiss hotels. No fan noise, individual room control, designer finishes."
+}
+  </script>
+  <link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/for-hotels.html">
+  <link rel="alternate" hreflang="de" href="https://sunwaveswitzerland.com/de/for-hotels.html">
+  <link rel="alternate" hreflang="x-default" href="https://sunwaveswitzerland.com/for-hotels.html">
+<style>
+  .nav__lang{display:flex;align-items:center;gap:2px;margin-left:10px}
+  .nav__lang-btn{font-size:.68rem;font-weight:700;letter-spacing:.06em;color:rgba(255,255,255,.45);text-decoration:none;padding:3px 7px;border-radius:3px;border:1px solid rgba(255,255,255,.18);transition:all .2s}
+  a.nav__lang-btn:hover,.nav__lang-btn.lang-active{color:var(--gold);border-color:var(--gold);background:rgba(245,197,24,.08)}
+  .nav__lang-sep{color:rgba(255,255,255,.2);font-size:.7rem;padding:0 1px}
+  .mobile-lang{display:none;align-items:center;gap:6px;padding:12px 20px;border-top:1px solid rgba(255,255,255,.1);margin-top:4px}
+  .mobile-lang a,.mobile-lang span{font-size:.8rem;font-weight:700;color:rgba(255,255,255,.5);text-decoration:none;padding:4px 10px;border-radius:4px;border:1px solid rgba(255,255,255,.15)}
+  .mobile-lang a:hover,.mobile-lang .lang-active{color:var(--gold);border-color:var(--gold)}
+  @media(max-width:768px){.nav__lang{display:none}.mobile-lang{display:flex}}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <img src="../images/logo.webp" alt="SunWave Switzerland" style="height:44px;display:block;border-radius:6px;">
+    </a>
+    <div class="nav__links">
+      <a href="product.html">Das Paneel</a>
+      <a href="research.html">Forschung</a>
+      <div class="nav__drop">
+        <button class="nav__drop-btn">Für &#9662;</button>
+        <div class="nav__drop-menu" id="nav-drop-menu">
+          <a href="for-solar.html">Solar-Installateure</a>
+          <a href="for-hotels.html">Hotels &amp; Gastronomie</a>
+          <a href="for-homes.html">Schweizer Haushalte</a>
+          <a href="for-offices.html">Büro &amp; Gewerbe</a>
+        </div>
+      </div>
+      <a href="index.html#calculator">Rechner</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Kontakt</a>
+    </div>
+    <div class="nav__right">
+      <a href="product.html" class="nav__order-btn">Jetzt bestellen</a>
+      <div class="nav__lang">
+        <a href="../for-hotels.html" class="nav__lang-btn">EN</a>
+        <span class="nav__lang-sep">|</span>
+        <span class="nav__lang-btn lang-active">DE</span>
+      </div>
+      <button class="nav__hamburger" id="nav-hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav__mobile" id="nav-mobile">
+    <a href="product.html">Das Paneel</a>
+    <a href="research.html">Forschung</a>
+    <a href="for-solar.html">Solar-Installateure</a>
+    <a href="for-hotels.html">Hotels &amp; Gastronomie</a>
+    <a href="for-homes.html">Schweizer Haushalte</a>
+    <a href="for-offices.html">Büro &amp; Gewerbe</a>
+    <a href="index.html#calculator">Rechner</a>
+    <a href="blog/index.html">Blog</a>
+    <a href="contact.html">Kontakt</a>
+    <a href="product.html" class="nav__mobile-order">Jetzt bestellen</a>
+  </div>
+  <div class="mobile-lang">
+    <a href="../for-hotels.html">EN</a>
+    <span class="lang-active">DE</span>
+  </div>
+</nav>
+
+<!-- ── Hero ── -->
+<section class="audience-hero">
+  <img class="audience-hero__bg" src="../images/hero-hotels.webp" alt="Swiss boutique hotel suite with SunWave Ceramica infrared heating panel — silent, dustless, designer finish for luxury hospitality" loading="eager">
+  <div class="audience-hero__overlay"></div>
+  <div class="audience-hero__inner">
+    <div>
+      <div class="audience-hero__pill">Für Hotels &amp; Gastronomie</div>
+      <h1>Infrared Heating for <span>Swiss Hotels</span></h1>
+      <p>Silent. Dustless. Designer finishes. Individual room control. The SunWave Ceramica delivers the thermal comfort guests expect — while reducing your heating bill by up to 66% and eliminating boiler maintenance costs.</p>
+      <a href="contact.html" class="btn-primary" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:var(--dark); font-weight:700; font-size:1rem; padding:16px 32px; border-radius:8px; text-decoration:none;">Hotel-Angebot anfordern</a>
+    </div>
+    <div class="hero-stat-grid">
+      <div class="hero-stat">
+        <div class="hero-stat__val">0 dB</div>
+        <div class="hero-stat__lbl">Silent operation — no fan, no noise</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat__val">0</div>
+        <div class="hero-stat__lbl">VOC emissions (Fraunhofer WKI)</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat__val">6</div>
+        <div class="hero-stat__lbl">Designer ceramic finishes</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat__val">66%</div>
+        <div class="hero-stat__lbl">Energy saving vs. gas heating</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Guest Experience ── -->
+<section class="audience-section">
+  <div class="audience-section__inner">
+    <h2>Why Guests Notice the Difference</h2>
+    <p class="sub">Infrared heating is perceived differently from convective heating — guests feel warmer at lower air temperatures, notice no noise, no dust, and no dry-air discomfort.</p>
+    <div class="two-col">
+      <div>
+        <div class="guest-benefit">
+          <h4>Vollständig geräuschlos</h4>
+          <p>No fan, no pump, no thermostat click. The SunWave Ceramica operates in total silence. Guests sleeping light in mountain chalets and city hotels notice the absence of mechanical noise — especially during the night setback cycle when conventional heating systems click on and off.</p>
+        </div>
+        <div class="guest-benefit">
+          <h4>Keine Staubzirkulation</h4>
+          <p>Convective heaters and fan coil units circulate air and with it, dust, allergens, and particles. Infrared heating does not move air. Room occupants with dust sensitivity, hay fever, oder asthma experience noticeably cleaner air. The Fraunhofer WKI test also confirmed zero VOC emissions — the panel off-gasses nothing.</p>
+        </div>
+        <div class="guest-benefit">
+          <h4>Instant warmth — no wait time</h4>
+          <p>Infrared radiation warms surfaces and occupants directly, within seconds of the panel starting. There is no "warm-up" period waiting for hot water to circulate oder air to heat. Guests entering a cold room feel warmth immediately — even before the air temperature has fully recovered.</p>
+        </div>
+        <div class="guest-benefit">
+          <h4>Comfortable humidity levels</h4>
+          <p>Convective heating dries the air, leading to the parched-throat feeling guests associate with hotel rooms. Infrared heating warms surfaces without significantly affecting relative humidity. Guests consistently repodert modere comfortable air quality in infrared-heated rooms.</p>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:0.9rem; color:#555; line-height:1.7; margin-bottom:16px;">The SunWave Ceramica is available in six ceramic finishes designed to complement Swiss hotel interioders — from clean alpine whites to warm stone and contempoderary slate.</p>
+        <div class="variant-showcase">
+          <div class="variant-tile vt-white"><span>Alpine White</span></div>
+          <div class="variant-tile vt-mont"><span>Mont Blanc</span></div>
+          <div class="variant-tile vt-stone"><span>Bernese Stone</span></div>
+          <div class="variant-tile vt-slate"><span>Engadin Dark</span></div>
+          <div class="variant-tile vt-sky"><span>Léman Blue</span></div>
+          <div class="variant-tile vt-jura"><span>Jura Limestone</span></div>
+        </div>
+        <p style="font-size:0.82rem; color:#888; margin-top:12px;">All finishes available in the same 60×120 cm panel size. Mix finishes across room types oder maintain consistency throughout the property.</p>
+        <div class="dark-card" style="margin-top:24px;">
+          <h3>Room-by-Room Control</h3>
+          <div class="row"><span class="k">Each panel</span><span class="v">Independently controlled</span></div>
+          <div class="row"><span class="k">Guest room thermostat</span><span class="v">Optional add-on — contact us</span></div>
+          <div class="row"><span class="k">Setback when empty</span><span class="v gold">Full power off oder frost-protection</span></div>
+          <div class="row"><span class="k">Pre-heat before check-in</span><span class="v">30 min timer adequate</span></div>
+          <div class="row"><span class="k">Integration</span><span class="v">Woderks with PMS on/off control</span></div>
+          <div class="row"><span class="k">No energy wasted</span><span class="v green">Only runs in occupied rooms</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Visual Break ── -->
+<div class="img-break">
+  <img src="../images/hotels-luxury-suite.webp" alt="Five-star Swiss alpine hotel suite with SunWave Ceramica infrared heating panel — silent, zero-maintenance, elegant walnut wood frame" loading="lazy">
+</div>
+
+<!-- ── Financial Case ── -->
+<section class="audience-section" style="background:var(--dark);">
+  <div class="audience-section__inner">
+    <h2 style="color:#fff;">The Financial Case for Hotels</h2>
+    <p class="sub" style="color:rgba(255,255,255,0.6);">Swiss hotels typically spend CHF 15–25 per m² per year on heating. Infrared can reduce this dramatically — room by room, wing by wing, oder in a full property retrofit.</p>
+    <div class="two-col">
+      <div class="dark-card" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1);">
+        <h3>Example: 20-Room Hotel (30 m² per room)</h3>
+        <div class="row"><span class="k">Total heated area</span><span class="v">600 m²</span></div>
+        <div class="row"><span class="k">Panels required (est.)</span><span class="v">24 × SunWave Ceramica</span></div>
+        <div class="row"><span class="k">Gas heating consumption</span><span class="v" style="color:#f87171;">208 kWh/m²·yr</span></div>
+        <div class="row"><span class="k">Gas annual energy load</span><span class="v" style="color:#f87171;">124,800 kWh/yr + service</span></div>
+        <div class="row"><span class="k">Infrared consumption</span><span class="v gold">71 kWh/m²·yr</span></div>
+        <div class="row"><span class="k">Infrared annual energy load</span><span class="v green">42,600 kWh/yr</span></div>
+        <div class="row"><span class="k">Energy reduction</span><span class="v green">66% less energy</span></div>
+        <div class="row"><span class="k">Boiler maintenance</span><span class="v green">Eliminated entirely</span></div>
+        <div class="row"><span class="k">Payback period</span><span class="v green">Typically &lt;1 year</span></div>
+      </div>
+      <div>
+        <img src="../images/hotels-guest-comfort.webp" alt="Hotel guest experiencing silent, comfortable infrared warmth in a Swiss boutique hotel room — no fan noise, no dry air, superior guest comfort" class="section-photo" style="height:240px; margin-bottom:20px;" loading="lazy">
+        <ul class="check-list" style="color:rgba(255,255,255,0.75);">
+          <li style="color:rgba(255,255,255,0.75); border-color:rgba(255,255,255,0.08);">No boiler service contract — zero moving parts, zero annual maintenance cost</li>
+          <li style="color:rgba(255,255,255,0.75); border-color:rgba(255,255,255,0.08);">No boiler room space required — mechanical room can be repurposed</li>
+          <li style="color:rgba(255,255,255,0.75); border-color:rgba(255,255,255,0.08);">No pipe distribution system — no legionella risk, no pipe insulation cost</li>
+          <li style="color:rgba(255,255,255,0.75); border-color:rgba(255,255,255,0.08);">MuKEn compliance when existing boiler reaches end-of-life</li>
+          <li style="color:rgba(255,255,255,0.75); border-color:rgba(255,255,255,0.08);">Heating bills reduce with room occupancy — not the same whether occupied oder not</li>
+          <li style="color:rgba(255,255,255,0.75); border-color:rgba(255,255,255,0.08);">30+ year panel lifespan — no replacement cycles, no capital reinvestment</li>
+          <li style="color:rgba(255,255,255,0.75); border-color:rgba(255,255,255,0.08);">5 Jahre Garantie — replace within 48 hours if any fault</li>
+        </ul>
+        <a href="contact.html" style="display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:var(--dark); font-weight:700; font-size:1rem; padding:16px 32px; border-radius:8px; text-decoration:none; margin-top:24px;">Request a Hotel Proposal</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-band">
+  <div class="cta-band__inner">
+    <h2>Upgrade your guests' comfort. Reduce your heating bill.</h2>
+    <p>We'll provide a room-by-room plan, panel count, capital cost, and payback calculation for your specific property.</p>
+    <a href="contact.html" class="cta-band__btn">Hotel-Angebot anfordern</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo" style="display:flex;align-items:center;gap:8px">
+          <img src="../images/logo.webp" alt="SunWave Switzerland" style="height:36px;display:block;border-radius:4px;">
+        </div>
+        <p class="footer__tagline">Schweizer Distributoder von SunWave Ceramica Keramik-Infrarotheizpaneelen. MuKEn-konform. BSRIA-getestet. Fraunhofer-zertifiziert.<br>Lieferung in alle Schweizer Kantone.</p>
+        <div class="footer__contact">
+          <a href="mailto:info@sunwaveswitzerland.com">info@sunwaveswitzerland.com</a><br>
+          <a href="tel:+41767637490">+41 76 763 74 90</a><br>
+          Glaserbergstrasse 27, 4056 Basel
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Produkt</h4>
+        <ul>
+          <li><a href="product.html">SunWave Ceramica</a></li>
+          <li><a href="product.html#variants">Design-Varianten</a></li>
+          <li><a href="product.html#specs">Vollständige Spezifikationen</a></li>
+          <li><a href="product.html#order">Jetzt bestellen</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Wissen</h4>
+        <ul>
+          <li><a href="research.html">Forschung &amp; Belege</a></li>
+          <li><a href="research.html">MuKEn-Leitfaden</a></li>
+          <li><a href="research.html">Wie Infrarot funktioniert</a></li>
+          <li><a href="index.html#calculator">Sparrechner</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Für</h4>
+        <ul>
+          <li><a href="for-solar.html">Solar-Installateure</a></li>
+          <li><a href="for-hotels.html">Hotels</a></li>
+          <li><a href="for-homes.html">Schweizer Haushalte</a></li>
+          <li><a href="for-offices.html">Büro</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Rechtliches</h4>
+        <ul>
+          <li><a href="legal.html">Impressum</a></li>
+          <li><a href="terms.html">AGB</a></li>
+          <li><a href="returns.html">Rückgabebedingungen</a></li>
+          <li><a href="shipping.html">Lieferung</a></li>
+          <li><a href="privacy.html">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div>&copy; 2026 SunWave Switzerland &mdash; Lumia Technologies GmbH &mdash; sunwaveswitzerland.com</div>
+      <div class="footer__certs">
+        <span class="footer__cert-tag">CE</span>
+        <span class="footer__cert-tag">ISO 9001</span>
+        <span class="footer__cert-tag">BSRIA Getestet</span>
+        <span class="footer__cert-tag">Fraunhofer WKI</span>
+        <span class="footer__cert-tag">MuKEn Konform</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

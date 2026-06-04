@@ -1,0 +1,908 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-59C235NYBZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-59C235NYBZ');
+  </script>
+  <meta name="google-site-verification" content="6wdKI57Ue8NkOrxgtjev8nWlXHr9jRaZAbMQMqkSSRs">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="../images/logo.webp">
+  <title>SunWave Switzerland — Keramik-Infrarotheizung für die Schweiz</title>
+  <meta name="description" content="Eines der meistgeprüften Keramik-Infrarotheizpaneele der Schweiz. BSRIA, Fraunhofer WKI, TU Dresden und Labor S.A. zertifiziert. MuKEn-konform. CHF 35 Lieferung.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .hero__lifestyle { width:100%;border-radius:6px;box-shadow:0 24px 64px rgba(0,0,0,0.5);display:block; }
+    .hero__photo-caption { position:absolute;bottom:14px;left:14px;background:rgba(0,0,0,0.65);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:4px;padding:8px 14px; }
+    .hero__photo-caption strong { display:block;font-size:0.75rem;font-weight:700;color:var(--gold,#f5c518); }
+    .hero__photo-caption span { font-size:0.7rem;color:rgba(255,255,255,0.55); }
+    .lab-logo-img { height:26px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:0.75; }
+    .evidence-item { display:flex;flex-direction:column;align-items:center;gap:6px; }
+    .panel-thumbs { display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:10px; }
+    .panel-thumb { border-radius:6px;cursor:pointer;border:2px solid transparent;aspect-ratio:1/2;object-fit:cover;width:100%;transition:border-color 0.2s; }
+    .panel-thumb.active,.panel-thumb:hover { border-color:var(--gold,#f5c518); }
+    .panel-main-photo { width:100%;aspect-ratio:1/2;object-fit:cover;border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,0.35);display:block;transition:opacity 0.25s; }
+    .cert-images-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:16px;max-width:720px;margin:0 auto 40px;align-items:end; }
+    .cert-images-grid figure { margin:0;text-align:center; }
+    .cert-images-grid figure img { max-height:90px;width:auto;border-radius:6px;border:1px solid rgba(0,0,0,0.08);object-fit:contain; }
+    .cert-images-grid figure figcaption { font-size:0.7rem;color:#888;margin-top:6px; }
+    .cert-doc-img { width:100%;border-radius:6px;border:1px solid rgba(0,0,0,0.12);box-shadow:0 2px 12px rgba(0,0,0,0.08); }
+
+    /* ── Homepage product showcase ── */
+    .hp-prod { display:grid; grid-template-columns:1fr 1fr; min-height:620px; }
+    .hp-prod__visual {
+      background:#ffffff;
+      display:flex; flex-direction:column;
+      align-items:center; justify-content:center;
+      padding:64px 56px;
+    }
+    .hp-prod__main-img {
+      width:100%; max-width:300px;
+      aspect-ratio:5/7; object-fit:cover;
+      border-radius:6px; display:block;
+      transition:opacity 0.25s;
+      box-shadow:0 24px 56px rgba(0,0,0,0.14);
+    }
+    .hp-prod__thumbs {
+      display:flex; gap:8px; margin-top:20px;
+      flex-wrap:wrap; justify-content:center;
+      max-width:300px;
+    }
+    .hp-prod__thumb {
+      width:40px; height:56px; object-fit:cover;
+      border-radius:3px; cursor:pointer;
+      border:2px solid transparent; opacity:0.55;
+      transition:opacity 0.18s, border-color 0.18s;
+    }
+    .hp-prod__thumb:hover { opacity:0.85; }
+    .hp-prod__thumb.active { border-color:#1a1a24; opacity:1; }
+    .hp-prod__finish-label {
+      margin-top:12px; font-size:0.75rem;
+      color:#8a7f74; letter-spacing:0.04em;
+    }
+    .hp-prod__info {
+      display:flex; flex-direction:column; justify-content:center;
+      padding:64px 72px 64px 64px;
+      background:#eee8de;
+    }
+    .hp-prod__eyebrow {
+      font-size:0.72rem; font-weight:700; text-transform:uppercase;
+      letter-spacing:0.12em; color:#b8860b; margin-bottom:14px;
+    }
+    .hp-prod__h2 {
+      font-size:clamp(1.8rem,2.8vw,2.6rem); font-weight:800;
+      color:#1a1a24; line-height:1.1; margin-bottom:20px;
+      letter-spacing:-0.02em;
+    }
+    .hp-prod__desc {
+      font-size:0.92rem; color:#666; line-height:1.7;
+      margin-bottom:28px; max-width:400px;
+    }
+    .hp-prod__badges {
+      display:flex; gap:8px; flex-wrap:wrap; margin-bottom:32px;
+    }
+    .hp-prod__badge {
+      font-size:0.72rem; font-weight:700;
+      padding:5px 12px; border-radius:3px;
+      letter-spacing:0.03em;
+    }
+    .hp-prod__badge--dark { background:#1a1a24; color:#FDD249; }
+    .hp-prod__badge--light { background:#e8e3db; color:#444; }
+    .hp-prod__price {
+      font-size:2rem; font-weight:800; color:#1a1a24; margin-bottom:4px;
+    }
+    .hp-prod__price-note {
+      font-size:0.8rem; color:#999; margin-bottom:28px;
+    }
+    .hp-prod__ctas { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:24px; }
+    .hp-prod__trust {
+      display:flex; gap:16px; flex-wrap:wrap;
+      border-top:1px solid #ddd8d0; padding-top:20px;
+    }
+    .hp-prod__trust span {
+      font-size:0.75rem; color:#888; font-weight:500;
+    }
+    @media(max-width:900px) {
+      .hp-prod { grid-template-columns:1fr; }
+      .hp-prod__info { padding:48px 32px; }
+      .hp-prod__visual { padding:48px 32px; }
+    }
+  </style>
+  <link rel="canonical" href="https://sunwaveswitzerland.com/de/">
+  <meta property="og:title" content="SunWave Switzerland — Keramik-Infrarotheizung für die Schweiz">
+  <meta property="og:description" content="Eines der meistgeprüften Keramik-Infrarotheizpaneele der Schweiz. BSRIA, Fraunhofer WKI, TU Dresden und Labor S.A. zertifiziert. MuKEn-konform. CHF 35 Lieferung.">
+  <meta property="og:url" content="https://sunwaveswitzerland.com/de/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://sunwaveswitzerland.com/images/hero-banner-1.webp">
+  <meta property="og:site_name" content="SunWave Switzerland">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SunWave Switzerland — Keramik-Infrarotheizung für die Schweiz">
+  <meta name="twitter:description" content="Eines der meistgeprüften Keramik-Infrarotheizpaneele der Schweiz. BSRIA, Fraunhofer WKI, TU Dresden und Labor S.A. zertifiziert. MuKEn-konform. CHF 35 Lieferung.">
+  <meta name="twitter:image" content="https://sunwaveswitzerland.com/images/hero-banner-1.webp">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SunWave Switzerland",
+  "alternateName": "Lumia Technologies GmbH",
+  "url": "https://sunwaveswitzerland.com",
+  "logo": "https://sunwaveswitzerland.com/images/logo.webp",
+  "telephone": "+41767637490",
+  "email": "info@sunwaveswitzerland.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Glaserbergstrasse 27",
+    "addressLocality": "Basel",
+    "postalCode": "4056",
+    "addressCountry": "CH"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+41767637490",
+    "contactType": "sales",
+    "areaServed": "CH",
+    "availableLanguage": [
+      "English",
+      "German",
+      "French"
+    ]
+  },
+  "sameAs": [
+    "https://sunwaveswitzerland.com"
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ist eine Infrarotheizung MuKEn-konform in der Schweiz?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Electric infrared panels produce zero on-site combustion and operate on Switzerland's ~90% low-carbon electricity grid. They qualify as a compliant fossil fuel heating replacement under MuKEn 2014 Article 4.1 in all cantons that have adopted the provision — including Zurich, Bern, Basel, Vaud, and Aargau. No planning permission required in most cases."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie schnell kann meine Heizung durch Infrarotpaneele ersetzt werden?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SunWave Ceramica panels ship to all Swiss cantons with delivery in 3–5 working days. Panels connecting to standard sockets can be installed the same day they arrive — no electrician required for socket-connected panels. Hardwired installation requires a NIV-authorised electrician (typically 1 day)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the warranty on SunWave Ceramica panels?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "5 years full manufacturer's warranty. The ceramic surface does not degrade — there are no moving parts, no filters, no gas components. The BSRIA 98-day continuous test confirmed stable performance with no output degradation throughout."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use infrared panels in a rented apartment in Switzerland?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Panels connecting to standard sockets do not require modification to the building and typically do not require landlord consent under Swiss tenancy law. They can be removed on departure with no permanent damage — mounting holes only."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Sind die Paneele sicher für Kinder und Allergiker?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fraunhofer WKI certified VOC emissions at 0.043 mg/m³ TVOC — 23× below the limit. No combustion products. No forced air movement (no dust recirculation). The ceramic surface is chemically inert. An der oberen Wand außerhalb der Reichweite kleiner Kinder montieren."
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/">
+  <link rel="alternate" hreflang="de" href="https://sunwaveswitzerland.com/de/">
+  <link rel="alternate" hreflang="x-default" href="https://sunwaveswitzerland.com/">
+<style>
+  .nav__lang{display:flex;align-items:center;gap:2px;margin-left:10px}
+  .nav__lang-btn{font-size:.68rem;font-weight:700;letter-spacing:.06em;color:rgba(255,255,255,.45);text-decoration:none;padding:3px 7px;border-radius:3px;border:1px solid rgba(255,255,255,.18);transition:all .2s}
+  a.nav__lang-btn:hover,.nav__lang-btn.lang-active{color:var(--gold);border-color:var(--gold);background:rgba(245,197,24,.08)}
+  .nav__lang-sep{color:rgba(255,255,255,.2);font-size:.7rem;padding:0 1px}
+  .mobile-lang{display:none;align-items:center;gap:6px;padding:12px 20px;border-top:1px solid rgba(255,255,255,.1);margin-top:4px}
+  .mobile-lang a,.mobile-lang span{font-size:.8rem;font-weight:700;color:rgba(255,255,255,.5);text-decoration:none;padding:4px 10px;border-radius:4px;border:1px solid rgba(255,255,255,.15)}
+  .mobile-lang a:hover,.mobile-lang .lang-active{color:var(--gold);border-color:var(--gold)}
+  @media(max-width:768px){.nav__lang{display:none}.mobile-lang{display:flex}}
+</style>
+</head>
+<body>
+
+<!-- ══ NAVIGATION ══ -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <img src="../images/logo.webp" alt="SunWave Switzerland" style="height:44px;display:block;border-radius:6px;">
+    </a>
+    <div class="nav__links">
+      <a href="product.html">Das Paneel</a>
+      <a href="research.html">Forschung</a>
+      <div class="nav__drop">
+        <button class="nav__drop-btn">Für &#9662;</button>
+        <div class="nav__drop-menu" id="nav-drop-menu">
+          <a href="for-solar.html">Solar-Installateure</a>
+          <a href="for-hotels.html">Hotels &amp; Gastronomie</a>
+          <a href="for-homes.html">Schweizer Haushalte</a>
+          <a href="for-offices.html">Büro &amp; Gewerbe</a>
+        </div>
+      </div>
+      <a href="index.html#calculator">Rechner</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Kontakt</a>
+    </div>
+    <div class="nav__right">
+      <a href="product.html" class="nav__order-btn">Jetzt bestellen</a>
+      <div class="nav__lang">
+        <a href="../index.html" class="nav__lang-btn">EN</a>
+        <span class="nav__lang-sep">|</span>
+        <span class="nav__lang-btn lang-active">DE</span>
+      </div>
+      <button class="nav__hamburger" id="nav-hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav__mobile" id="nav-mobile">
+    <a href="product.html">Das Paneel</a>
+    <a href="research.html">Forschung</a>
+    <a href="for-solar.html">Solar-Installateure</a>
+    <a href="for-hotels.html">Hotels &amp; Gastronomie</a>
+    <a href="for-homes.html">Schweizer Haushalte</a>
+    <a href="for-offices.html">Büro &amp; Gewerbe</a>
+    <a href="index.html#calculator">Rechner</a>
+    <a href="blog/index.html">Blog</a>
+    <a href="contact.html">Kontakt</a>
+    <a href="product.html" class="nav__mobile-order">Jetzt bestellen</a>
+  </div>
+  <div class="mobile-lang">
+    <a href="../index.html">EN</a>
+    <span class="lang-active">DE</span>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+
+  <!-- Rotating background slides -->
+  <div class="hero__slides">
+    <div class="hero__slide hero__slide--active">
+      <img src="../images/hero-banner-1.webp" alt="Swiss alpine living room with SunWave ceramic heating panel">
+      <div class="hero__overlay"></div>
+      <div class="hero__overlay-bottom"></div>
+    </div>
+    <div class="hero__slide">
+      <img src="../images/hero-banner-2.webp" alt="Zurich apartment evening with SunWave ceramic heating panel">
+      <div class="hero__overlay"></div>
+      <div class="hero__overlay-bottom"></div>
+    </div>
+    <div class="hero__slide">
+      <img src="../images/hero-banner-3.webp" alt="Swiss chalet living room with SunWave ceramic heating panel">
+      <div class="hero__overlay"></div>
+      <div class="hero__overlay-bottom"></div>
+    </div>
+  </div>
+
+  <!-- Content — single column left-aligned -->
+  <div class="hero__inner">
+    <div class="hero__text">
+      <div class="hero__badge">Ceramic Infrared Heating &mdash; Switzerland</div>
+      <h1 class="hero__h1">
+        Eines der meistgeprüften<br>
+        <em>Infrarotheizpaneele</em><br>
+        der Schweiz.
+      </h1>
+      <p class="hero__sub">
+        Keramik-Infrarotheizung. Geräuschlos. Null Emissionen. Bis zu 80% weniger Energie als A+++ Konvektoderen. BSRIA-getestet. MuKEn-konform.
+      </p>
+      <div class="hero__ctas">
+        <a href="product.html" class="btn btn--gold btn--lg">Das Paneel ansehen</a>
+        <a href="#calculator" class="btn btn--outline btn--lg">Einsparungen berechnen</a>
+      </div>
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <div class="hero__stat-value">Bis zu 80%</div>
+          <div class="hero__stat-label">weniger Verbrauch vs. A+++<br>bestätigt von BSRIA</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-value">4</div>
+          <div class="hero__stat-label">independent<br>product lab tests</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-value">5yr</div>
+          <div class="hero__stat-label">manufacturer<br>warranty</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-value">CHF 490</div>
+          <div class="hero__stat-label">pro Paneel inkl. Thermostat,<br>12–15 m² pro Paneel</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide dots -->
+  <div class="hero__dots">
+    <button class="hero__dot hero__dot--active" data-slide="0" aria-label="Slide 1"></button>
+    <button class="hero__dot" data-slide="1" aria-label="Slide 2"></button>
+    <button class="hero__dot" data-slide="2" aria-label="Slide 3"></button>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="hero__scroll" style="position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:4;display:flex;flex-direction:column;align-items:center;gap:5px;opacity:0.45;pointer-events:none;">
+    <span style="font-size:0.6rem;color:#fff;letter-spacing:0.12em;text-transform:uppercase;">Scrollen</span>
+    <span style="font-size:0.85rem;color:#fff;animation:bounce 1.8s ease-in-out infinite">↓</span>
+  </div>
+
+</section>
+<style>
+@keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(7px)} }
+@media(max-width:768px){
+  .hero__text { padding: 82px 0 60px; }
+  .hero__h1 { font-size: clamp(1.9em, 8vw, 2.8em); }
+  .hero__stats { flex-wrap: wrap; gap: 16px; border-top: none; padding-top: 0; }
+  .hero__stat { border-right: none; margin-right: 0; padding-right: 0; flex: 0 0 calc(50% - 8px); }
+}
+@media(max-width:560px){
+  .hero__text { padding: 78px 0 48px; }
+  .hero__stat { flex: 0 0 calc(50% - 6px); }
+}
+</style>
+
+<!-- ══ EVIDENCE STRIP ══ -->
+<section class="evidence-strip">
+  <div class="evidence-strip__inner">
+    <span class="evidence-strip__label">Unabhängig getestet von</span>
+    <div class="evidence-strip__divider"></div>
+    <div class="evidence-item">
+      <img src="../images/logo-bsria.webp" alt="BSRIA" class="lab-logo-img">
+      <span class="evidence-item__report">Repodert 105350/1</span>
+    </div>
+    <div class="evidence-strip__divider"></div>
+    <div class="evidence-item">
+      <img src="../images/logo-fraunhofer.webp" alt="Fraunhofer WKI" class="lab-logo-img">
+      <span class="evidence-item__report">MAIC-2022-2428</span>
+    </div>
+    <div class="evidence-strip__divider"></div>
+    <div class="evidence-item">
+      <img src="../images/logo-tu-dresden.webp" alt="TU Dresden" class="lab-logo-img" style="filter:brightness(0) invert(1);opacity:0.8">
+      <span class="evidence-item__report">DIN EN IEC 60675-3</span>
+    </div>
+    <div class="evidence-strip__divider"></div>
+    <div class="evidence-item">
+      <span class="evidence-item__name" style="font-weight:700;font-size:0.82rem">Laboder S.A.</span>
+      <span class="evidence-item__report">EN 60335-2-30 · 2024</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ STATS ══ -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="stats-row">
+      <div class="stat-item">
+        <div class="stat-item__value">Bis zu 80%</div>
+        <div class="stat-item__label">weniger Verbrauch vs. A+++ convection heaters<br><em style="font-size:0.85em;opacity:0.6">(BSRIA Repodert 105350/1, 2023)</em></div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-item__value">66%</div>
+        <div class="stat-item__label">Weniger Energie vs. Gaszentralheizung<br><em style="font-size:0.85em;opacity:0.6">(unabhängige akademische Forschung — Infrarottechnologie)</em></div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-item__value">0,043</div>
+        <div class="stat-item__label">mg/m³ TVOC — 23× unter Grenzwert<br><em style="font-size:0.85em;opacity:0.6">(Fraunhofer WKI AgBB, Day 7)</em></div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-item__value">67°C</div>
+        <div class="stat-item__label">Stabile Oberflächentemp. in 32 Min.<br><em style="font-size:0.85em;opacity:0.6">(BSRIA 98-Tage-Dauertest)</em></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PRODUCT + VARIANTS ══ -->
+<section id="product">
+  <div class="hp-prod">
+
+    <!-- Left: image + thumbnail strip -->
+    <div class="hp-prod__visual">
+      <img id="panel-main-photo" src="../images/panel-imperial-marble.webp"
+           alt="SunWave Ceramica" class="hp-prod__main-img">
+      <div class="hp-prod__thumbs">
+        <img src="../images/panel-imperial-marble.webp" class="hp-prod__thumb active"
+             onclick="switchPanelPhoto(this,'images/panel-imperial-marble.webp','Imperial Marble')" alt="Imperial Marble" title="Imperial Marble">
+        <img src="../images/panel-arctic-white.webp" class="hp-prod__thumb"
+             onclick="switchPanelPhoto(this,'images/panel-arctic-white.webp','Alpine White')" alt="Alpine White" title="Alpine White">
+        <img src="../images/panel-tuscan-sand.webp" class="hp-prod__thumb"
+             onclick="switchPanelPhoto(this,'images/panel-tuscan-sand.webp','Tuscan Sand')" alt="Tuscan Sand" title="Tuscan Sand">
+        <img src="../images/panel-nordic-slate.webp" class="hp-prod__thumb"
+             onclick="switchPanelPhoto(this,'images/panel-nordic-slate.webp','Nordic Slate')" alt="Nordic Slate" title="Nordic Slate">
+        <img src="../images/panel-sandstone-edge.webp" class="hp-prod__thumb"
+             onclick="switchPanelPhoto(this,'images/panel-sandstone-edge.webp','Sandstone Edge')" alt="Sandstone Edge" title="Sandstone Edge">
+        <img src="../images/panel-desert-flow.webp" class="hp-prod__thumb"
+             onclick="switchPanelPhoto(this,'images/panel-desert-flow.webp','Desert Flow')" alt="Desert Flow" title="Desert Flow">
+        <img src="../images/panel-ivory-cloud.webp" class="hp-prod__thumb"
+             onclick="switchPanelPhoto(this,'images/panel-ivory-cloud.webp','Ivory Cloud')" alt="Ivory Cloud" title="Ivory Cloud">
+        <img src="../images/panel-walnut-stone.webp" class="hp-prod__thumb"
+             onclick="switchPanelPhoto(this,'images/panel-walnut-stone.webp','Walnut Stone')" alt="Walnut Stone" title="Walnut Stone">
+        <img src="../images/panel-timber-stone.webp" class="hp-prod__thumb"
+             onclick="switchPanelPhoto(this,'images/panel-timber-stone.webp','Timber Stone')" alt="Timber Stone" title="Timber Stone">
+      </div>
+      <p class="hp-prod__finish-label" id="panel-thumb-label">Imperial Marble</p>
+    </div>
+
+    <!-- Right: text + CTA -->
+    <div class="hp-prod__info">
+      <div class="hp-prod__eyebrow">Ceramic Infrared Heating Panel</div>
+      <h2 class="hp-prod__h2">Ein Paneel, das wärmt<br>Ihr Zuhause — nicht die Luft.</h2>
+      <p class="hp-prod__desc">
+        SunWave Ceramica. 60 &times; 120 cm. 650 W. Nine surface finishes in 6 mm fine podercelain stoneware. Dieselbe Technologie in jeder Ausführung — Design ändern, Leistung beibehalten.
+      </p>
+      <div class="hp-prod__price">CHF 490</div>
+      <p class="hp-prod__price-note">per panel &middot; incl. VAT &middot; WiFi thermostat required &amp; included &middot; CHF 35 delivery</p>
+      <div class="hp-prod__ctas">
+        <a href="product.html#order" class="btn btn--gold btn--lg">Jetzt bestellen</a>
+        <a href="product.html" class="btn btn--dark btn--lg">Vollständige Spezifikationen</a>
+      </div>
+      <div class="hp-prod__trust">
+        <span>&#10003; 5 Jahre Garantie</span>
+        <span>&#10003; Ships in 3&ndash;5 days</span>
+        <span>&#10003; 30 Tage Rückgabe</span>
+        <span>&#10003; Klasse II zertifiziert</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ WHO IT'S FOR ══ -->
+<section class="section section--dark" id="for">
+  <div class="container">
+    <div class="section__header section__header--center">
+      <div class="section__eyebrow">Für wen</div>
+      <h2 class="section__h2">Built for Swiss professionals<br>and homeowners</h2>
+      <p class="section__lead">Von Solar-Installateueren, die ihr Podertfolio erweitern, bis hin zu Hotels, die Lüfterlärm aus Gästezimmern eliminieren, und Hausbesitzern, die eine defekte Heizung voder dem Winter ersetzen.</p>
+    </div>
+    <div class="audience-grid">
+      <a href="for-solar.html" class="audience-card">
+        <div class="audience-card__title">Solar-Installateure</div>
+        <div class="audience-card__desc">Kombinieren Sie Infrarotheizung mit Ihrer Solar-PV-Anlage. Kunden laden Paneele tagsüber, heizen Räume thermisch — das perfekte MuKEn-konforme Paket.</div>
+        <div class="audience-card__link">Mehr erfahren →</div>
+      </a>
+      <a href="for-hotels.html" class="audience-card">
+        <div class="audience-card__title">Hotels &amp; Gastronomie</div>
+        <div class="audience-card__desc">Geräuschloser Betrieb. Kein Staub. Keine Wartung. Individuelle Raumsteuerung. Premium-Kachel-Ästhetik. Perfekt für 4- und 5-Sterne-Häuser in der Schweiz.</div>
+        <div class="audience-card__link">Mehr erfahren →</div>
+      </a>
+      <a href="for-homes.html" class="audience-card">
+        <div class="audience-card__title">Schweizer Haushalte</div>
+        <div class="audience-card__desc">MuKEn-konformer Heizungsersatz ab CHF 490. Kein Klempner. Keine Baugenehmigung. CHF 35 Lieferung, 3–5 Tage. Für Miet- und Eigentumswohnungen.</div>
+        <div class="audience-card__link">Mehr erfahren →</div>
+      </a>
+      <a href="for-offices.html" class="audience-card">
+        <div class="audience-card__title">Büro &amp; Gewerbe</div>
+        <div class="audience-card__desc">Zonenheizung — nur bewohnte Bereiche beheizen. Geräuschlos (kein Ventilatoder). Niedrigere CO₂-Bilanz. Amodertisation in unter 3 Jahren vs. Gas. Minimale Installationsunterbrechung.</div>
+        <div class="audience-card__link">Mehr erfahren →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ THE SCIENCE ══ -->
+<section class="section">
+  <div class="container">
+    <div class="product-showcase">
+      <div>
+        <div class="section__eyebrow">Die Wissenschaft</div>
+        <h2 class="section__h2">Why radiant heat<br>outperforms convection</h2>
+        <p style="margin-bottom:24px;color:var(--text-muted);line-height:1.7">
+          Herkömmliche Elektroheizungen erwärmen die Luft. Warme Luft steigt auf. Ihre Füße bleiben kalt, während der Thermostat zufrieden ist. Jedes Mal, wenn ein Fenster oder eine Tür geöffnet wird, entweicht die erwärmte Luft.
+        </p>
+        <p style="margin-bottom:28px;color:var(--text-muted);line-height:1.7">
+          SunWave Ceramica Paneele emittieren langwelliges Infrarot (8–14 µm) — dieselbe Wellenlänge, die Baumaterialien, Böden, Wände und Menschen am effizientesten absoderbieren. Oberflächen erwärmen sich. Wände speichern Wärme und geben sie langsam ab. Der Raum ist bei 1–2°C niedrigerer Thermostateinstellung komfortabel.
+        </p>
+        <div class="features-grid" style="grid-template-columns:1fr 1fr;margin-bottom:28px">
+          <div class="feature-item">
+            <div class="feature-item__icon"><img src="../images/icon.png" alt="" style="width:20px;height:20px;display:inline-block;"></div>
+            <div class="feature-item__title">Keine Luftschichtung</div>
+            <div class="feature-item__desc">Gleichmäßige Temperatur vom Boden bis zur Decke. Kein Warm-Decke-Kalt-Boden-Effekt.</div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-item__icon"><img src="../images/icon.png" alt="" style="width:20px;height:20px;display:inline-block;"></div>
+            <div class="feature-item__title">Thermische Masse aufgeladen</div>
+            <div class="feature-item__desc">Wände und Böden absoderbieren und geben Wärme langsam wieder ab. Der Raum bleibt warm, nachdem das Paneel abschaltet.</div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-item__icon"><img src="../images/icon.png" alt="" style="width:20px;height:20px;display:inline-block;"></div>
+            <div class="feature-item__title">Keine Staubzirkulation</div>
+            <div class="feature-item__desc">Keine Konvektionsluftströme bedeutet: abgesetzte Allergene bleiben abgesetzt. Keine Rezirkulation.</div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-item__icon"><img src="../images/icon.png" alt="" style="width:20px;height:20px;display:inline-block;"></div>
+            <div class="feature-item__title">Vollständig geräuschlos</div>
+            <div class="feature-item__desc">Kein Ventilatoder. Keine Pumpe. Keine Verbrennung. Keine beweglichen Teile. Absolute Stille im Betrieb.</div>
+          </div>
+        </div>
+        <a href="research.html" class="btn btn--outline-dark">Die Physik im Detail →</a>
+      </div>
+      <div>
+        <!-- Visual diagram -->
+        <div style="background:var(--dark-2);border-radius:6px;padding:36px;color:white">
+          <p style="font-size:0.78em;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--gold);margin-bottom:20px">Energieverbrauch pro m²/Jahr</p>
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:0.82em;margin-bottom:6px">
+                <span style="opacity:0.7">Gas-Zentralheizung</span>
+                <strong style="color:#ff6b6b">208.73 kWh/m²</strong>
+              </div>
+              <div style="background:rgba(255,255,255,0.08);border-radius:4px;height:12px;overflow:hidden">
+                <div style="background:#ff6b6b;width:100%;height:100%;border-radius:4px"></div>
+              </div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:0.82em;margin-bottom:6px">
+                <span style="opacity:0.7">Gas-Brennwertkessel</span>
+                <strong style="color:#ff9f43">187.8 kWh/m²</strong>
+              </div>
+              <div style="background:rgba(255,255,255,0.08);border-radius:4px;height:12px;overflow:hidden">
+                <div style="background:#ff9f43;width:90%;height:100%;border-radius:4px"></div>
+              </div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:0.82em;margin-bottom:6px">
+                <span style="opacity:0.7">SunWave Ceramica (Infrarot)</span>
+                <strong style="color:var(--gold)">71.21 kWh/m²</strong>
+              </div>
+              <div style="background:rgba(255,255,255,0.08);border-radius:4px;height:12px;overflow:hidden">
+                <div style="background:var(--gold);width:34%;height:100%;border-radius:4px"></div>
+              </div>
+            </div>
+          </div>
+          <p style="font-size:0.72em;opacity:0.6;margin-top:20px;line-height:1.5">Quelle: Unabhängige akademische Forschung zur keramischen Infrarotheizungstechnologie (Dr.-Ing. Peter Kosack, 2008–2009).</p>
+
+          <div style="margin-top:28px;background:rgba(245,197,24,0.08);border:1px solid rgba(245,197,24,0.2);border-radius:4px;padding:18px">
+            <p style="font-size:0.82em;font-style:italic;opacity:0.85;line-height:1.6">"Based on the current market, the best rated triple A heating consumption, the ceramic heaters save up to <strong style="color:var(--gold)">80% of the cost</strong>."</p>
+            <p style="font-size:0.72em;opacity:0.65;margin-top:8px">— BSRIA Repodert 105350/1, July 2023, Mark Roper, Head of Laboderatodery & Test</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ INDEPENDENT EVIDENCE ══ -->
+<section class="section section--dark" id="research">
+  <div class="container">
+    <div class="section__header">
+      <div class="section__eyebrow">Unabhängige Belege</div>
+      <h2 class="section__h2">4 laboderatoderies.<br>4 independent tests.</h2>
+      <p class="section__lead">Jede Aussage auf dieser Website basiert auf einer namentlich genannten Studie mit Berichtsnummer. Kein Marketing. Keine Herstellerdaten. Unabhängige Laboderatoderien.</p>
+    </div>
+    <div class="evidence-grid">
+      <div class="evidence-card">
+        <div class="evidence-card__org">BSRIA Limited, UK</div>
+        <div class="evidence-card__report">Repodert 105350/1 · July 2023</div>
+        <div class="evidence-card__title">98-tägiger Dauerleistungstest</div>
+        <div class="evidence-card__finding">
+          "Ceramic heaters save up to <strong>80% of the cost</strong> vs. bestbewerteten Triple-A konventionellen Elektroheizungen."<br>
+          Oberflächentemp.: 67°C in 32 Min. Durchschnittliche Tageskosten: £0,91.
+        </div>
+        <div class="evidence-card__meta">Genehmigt von Mark Roper, Leiter Laboder &amp; Test, BSRIA</div>
+      </div>
+      <div class="evidence-card">
+        <div class="evidence-card__org">Fraunhofer WKI, Deutschland</div>
+        <div class="evidence-card__report">Repodert MAIC-2022-2428 · Sept 2022</div>
+        <div class="evidence-card__title">Innenraumluftqualität — AgBB-Bewertung</div>
+        <div class="evidence-card__finding">
+          TVOC: <strong>0,043 mg/m³</strong> (limit 1.0). R-value: 0.186 (limit 1.0).<br>
+          Karzinogene VOC: nicht nachgewiesen. Alle AgBB-Tag-28-Anforderungen in 7 Tagen erfüllt.
+        </div>
+        <div class="evidence-card__meta">Dr. E. Uhde, Abteilung Materialanalyse &amp; Innenraumluftchemie</div>
+      </div>
+      <div class="evidence-card">
+        <div class="evidence-card__org">TU Dresden, Deutschland</div>
+        <div class="evidence-card__report">DIN EN IEC 60675-3 · Oktober 2022</div>
+        <div class="evidence-card__title">Messung des Strahlungswirkungsgrads</div>
+        <div class="evidence-card__finding">
+          Strahlungswirkungsgrad des SunWave Ceramica Paneels bestätigt nach DIN EN IEC 60675-3 — dem europäischen Standard zur Messung des Anteils der elektrischen Eingangsleistung, der zu Infrarotstrahlung wird.
+        </div>
+        <div class="evidence-card__meta">Technische Universität Dresden, Fachbereich Energieeffizienz</div>
+      </div>
+      <div class="evidence-card">
+        <div class="evidence-card__org">Laboder S.A., Griechenland</div>
+        <div class="evidence-card__report">Repodert 2316.001.3.01 · December 2024</div>
+        <div class="evidence-card__title">Full EN 60335-2-30 Elektrisch Safety Test</div>
+        <div class="evidence-card__finding">
+          Alle Klauseln BESTANDEN. Klasse II / IP20. Oberflächentemperaturanstieg: 71,2K (Grenzwert 90K). Ableitstrom: 0,1mA (Grenzwert 0,25mA). 3000V Dielektrizitätsprüfung bestanden.
+        </div>
+        <div class="evidence-card__meta">Neuester Test · December 23, 2024 · Alle anwendbaren Klauseln</div>
+      </div>
+      <div class="evidence-card" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-height:200px">
+        <div style="margin-bottom:12px"><img src="../images/icon.png" alt="" style="width:32px;height:32px;display:inline-block;"></div>
+        <div class="evidence-card__title" style="margin-bottom:12px">Alle Testdaten verfügbar</div>
+        <p style="font-size:0.82em;color:rgba(255,255,255,0.5);margin-bottom:20px">Alle vier Berichte mit Methodik, Rohdaten und Schlussfolgerungen dokumentiert.</p>
+        <a href="research.html" class="btn btn--gold btn--sm">Alle Forschungsdaten lesen →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SWISS MARKET / MUKEN ══ -->
+<section class="section section--gray">
+  <div class="container">
+    <div class="product-showcase product-showcase--flip">
+      <div>
+        <div class="section__eyebrow" style="color:var(--orange)">Schweizer Markt</div>
+        <h2 class="section__h2">MuKEn is phasing out<br>your boiler. We're ready.</h2>
+        <p style="margin-bottom:20px;color:var(--text-muted);line-height:1.7">
+          MuKEn 2014 — die Mustervoderschriften der Kantone im Energiebereich — schreibt voder, dass fossile Heizsysteme am Lebensende durch erneuerbare Alternativen ersetzt werden müssen. Ab 2026 gilt dies in den meisten Schweizer Kantonen, darunter Zürich, Bern, Basel, Waadt und Aargau.
+        </p>
+        <p style="margin-bottom:28px;color:var(--text-muted);line-height:1.7">
+          SunWave Ceramica Paneele sind vollständig elektrisch mit null Emissionen voder Ort. Sie qualifizieren sich als konformer Ersatz in allen Kantonen, die die Fossile-Brennstoffe-Ausstiegsregelung übernommen haben — ohne Baugenehmigung, ohne Klempner, lieferbar innerhalb von 3–5 Tagen.
+        </p>
+        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:28px">
+          <div style="display:flex;align-items:center;gap:12px;font-size:0.9em">
+            <span style="color:#22a855;font-weight:700;font-size:1.1em">✓</span>
+            <span>Keine Verbrennung fossiler Brennstoffe — null CO₂ voder Ort</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:0.9em">
+            <span style="color:#22a855;font-weight:700;font-size:1.1em">✓</span>
+            <span>Kompatibel mit dem ~90% kohlenstoffarmen Schweizer Stromnetz</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:0.9em">
+            <span style="color:#22a855;font-weight:700;font-size:1.1em">✓</span>
+            <span>In den meisten Kantonen keine Baugenehmigung erforderlich</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;font-size:0.9em">
+            <span style="color:#22a855;font-weight:700;font-size:1.1em">✓</span>
+            <span>Kann innerhalb von Tagen nach Heizungsausfall installiert werden</span>
+          </div>
+        </div>
+        <a href="research.html" class="btn btn--dark">MuKEn-Konformitätsleitfaden →</a>
+      </div>
+      <div>
+        <div style="background:var(--dark);color:white;border-radius:6px;padding:36px">
+          <p style="font-size:0.78em;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--gold);margin-bottom:20px">Jährliche Kosten — 80m² Wohnung, Zürich</p>
+          <div style="display:flex;flex-direction:column;gap:20px">
+            <div style="background:rgba(255,255,255,0.06);border-radius:4px;padding:20px">
+              <div style="font-size:0.8em;opacity:0.6;margin-bottom:8px">Gas-Zentralheizung</div>
+              <div style="font-size:1.8em;font-weight:800;color:#ff9f43">CHF 2,171</div>
+              <div style="font-size:0.75em;opacity:0.6;margin-top:4px">+CHF 400 jährlicher Service</div>
+            </div>
+            <div style="background:rgba(245,197,24,0.1);border:1px solid rgba(245,197,24,0.3);border-radius:4px;padding:20px">
+              <div style="font-size:0.8em;opacity:0.8;margin-bottom:8px">SunWave Ceramica infrared</div>
+              <div style="font-size:1.8em;font-weight:800;color:var(--gold)">CHF 1,652</div>
+              <div style="font-size:0.75em;opacity:0.5;margin-top:4px">Kein Service erforderlich</div>
+            </div>
+            <div style="text-align:center;padding:16px 0;border-top:1px solid rgba(255,255,255,0.08)">
+              <div style="font-size:0.8em;opacity:0.6;margin-bottom:4px">Jährliche Ersparnis</div>
+              <div style="font-size:2em;font-weight:800;color:var(--gold)">CHF 919+</div>
+              <div style="font-size:0.75em;opacity:0.6">Paneel-Amodertisation: 2–3 Jahre</div>
+            </div>
+          </div>
+          <p style="font-size:0.7em;opacity:0.55;margin-top:16px;line-height:1.5">Basierend auf akademischer Forschung, CHF 0,29/kWh Strom (Schweizer Durchschnitt 2026), CHF 0,13/kWh Gas. Individuelle Ergebnisse variieren.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SAVINGS CALCULATOR ══ -->
+<section class="section section--dark" id="calculator">
+  <div class="container">
+    <div class="section__header section__header--center">
+      <div class="section__eyebrow">Sparrechner</div>
+      <h2 class="section__h2">Berechnen Sie Ihren Wechsel</h2>
+      <p class="section__lead">Basierend auf unabhängigen Forschungsdaten. Für Ihr Gebäude und Ihre Energiepreise anpassen.</p>
+    </div>
+    <div class="calc-section">
+      <div class="calc-grid">
+        <div class="calc-field">
+          <label for="sw-area">Zu beheizende Fläche (m²)</label>
+          <input type="number" id="sw-area" value="80" min="10" max="500" step="5" oninput="swCalc()">
+        </div>
+        <div class="calc-field">
+          <label for="sw-system">Aktuelles Heizsystem</label>
+          <select id="sw-system" onchange="swCalc()">
+            <option value="gas">Gas-Zentralheizung</option>
+            <option value="gas_condensing">Gas-Brennwertkessel</option>
+            <option value="oil">Oil heating</option>
+            <option value="electric">Conventional electric</option>
+          </select>
+        </div>
+        <div class="calc-field">
+          <label for="sw-elec">Strompreis (CHF/kWh)</label>
+          <input type="number" id="sw-elec" value="0.29" min="0.10" max="0.50" step="0.01" oninput="swCalc()">
+        </div>
+        <div class="calc-field">
+          <label id="sw-fuel-label" for="sw-fuel">Gaspreis (CHF/kWh)</label>
+          <input type="number" id="sw-fuel" value="0.13" min="0.05" max="0.50" step="0.01" oninput="swCalc()">
+        </div>
+        <div class="calc-field">
+          <label for="sw-insul">Gebäudedämmung</label>
+          <select id="sw-insul" onchange="swCalc()">
+            <option value="excellent">Excellent (post-2000)</option>
+            <option value="good" selected>Gut (1980–2000)</option>
+            <option value="average">Durchschnittlich (1960–1980)</option>
+            <option value="poor">Pooder (pre-1960)</option>
+          </select>
+        </div>
+        <div class="calc-field" style="display:flex;align-items:flex-end">
+          <p style="font-size:0.75em;color:rgba(255,255,255,0.4);line-height:1.5;margin:0">
+            Ergebnisse werden automatisch aktualisiert.
+            Basierend auf Schweizer Durchschnitts-Energiepreisen 2026.
+          </p>
+        </div>
+      </div>
+      <div class="calc-results" id="calc-results">
+        <div class="calc-metric">
+          <div class="calc-metric__value" id="res-saving">—</div>
+          <div class="calc-metric__label">Jährliche Ersparnis (CHF)</div>
+        </div>
+        <div class="calc-metric">
+          <div class="calc-metric__value" id="res-payback">—</div>
+          <div class="calc-metric__label">Amodertisierungsdauer</div>
+        </div>
+        <div class="calc-metric">
+          <div class="calc-metric__value" id="res-co2">—</div>
+          <div class="calc-metric__label">Jährlich eingesparte CO₂</div>
+        </div>
+      </div>
+      <p class="calc-note">Energiedaten: Unabhängige akademische Forschung on ceramic infrared heating technology (Dr. Kosack, 2008–2009) — 71.21 kWh/m²/yr infrared vs 208.73 kWh/m²/yr gas. Insulation multipliers per SIA 380/1. Default rates: CHF 0.29/kWh electricity, CHF 0.13/kWh gas (Swiss 2026 averages — adjust to your tariff). Panel capital: CHF 490 × panels (12–15 m² each, thermostat included). CO₂: Swiss grid avg 35g/kWh; gas 202g/kWh. Results are indicative — individual buildings vary.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ FAQ ══ -->
+<section class="section" style="background:#f8f7f4;">
+  <div class="container" style="max-width:760px">
+    <div class="section__header section__header--center">
+      <div class="section__eyebrow" style="color:var(--orange)">Häufige Fragen</div>
+      <h2 class="section__h2" style="color:var(--dark)">Häufig gestellte Fragen</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item faq-item--light">
+        <button class="faq-trigger" aria-expanded="false">
+          Ist eine Infrarotheizung MuKEn-konform in der Schweiz?
+          <span class="faq-trigger__icon">+</span>
+        </button>
+        <div class="faq-body">Elektrische Infrarotpaneele erzeugen keine Verbrennung voder Ort und betreiben sich mit dem ~90% kohlenstoffarmen Schweizer Stromnetz. Sie qualifizieren sich als konformer Heizungsersatz unter MuKEn 2014 Artikel 4.1 in allen Kantonen mit entsprechender Regelung — inkl. Zürich, Bern, Basel, Waadt und Aargau.</div>
+      </div>
+      <div class="faq-item faq-item--light">
+        <button class="faq-trigger" aria-expanded="false">
+          Wie schnell kann meine Heizung durch Infrarotpaneele ersetzt werden?
+          <span class="faq-trigger__icon">+</span>
+        </button>
+        <div class="faq-body">SunWave Ceramica Paneele werden in alle Schweizer Kantone in 3–5 Werktagen geliefert. Steckdosen-Paneele können am Liefertag installiert werden — kein Elektriker erforderlich. Fest verdrahtete Installation erfordert einen NIV-zugelassenen Elektriker (in der Regel 1 Tag).</div>
+      </div>
+      <div class="faq-item faq-item--light">
+        <button class="faq-trigger" aria-expanded="false">
+          Wie lange ist die Garantie?
+          <span class="faq-trigger__icon">+</span>
+        </button>
+        <div class="faq-body">5 Jahre volle Herstellergarantie. Die Keramikoberfläche degradiert nicht — keine beweglichen Teile, keine Filter, keine Gaskomponenten. Der BSRIA 98-Tage-Dauertest bestätigte stabile Leistung ohne Leistungsabfall.</div>
+      </div>
+      <div class="faq-item faq-item--light">
+        <button class="faq-trigger" aria-expanded="false">
+          Kann ich Infrarotpaneele in einer Mietwohnung nutzen?
+          <span class="faq-trigger__icon">+</span>
+        </button>
+        <div class="faq-body">Ja. Steckdosen-Paneele erfordern keine baulichen Veränderungen und benötigen in der Regel keine Vermietereinwilligung nach Schweizer Mietrecht. Sie können bei Auszug ohne bleibende Schäden entfernt werden — nur Montagelöcher.</div>
+      </div>
+      <div class="faq-item faq-item--light">
+        <button class="faq-trigger" aria-expanded="false">
+          Sind die Paneele sicher für Kinder und Allergiker?
+          <span class="faq-trigger__icon">+</span>
+        </button>
+        <div class="faq-body">Fraunhofer WKI certified VOC emissions at 0,043 mg/m³ TVOC — 23× below the limit. No combustion products. No forced air movement (no dust recirculation). The ceramic surface is chemically inert (same material as food-safe flooder tiles). An der oberen Wand außerhalb der Reichweite kleiner Kinder montieren.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA BAND ══ -->
+<section class="cta-band">
+  <h2>Bereit für saubere,<br>geräuschlose Infrarotwärme?</h2>
+  <p>CHF 490 per panel. A thermostat is required — included with every oderder. CHF 35 delivery across Switzerland. 5 Jahre Garantie. 3–5 day delivery.</p>
+  <div class="btn-group">
+    <a href="product.html#order" class="btn btn--dark btn--lg">Das Paneel bestellen →</a>
+    <a href="contact.html" class="btn btn--outline-dark btn--lg">Frage stellen</a>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo" style="display:flex;align-items:center;gap:8px">
+          <img src="../images/logo.webp" alt="SunWave Switzerland" style="height:36px;display:block;border-radius:4px;">
+        </div>
+        <p class="footer__tagline">Schweizer Distributoder von SunWave Ceramica Keramik-Infrarotheizpaneelen. MuKEn-konform. BSRIA-getestet. Fraunhofer-zertifiziert.<br>Lieferung in alle Schweizer Kantone.</p>
+        <div class="footer__contact">
+          <a href="mailto:info@sunwaveswitzerland.com">info@sunwaveswitzerland.com</a><br>
+          <a href="tel:+41767637490">+41 76 763 74 90</a><br>
+          Glaserbergstrasse 27, 4056 Basel
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Produkt</h4>
+        <ul>
+          <li><a href="product.html">SunWave Ceramica</a></li>
+          <li><a href="product.html#variants">Design-Varianten</a></li>
+          <li><a href="product.html#specs">Vollständige Spezifikationen</a></li>
+          <li><a href="product.html#order">Jetzt bestellen</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Wissen</h4>
+        <ul>
+          <li><a href="research.html">Forschung &amp; Belege</a></li>
+          <li><a href="research.html">MuKEn-Leitfaden</a></li>
+          <li><a href="research.html">Wie Infrarot funktioniert</a></li>
+          <li><a href="index.html#calculator">Sparrechner</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Für</h4>
+        <ul>
+          <li><a href="for-solar.html">Solar-Installateure</a></li>
+          <li><a href="for-hotels.html">Hotels</a></li>
+          <li><a href="for-homes.html">Schweizer Haushalte</a></li>
+          <li><a href="for-offices.html">Büro</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Rechtliches</h4>
+        <ul>
+          <li><a href="legal.html">Impressum</a></li>
+          <li><a href="terms.html">AGB</a></li>
+          <li><a href="returns.html">Rückgabebedingungen</a></li>
+          <li><a href="shipping.html">Lieferung</a></li>
+          <li><a href="privacy.html">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div>&copy; 2026 SunWave Switzerland &mdash; Lumia Technologies GmbH &mdash; sunwaveswitzerland.com</div>
+      <div class="footer__certs">
+        <span class="footer__cert-tag">CE</span>
+        <span class="footer__cert-tag">ISO 9001</span>
+        <span class="footer__cert-tag">BSRIA Getestet</span>
+        <span class="footer__cert-tag">Fraunhofer WKI</span>
+        <span class="footer__cert-tag">MuKEn Konform</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+function switchPanelPhoto(thumb, src, label) {
+  document.querySelectorAll('.hp-prod__thumb').forEach(t => t.classList.remove('active'));
+  thumb.classList.add('active');
+  const main = document.getElementById('panel-main-photo');
+  if (main) { main.style.opacity='0.4'; main.src = src; main.onload = () => main.style.opacity='1'; }
+  const lbl = document.getElementById('panel-thumb-label');
+  if (lbl) lbl.textContent = label;
+}
+</script>
+</body>
+</html>

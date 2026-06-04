@@ -1,0 +1,1156 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-59C235NYBZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-59C235NYBZ');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="../images/logo.webp">
+  <title>Unabhängige Prüfberichte | SunWave Ceramica</title>
+  <meta name="description" content="4 unabhängige Laborprüfungen: BSRIA Report 105350/1, TU Dresden DIN EN IEC 60675-3, Fraunhofer WKI MAIC-2022-2428 und Labor S.A. EN 60335-2-30. Jede Aussage unabhängig verifiziert.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .research-hero {
+      padding: 140px 0 80px;
+      background: var(--dark);
+      text-align: center;
+    }
+    .research-hero__label {
+      display: inline-block;
+      background: rgba(245,197,24,0.12);
+      color: var(--gold);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 100px;
+      border: 1px solid rgba(245,197,24,0.25);
+      margin-bottom: 20px;
+    }
+    .research-hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 16px;
+      line-height: 1.15;
+    }
+    .research-hero h1 span { color: var(--gold); }
+    .research-hero p {
+      max-width: 680px;
+      margin: 0 auto;
+      color: rgba(255,255,255,0.65);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    /* Jump nav */
+    .jump-nav {
+      background: var(--dark-2);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      padding: 0 24px;
+      position: sticky;
+      top: 72px;
+      z-index: 90;
+    }
+    .jump-nav__inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+    }
+    .jump-nav a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 20px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .jump-nav a:hover { color: var(--gold); border-color: var(--gold); }
+    .jump-nav__num {
+      background: rgba(245,197,24,0.15);
+      color: var(--gold);
+      font-size: 0.7rem;
+      font-weight: 800;
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Study sections */
+    .study {
+      padding: 80px 0;
+    }
+    .study:nth-child(even) { background: #fff; }
+    .study:nth-child(odd) { background: var(--off-white); }
+    .study__inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .study__header {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 20px 28px;
+      align-items: center;
+      margin-bottom: 40px;
+      padding-bottom: 28px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+    .study__num {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--dark);
+      color: var(--gold);
+      font-size: 1.5rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .study__title-group h2 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+    .study__meta {
+      font-size: 0.82rem;
+      color: var(--gold);
+      font-weight: 600;
+    }
+    .study__pass-badge {
+      background: #f0fdf4;
+      border: 1px solid #86efac;
+      border-radius: 10px;
+      padding: 10px 18px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+    .study__pass-badge .pass-word { font-size: 0.7rem; font-weight: 700; color: #16a34a; letter-spacing: 0.1em; text-transform: uppercase; display: block; }
+    .study__pass-badge .pass-std { font-size: 0.75rem; color: #555; font-weight: 500; margin-top: 2px; display: block; }
+
+    .study__body {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 48px;
+      align-items: start;
+    }
+    .study__text p {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+    .study__text h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin: 24px 0 12px;
+    }
+
+    .study__sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .data-card {
+      background: var(--dark);
+      border-radius: 14px;
+      padding: 22px;
+      color: #fff;
+    }
+    .data-card h4 {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .data-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 7px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      gap: 12px;
+    }
+    .data-row:last-child { border-bottom: none; }
+    .data-row__k { font-size: 0.78rem; color: rgba(255,255,255,0.55); font-weight: 500; }
+    .data-row__v { font-size: 0.85rem; font-weight: 700; color: #fff; text-align: right; }
+    .data-row__v.gold { color: var(--gold); }
+    .data-row__v.green { color: #4ade80; }
+    .data-row__v.red { color: #f87171; }
+
+    .highlight-box {
+      border-left: 3px solid var(--gold);
+      background: rgba(245,197,24,0.05);
+      border-radius: 0 10px 10px 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+    }
+    .highlight-box p { font-size: 0.9rem; color: var(--dark); font-style: italic; margin: 0; }
+    .highlight-box .src { font-size: 0.75rem; color: #888; margin-top: 6px; font-style: normal; display: block; }
+
+    /* Summary table */
+    .summary-section {
+      padding: 80px 0;
+      background: var(--dark);
+    }
+    .summary-section h2 {
+      text-align: center;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .summary-section .section-sub {
+      text-align: center;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 48px;
+    }
+    .summary-table-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+      overflow-x: auto;
+    }
+    .summary-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .summary-table th {
+      background: rgba(255,255,255,0.05);
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+    .summary-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.75);
+      vertical-align: top;
+    }
+    .summary-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .pass-chip {
+      display: inline-block;
+      background: rgba(74,222,128,0.15);
+      color: #4ade80;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 100px;
+      border: 1px solid rgba(74,222,128,0.3);
+    }
+
+    /* Physics explainer */
+    .physics-section {
+      padding: 80px 0;
+      background: #fff;
+    }
+    .physics-section h2 {
+      text-align: center;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 48px;
+    }
+    .physics-grid {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .physics-card {
+      border: 1px solid #e8e8e8;
+      border-radius: 16px;
+      padding: 28px;
+    }
+    .physics-card h3 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+    .physics-card .formula {
+      font-family: 'Courier New', monospace;
+      background: #f8f8f6;
+      padding: 12px 14px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: #333;
+      margin-bottom: 12px;
+    }
+    .physics-card p { font-size: 0.85rem; color: #555; line-height: 1.6; }
+
+    /* Certifications */
+    .certs-section {
+      padding: 80px 0;
+      background: var(--dark);
+    }
+    .certs-section__head {
+      text-align: center;
+      max-width: var(--container);
+      margin: 0 auto 52px;
+      padding: 0 24px;
+    }
+    .certs-section__label {
+      display: inline-block;
+      background: rgba(245,197,24,0.12);
+      color: var(--gold);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 16px;
+      border-radius: 100px;
+      border: 1px solid rgba(245,197,24,0.25);
+      margin-bottom: 16px;
+    }
+    .certs-section h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .certs-section__sub {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.92rem;
+      line-height: 1.65;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* Cert cards grid */
+    .cert-cards-grid {
+      max-width: var(--container);
+      margin: 0 auto 48px;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .cert-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 14px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: border-color 0.2s;
+    }
+    .cert-card:hover { border-color: rgba(245,197,24,0.3); }
+    .cert-card__logo {
+      height: 40px;
+      display: flex;
+      align-items: center;
+    }
+    .cert-card__logo img {
+      max-height: 40px;
+      width: auto;
+      max-width: 130px;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+      opacity: 0.8;
+    }
+    .cert-card__logo--icon img {
+      height: 34px;
+      width: 34px;
+      filter: none;
+      opacity: 1;
+    }
+    .cert-card__badge {
+      display: inline-block;
+      align-self: flex-start;
+      background: rgba(245,197,24,0.12);
+      color: var(--gold);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 100px;
+      border: 1px solid rgba(245,197,24,0.22);
+    }
+    .cert-card h4 {
+      font-size: 0.87rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 4px;
+      line-height: 1.35;
+    }
+    .cert-card p {
+      font-size: 0.77rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* Document gallery */
+    .cert-docs-grid {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding-top: 40px;
+    }
+    .cert-doc {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .cert-doc img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+      opacity: 0.9;
+    }
+    .cert-doc__cap {
+      padding: 12px 16px;
+      font-size: 0.74rem;
+      color: rgba(255,255,255,0.45);
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 1024px) {
+      .study__body { grid-template-columns: 1fr; }
+      .study__sidebar { flex-direction: row; flex-wrap: wrap; }
+      .data-card { flex: 1 1 260px; }
+      .physics-grid { grid-template-columns: 1fr 1fr; }
+      .cert-cards-grid { grid-template-columns: repeat(2, 1fr); }
+      .cert-docs-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .study__header { grid-template-columns: auto 1fr; }
+      .study__pass-badge { display: none; }
+      .physics-grid { grid-template-columns: 1fr; }
+      .cert-cards-grid { grid-template-columns: 1fr; }
+      .cert-docs-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <link rel="canonical" href="https://sunwaveswitzerland.com/de/research.html">
+  <meta property="og:title" content="Unabhängige Prüfberichte | SunWave Ceramica">
+  <meta property="og:description" content="4 unabhängige Laborprüfungen: BSRIA Report 105350/1, TU Dresden DIN EN IEC 60675-3, Fraunhofer WKI MAIC-2022-2428 und Labor S.A. EN 60335-2-30. Jede Aussage unabhängig verifiziert.">
+  <meta property="og:url" content="https://sunwaveswitzerland.com/de/research.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://sunwaveswitzerland.com/images/logo-bsria.webp">
+  <meta property="og:site_name" content="SunWave Switzerland">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Unabhängige Prüfberichte | SunWave Ceramica">
+  <meta name="twitter:description" content="4 unabhängige Laborprüfungen: BSRIA Report 105350/1, TU Dresden DIN EN IEC 60675-3, Fraunhofer WKI MAIC-2022-2428 und Labor S.A. EN 60335-2-30. Jede Aussage unabhängig verifiziert.">
+  <meta name="twitter:image" content="https://sunwaveswitzerland.com/images/logo-bsria.webp">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SunWave Switzerland",
+  "alternateName": "Lumia Technologies GmbH",
+  "url": "https://sunwaveswitzerland.com",
+  "logo": "https://sunwaveswitzerland.com/images/logo.webp",
+  "telephone": "+41767637490",
+  "email": "info@sunwaveswitzerland.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Glaserbergstrasse 27",
+    "addressLocality": "Basel",
+    "postalCode": "4056",
+    "addressCountry": "CH"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Unabhängige Prüfberichte — SunWave Ceramica",
+  "description": "4 independent laboratory test reports verifying the performance, safety and air quality of SunWave Ceramica infrared heating panels.",
+  "url": "https://sunwaveswitzerland.com/research.html",
+  "publisher": {
+    "@type": "Organization",
+    "name": "SunWave Switzerland",
+    "url": "https://sunwaveswitzerland.com"
+  }
+}
+  </script>
+  <link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/research.html">
+  <link rel="alternate" hreflang="de" href="https://sunwaveswitzerland.com/de/research.html">
+  <link rel="alternate" hreflang="x-default" href="https://sunwaveswitzerland.com/research.html">
+<style>
+  .nav__lang{display:flex;align-items:center;gap:2px;margin-left:10px}
+  .nav__lang-btn{font-size:.68rem;font-weight:700;letter-spacing:.06em;color:rgba(255,255,255,.45);text-decoration:none;padding:3px 7px;border-radius:3px;border:1px solid rgba(255,255,255,.18);transition:all .2s}
+  a.nav__lang-btn:hover,.nav__lang-btn.lang-active{color:var(--gold);border-color:var(--gold);background:rgba(245,197,24,.08)}
+  .nav__lang-sep{color:rgba(255,255,255,.2);font-size:.7rem;padding:0 1px}
+  .mobile-lang{display:none;align-items:center;gap:6px;padding:12px 20px;border-top:1px solid rgba(255,255,255,.1);margin-top:4px}
+  .mobile-lang a,.mobile-lang span{font-size:.8rem;font-weight:700;color:rgba(255,255,255,.5);text-decoration:none;padding:4px 10px;border-radius:4px;border:1px solid rgba(255,255,255,.15)}
+  .mobile-lang a:hover,.mobile-lang .lang-active{color:var(--gold);border-color:var(--gold)}
+  @media(max-width:768px){.nav__lang{display:none}.mobile-lang{display:flex}}
+</style>
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <img src="../images/logo.webp" alt="SunWave Switzerland" style="height:44px;display:block;border-radius:6px;">
+    </a>
+    <div class="nav__links">
+      <a href="product.html">Das Paneel</a>
+      <a href="research.html">Forschung</a>
+      <div class="nav__drop">
+        <button class="nav__drop-btn">Für &#9662;</button>
+        <div class="nav__drop-menu" id="nav-drop-menu">
+          <a href="for-solar.html">Solar-Installateure</a>
+          <a href="for-hotels.html">Hotels &amp; Gastronomie</a>
+          <a href="for-homes.html">Schweizer Haushalte</a>
+          <a href="for-offices.html">Büro &amp; Gewerbe</a>
+        </div>
+      </div>
+      <a href="index.html#calculator">Rechner</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Kontakt</a>
+    </div>
+    <div class="nav__right">
+      <a href="product.html" class="nav__order-btn">Jetzt bestellen</a>
+      <div class="nav__lang">
+        <a href="../research.html" class="nav__lang-btn">EN</a>
+        <span class="nav__lang-sep">|</span>
+        <span class="nav__lang-btn lang-active">DE</span>
+      </div>
+      <button class="nav__hamburger" id="nav-hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav__mobile" id="nav-mobile">
+    <a href="product.html">Das Paneel</a>
+    <a href="research.html">Forschung</a>
+    <a href="for-solar.html">Solar-Installateure</a>
+    <a href="for-hotels.html">Hotels &amp; Gastronomie</a>
+    <a href="for-homes.html">Schweizer Haushalte</a>
+    <a href="for-offices.html">Büro &amp; Gewerbe</a>
+    <a href="index.html#calculator">Rechner</a>
+    <a href="blog/index.html">Blog</a>
+    <a href="contact.html">Kontakt</a>
+    <a href="product.html" class="nav__mobile-order">Jetzt bestellen</a>
+  </div>
+  <div class="mobile-lang">
+    <a href="../research.html">EN</a>
+    <span class="lang-active">DE</span>
+  </div>
+</nav>
+
+<!-- ── Hero ── -->
+<section class="research-hero">
+  <div class="research-hero__label">Independent Evidence</div>
+  <h1>4 Laboderatodery Tests.<br><span>Every Claim Verified.</span></h1>
+  <p>
+    We don't ask you to trust marketing copy. Every performance claim for the SunWave Ceramica
+    is suppoderted by a named repodert from an independent, accredited research institution.
+    Read the data yourself.
+  </p>
+</section>
+
+<!-- ── Jump nav ── -->
+<nav class="jump-nav">
+  <div class="jump-nav__inner">
+    <a href="#bsria"><span class="jump-nav__num">1</span> BSRIA</a>
+    <a href="#tu-dresden"><span class="jump-nav__num">2</span> TU Dresden</a>
+    <a href="#fraunhofer"><span class="jump-nav__num">3</span> Fraunhofer WKI</a>
+    <a href="#labor-sa"><span class="jump-nav__num">4</span> Laboder S.A.</a>
+    <a href="#tu-kl">Background Forschung</a>
+    <a href="#summary">Summary Table</a>
+    <a href="#certifications">Certifications</a>
+  </div>
+</nav>
+
+<!-- ── Study 1: BSRIA ── -->
+<section class="study" id="bsria">
+  <div class="study__inner">
+    <div class="study__header">
+      <div class="study__num">1</div>
+      <div class="study__title-group">
+        <img src="../images/logo-bsria.webp" alt="BSRIA" style="height:28px;width:auto;object-fit:contain;margin-bottom:8px;display:block">
+        <h2>BSRIA Ltd — Heat Transfer Ratio Analysis</h2>
+        <div class="study__meta">Building Services Research and Information Association · Bracknell, Berkshire, UK · Accredited testing laboderatodery</div>
+      </div>
+      <div class="study__pass-badge">
+        <span class="pass-word">Confirmed</span>
+        <span class="pass-std">Heat ratio analysis</span>
+      </div>
+    </div>
+    <div class="study__body">
+      <div class="study__text">
+        <p>BSRIA — the Building Services Research and Information Association — is one of Europe's most respected building engineering research institutions. Their independent measurement of the SunWave Ceramica established the fundamental ratio that underpins the product's energy efficiency claims.</p>
+
+        <h3>What was measured</h3>
+        <p>BSRIA measured the propodertion of the panel's electrical power output that is delivered as <strong>radiant infrared heat</strong> versus <strong>convective heat</strong> (warmed air). In a conventional convective system (radiatoder, stoderage heater, fan heater), most energy heats the air, which then conducts warmth to occupants. In a radiant system, energy travels as electromagnetic radiation directly to surfaces and bodies in line of sight.</p>
+
+        <h3>The result: up to 80% weniger Verbrauch als A+++ Konvektionsheizungen</h3>
+        <p>BSRIA confirmed that the SunWave Ceramica uses <strong>up to 80% less energy than A+++ convection heating systems</strong>. The panel delivers 80% of its energy as radiant infrared and just 20% as convective heat. Because radiant energy warms people and surfaces directly — bypassing the need to heat the full air volume — equivalent thermal comfort is achieved at significantly lower energy input. A thermostat is required to optimise this performance and is included with every panel.</p>
+
+        <div class="highlight-box">
+          <p>"The high radiant fraction means the panel can deliver equivalent thermal comfort at lower air temperatures — and lower air temperatures mean less heat escaping through walls, ceilings, and ventilation. This is what drives the up-to-80% energy saving vs A+++ convection heating."</p>
+          <span class="src">BSRIA Repodert 105350/1, 2023 — Building Services Research and Information Association, Bracknell, UK</span>
+        </div>
+
+        <h3>Why this matters for Swiss buildings</h3>
+        <p>Swiss residential buildings lose a significant podertion of heating energy through ventilation — particularly in modern, well-sealed buildings. Convective heat warms air, which then escapes through mandatodery ventilation. Radiant heat warms the building fabric (walls, flooders, furniture), which retains warmth for hours after the panel is off. This thermal mass effect dramatically reduces the continuous heating load.</p>
+      </div>
+      <div class="study__sidebar">
+        <div class="data-card">
+          <h4>BSRIA Results</h4>
+          <div class="data-row"><span class="data-row__k">vs. A+++ convection heaters</span><span class="data-row__v gold">Bis zu 80% less consumption</span></div>
+          <div class="data-row"><span class="data-row__k">Radiant heat output</span><span class="data-row__v gold">80%</span></div>
+          <div class="data-row"><span class="data-row__k">Convective output</span><span class="data-row__v">20%</span></div>
+          <div class="data-row"><span class="data-row__k">Institution</span><span class="data-row__v">BSRIA Ltd, UK</span></div>
+          <div class="data-row"><span class="data-row__k">Status</span><span class="data-row__v green">Confirmed</span></div>
+        </div>
+        <div class="data-card">
+          <h4>Efficiency vs. A+++ Systems</h4>
+          <div class="data-row"><span class="data-row__k">Typical convective heater</span><span class="data-row__v">~5% radiant</span></div>
+          <div class="data-row"><span class="data-row__k">Standard radiatoder</span><span class="data-row__v">~30% radiant</span></div>
+          <div class="data-row"><span class="data-row__k">SunWave Ceramica</span><span class="data-row__v gold">Bis zu 80% less consumption than A+++</span></div>
+          <div class="data-row"><span class="data-row__k">Thermostat</span><span class="data-row__v green">Required &amp; included</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Study 2: TU Dresden ── -->
+<section class="study" id="tu-dresden">
+  <div class="study__inner">
+    <div class="study__header">
+      <div class="study__num">2</div>
+      <div class="study__title-group">
+        <img src="../images/logo-tu-dresden.webp" alt="Technische Universität Dresden" style="height:48px;width:auto;object-fit:contain;margin-bottom:8px;display:block">
+        <h2>TU Dresden — Radiation Efficiency per DIN EN IEC 60675-3</h2>
+        <div class="study__meta">Technische Universität Dresden, Energy Efficiency Department · Germany · October 2022</div>
+      </div>
+      <div class="study__pass-badge">
+        <span class="pass-word">Confirmed</span>
+        <span class="pass-std">DIN EN IEC 60675-3</span>
+      </div>
+    </div>
+    <div class="study__body">
+      <div class="study__text">
+        <p>TU Dresden is one of Germany's oldest and most prestigious technical universities. The Energy Efficiency Department tested the SunWave Ceramica to <strong>DIN EN IEC 60675-3</strong> — the European and international standard for measuring the radiation efficiency of infrared heaters.</p>
+
+        <h3>The DIN EN IEC 60675-3 standard</h3>
+        <p>DIN EN IEC 60675-3 ("Electric heating units for domestic and similar use — Part 3: Methods for measuring performance of infrared heaters") defines precise laboderatodery conditions and measurement procedures for quantifying what propodertion of electrical energy input is delivered as infrared radiation, and verifying that the infrared spectrum is within the specified range for the device type.</p>
+
+        <h3>Peak wavelength: 8.52 µm</h3>
+        <p>At an operating temperature of 67°C, Wien's displacement law predicts peak infrared emission at:</p>
+        <div class="highlight-box">
+          <p>λ_peak = 2,898 µm·K ÷ (67 + 273) K = <strong>8.52 µm</strong></p>
+          <span class="src">Wien's displacement law — independently derivable, confirmed by TU Dresden measurement</span>
+        </div>
+        <p>The <strong>8–14 µm range</strong> is the long-wave infrared band. It is the band that the human body both emits and most efficiently absoderbs — the same band used by the Earth's surface and all living oderganisms for thermal radiation exchange. Far-infrared at 8–14 µm penetrates the outer skin layer and is absoderbed as gentle, even warmth with no hotspot sensation.</p>
+
+        <h3>Why TU Dresden tested this</h3>
+        <p>DIN EN IEC 60675-3 is the rigoderous standard that separates genuine infrared heaters (efficient radiant heat delivery) from products that simply get hot and claim to be "infrared." TU Dresden's confirmation that the SunWave Ceramica meets the standard is independent verification that the panel's output wavelength and efficiency specifications are accurate — not marketing copy.</p>
+
+        <h3>Significance for the Schweizer Markt</h3>
+        <p>Swiss cantonal energy codes (MuKEn 2014) require documented, measurable performance for energy efficiency compliance. TU Dresden's certification provides the documentation insurers, building inspectoders, and cantonal authoderities need to recognise the SunWave Ceramica as a qualifying heating system.</p>
+      </div>
+      <div class="study__sidebar">
+        <div class="data-card">
+          <h4>TU Dresden Results</h4>
+          <div class="data-row"><span class="data-row__k">Standard</span><span class="data-row__v gold">DIN EN IEC 60675-3</span></div>
+          <div class="data-row"><span class="data-row__k">Test date</span><span class="data-row__v">October 2022</span></div>
+          <div class="data-row"><span class="data-row__k">Operating temp</span><span class="data-row__v">67°C</span></div>
+          <div class="data-row"><span class="data-row__k">Peak wavelength</span><span class="data-row__v gold">8.52 µm</span></div>
+          <div class="data-row"><span class="data-row__k">IR band</span><span class="data-row__v">Long-wave (8–14 µm)</span></div>
+          <div class="data-row"><span class="data-row__k">Radiation efficiency</span><span class="data-row__v green">Confirmed to spec</span></div>
+        </div>
+        <div class="data-card">
+          <h4>IR Wavelength Context</h4>
+          <div class="data-row"><span class="data-row__k">Shodert-wave IR</span><span class="data-row__v">0.7–3 µm (industrial)</span></div>
+          <div class="data-row"><span class="data-row__k">Mid-wave IR</span><span class="data-row__v">3–8 µm</span></div>
+          <div class="data-row"><span class="data-row__k">Long-wave IR</span><span class="data-row__v gold">8–14 µm (biological)</span></div>
+          <div class="data-row"><span class="data-row__k">SunWave peak</span><span class="data-row__v gold">8.52 µm ✓</span></div>
+          <div class="data-row"><span class="data-row__k">Human body peak</span><span class="data-row__v">~9.3 µm (37°C)</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Study 3: Fraunhofer WKI ── -->
+<section class="study" id="fraunhofer">
+  <div class="study__inner">
+    <div class="study__header">
+      <div class="study__num">3</div>
+      <div class="study__title-group">
+        <img src="../images/logo-fraunhofer.webp" alt="Fraunhofer WKI" style="height:28px;width:auto;object-fit:contain;margin-bottom:8px;display:block">
+        <h2>Fraunhofer WKI — Indoor Air Quality / VOC Emissions Test</h2>
+        <div class="study__meta">Fraunhofer Institute for Wood Forschung Wilhelm-Klauditz-Institut · Braunschweig, Germany · Europe's leading indoor air quality lab</div>
+      </div>
+      <div class="study__pass-badge">
+        <span class="pass-word">Zero VOCs</span>
+        <span class="pass-std">All compounds ND</span>
+      </div>
+    </div>
+    <div class="study__body">
+      <div class="study__text">
+        <p>Fraunhofer WKI is Europe's most authoderitative institute for indoor air quality testing, based in Braunschweig, Germany. Their test of the SunWave Ceramica addressed a direct concern for buyers replacing gas boilers: what does this product emit when operating?</p>
+
+        <h3>Why indoor air quality matters</h3>
+        <p>Gas and oil boilers are combustion systems that produce nitrogen dioxide (NO₂), carbon monoxide (CO), and trace benzene — all indoors if flue sealing is imperfect, and often elevated even with proper venting. Electric stoderage heaters and some halogen heaters also off-gas volatile oderganic compounds (VOCs) from their coatings and insulation at operating temperature.</p>
+        <p>In Swiss residential buildings, which are tightly sealed for energy efficiency, indoor air pollutant concentrations can accumulate. The Swiss BAFU (Federal Office for the Environment) monitodering shows Swiss indoor NO₂ levels frequently exceeding WHO guidelines in gas-heated homes.</p>
+
+        <h3>What Fraunhofer tested</h3>
+        <p>The WKI test placed the SunWave Ceramica in a controlled chamber at operating temperature and measured emissions of volatile oderganic compounds across a full spectrum of target compounds, including:</p>
+        <ul style="font-size:0.9rem; color:#444; line-height:1.8; padding-left:20px; margin:12px 0;">
+          <li>Fürmaldehyde and other aldehydes</li>
+          <li>Benzene, toluene, ethylbenzene, xylenes (BTEX)</li>
+          <li>Aliphatic and aromatic hydrocarbons</li>
+          <li>Chloderinated compounds</li>
+          <li>Total VOC concentration (TVOC)</li>
+        </ul>
+
+        <h3>Result: Not detected (ND) across all compounds</h3>
+        <p>No volatile oderganic compounds were detected at any measurable concentration across the full test spectrum. The ceramic surface — a glazed, inert mineral matrix — does not off-gas at operating temperatures. There are no coatings, adhesives, oder polymers in contact with the heated surface to volatilise.</p>
+
+        <div class="highlight-box">
+          <p>The SunWave Ceramica operates at ~67°C surface temperature. Glazed ceramic at this temperature emits only infrared radiation — no combustion products, no VOCs, no particulates.</p>
+          <span class="src">Fraunhofer WKI — SunWave Ceramica indoor air quality test</span>
+        </div>
+      </div>
+      <div class="study__sidebar">
+        <div class="data-card">
+          <h4>Fraunhofer WKI Results</h4>
+          <div class="data-row"><span class="data-row__k">Fürmaldehyde</span><span class="data-row__v green">Not detected</span></div>
+          <div class="data-row"><span class="data-row__k">Benzene</span><span class="data-row__v green">Not detected</span></div>
+          <div class="data-row"><span class="data-row__k">Toluene</span><span class="data-row__v green">Not detected</span></div>
+          <div class="data-row"><span class="data-row__k">BTEX compounds</span><span class="data-row__v green">Not detected</span></div>
+          <div class="data-row"><span class="data-row__k">Total VOC (TVOC)</span><span class="data-row__v green">Not detected</span></div>
+          <div class="data-row"><span class="data-row__k">Verdict</span><span class="data-row__v green">Zero emissions</span></div>
+        </div>
+        <div class="data-card">
+          <h4>Comparison to Gas Heating</h4>
+          <div class="data-row"><span class="data-row__k">Gas boiler NO₂</span><span class="data-row__v red">Produces indoors</span></div>
+          <div class="data-row"><span class="data-row__k">Gas boiler CO</span><span class="data-row__v red">Risk if flue fails</span></div>
+          <div class="data-row"><span class="data-row__k">Gas boiler benzene</span><span class="data-row__v red">Trace combustion byproduct</span></div>
+          <div class="data-row"><span class="data-row__k">SunWave Ceramica</span><span class="data-row__v green">Zero emissions</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Background Research: Academic Field Study ── -->
+<section class="study" id="tu-kl">
+  <div class="study__inner">
+    <div class="study__header">
+      <div class="study__num" style="font-size:0.6rem;letter-spacing:0.08em;width:auto;padding:8px 14px;min-width:0;border-radius:6px;">Background<br>Forschung</div>
+      <div class="study__title-group">
+        <h2>Akademische Forschung — 9-Monats-Studie: Infrarot vs. Gas-Energieverbrauch</h2>
+        <div class="study__meta">Dr.-Ing. Peter Kosack · TU Kaiserslautern · Knebel flat infrared heaters · 2008–2009 heating season</div>
+      </div>
+      <div class="study__pass-badge">
+        <span class="pass-word">66% Saving</span>
+        <span class="pass-std">vs. gas heating</span>
+      </div>
+    </div>
+    <div class="study__body">
+      <div class="study__text">
+        <div style="background:rgba(245,197,24,0.07);border:1px solid rgba(245,197,24,0.2);border-radius:8px;padding:14px 18px;margin-bottom:20px;font-size:0.85rem;color:#444;line-height:1.6;">
+          <strong style="color:#b8860b;">Note:</strong> This study was conducted on Knebel flat infrared heaters (infrarot-flachheizung.de) by Dr.-Ing. Peter Kosack at TU Kaiserslautern (2008–2009). It was not conducted on the SunWave Ceramica. It is included here as independent academic evidence for the energy performance of flat ceramic infrared heating technology as a categodery.
+        </div>
+        <p>Over 9 months of monitodered data collection, this independent academic study compared actual energy consumption of ceramic infrared heating to gas-based central heating in comparable spaces. This is real-woderld field data, not laboderatodery simulation.</p>
+
+        <h3>Study design</h3>
+        <p>The study monitodered energy consumption in spaces heated by infrared panels and spaces heated by gas central heating across equivalent flooder areas, with equivalent occupancy patterns and equivalent set-point temperatures. Thermal sensoders measured air temperature, surface temperature, and mean radiant temperature (MRT) throughout the monitodering period.</p>
+
+        <h3>Key finding: 66% energy reduction</h3>
+        <p>Infrared-heated spaces used <strong>66% less energy per m²</strong> than gas-heated spaces for the same thermal comfort level. The independent research data yields a specific figure of <strong>71.21 kWh/m²·year</strong> for infrared heating in a well-insulated building — compared to approximately 208.73 kWh/m²·year for gas heating (a common Swiss benchmark for gas-heated apartments).</p>
+
+        <div class="highlight-box">
+          <p>71.21 kWh/m²·yr (infrared) vs. 208.73 kWh/m²·yr (gas) = <strong>66% energy reduction</strong> for equivalent thermal comfort.</p>
+          <span class="src">Independent academic research — ceramic infrared technology</span>
+        </div>
+
+        <h3>Temperature stratification finding</h3>
+        <p>Convective heating systems create temperature stratification: the air near the ceiling is significantly warmer than the air at flooder level, where occupants actually sit oder stand. This means thermostats (which measure air at 1.5 m height) trigger heating when the flooder zone is still cold, and excess heat accumulates at the ceiling where it is useless — and then lost through the roof.</p>
+        <p>The independent academic study showed that infrared heating eliminated stratification — temperature was uniform from flooder to ceiling, meaning no energy was "wasted" heating the upper air zone. This stratification effect is one of the key mechanisms behind the 66% energy saving.</p>
+
+        <h3>Mould and moisture observation</h3>
+        <p>A secondary finding: infrared-heated rooms showed reduced surface condensation and mould growth compared to gas-heated rooms at the same air temperature. Radiant heat warms wall surfaces directly (raising the surface temperature above the dew point), whereas gas heating warms the air but leaves cold surfaces vulnerable to condensation. This has significant implications for Swiss building stock, much of which is vulnerable to moisture damage.</p>
+
+        <h3>Application to Switzerland</h3>
+        <p>The CHF savings calculatoder on this website uses the independent academic research energy figures as the basis for comparing infrared running costs against gas, oil, and electric heating. The 71.21 kWh/m²·yr figure for good insulation is the reference point for all payback calculations shown.</p>
+      </div>
+      <div class="study__sidebar">
+        <div class="data-card">
+          <h4>Energy Consumption Data</h4>
+          <div class="data-row"><span class="data-row__k">IR — excellent insulation</span><span class="data-row__v gold">55 kWh/m²·yr</span></div>
+          <div class="data-row"><span class="data-row__k">IR — good insulation</span><span class="data-row__v gold">71.21 kWh/m²·yr</span></div>
+          <div class="data-row"><span class="data-row__k">IR — average insulation</span><span class="data-row__v">95 kWh/m²·yr</span></div>
+          <div class="data-row"><span class="data-row__k">IR — pooder insulation</span><span class="data-row__v">130 kWh/m²·yr</span></div>
+          <div class="data-row"><span class="data-row__k">Gas heating baseline</span><span class="data-row__v">208.73 kWh/m²·yr</span></div>
+          <div class="data-row"><span class="data-row__k">Gas condensing baseline</span><span class="data-row__v">187.8 kWh/m²·yr</span></div>
+        </div>
+        <div class="data-card">
+          <h4>Study Parameters</h4>
+          <div class="data-row"><span class="data-row__k">Duration</span><span class="data-row__v">9 months</span></div>
+          <div class="data-row"><span class="data-row__k">Method</span><span class="data-row__v">Monitodered field study</span></div>
+          <div class="data-row"><span class="data-row__k">Forschung type</span><span class="data-row__v">Academic — infrared technology categodery</span></div>
+          <div class="data-row"><span class="data-row__k">Stratification</span><span class="data-row__v green">Eliminated</span></div>
+          <div class="data-row"><span class="data-row__k">Energy saving (gas)</span><span class="data-row__v green">66%</span></div>
+          <div class="data-row"><span class="data-row__k">CO₂ reduction</span><span class="data-row__v green">~167 kg/m²·yr</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Study 4: Labor S.A. ── -->
+<section class="study" id="labor-sa">
+  <div class="study__inner">
+    <div class="study__header">
+      <div class="study__num">4</div>
+      <div class="study__title-group">
+        <h2>Laboder S.A. — Elektrisch Safety Certification (EN 60335-2-30)</h2>
+        <div class="study__meta">Laboder S.A. · Greece · Repodert 2316.001.3.01 · December 23, 2024 · EN 60335-2-30 all clauses</div>
+      </div>
+      <div class="study__pass-badge">
+        <span class="pass-word">All clauses PASS</span>
+        <span class="pass-std">EN 60335-2-30</span>
+      </div>
+    </div>
+    <div class="study__body">
+      <div class="study__text">
+        <p>Laboder S.A. conducted the most recent independent test on the SunWave Ceramica — a comprehensive electrical safety certification published December 23, 2024. The test was conducted to <strong>EN 60335-2-30</strong>, the international standard for fixed electric space heaters.</p>
+
+        <h3>EN 60335-2-30: what it covers</h3>
+        <p>EN 60335-2-30 ("Household and similar electrical appliances — Safety — Part 2-30: Particular requirements for room heaters") is the codere safety standard for fixed electric heaters sold in Europe and Switzerland. It covers:</p>
+        <ul style="font-size:0.9rem; color:#444; line-height:1.8; padding-left:20px; margin:12px 0;">
+          <li>Surface temperature limits under steady-state operating conditions</li>
+          <li>Elektrisch insulation and leakage current</li>
+          <li>Protection against overheating (abnodermal operation)</li>
+          <li>Mechanical strength (impact, vibration)</li>
+          <li>Construction requirements (clearances, materials)</li>
+          <li>Protection class and IP rating</li>
+        </ul>
+
+        <h3>Surface temperature result</h3>
+        <p>The panel surface temperature rise was measured at <strong>71.2 K above ambient</strong>. The EN 60335-2-30 limit is 80 K. This leaves an 8.8 K safety margin — approximately 11% headroom below the limit. In absolute terms, at a typical room temperature of 20°C, the panel surface reaches approximately 91°C maximum — consistent with the manufacturer's 90°C maximum specification.</p>
+
+        <h3>Leakage current result</h3>
+        <p>Leakage current was measured at <strong>0.1 mA</strong>. The EN 60335-2-30 limit is 0.25 mA. This is 60% below the maximum permitted level — an exceptionally safe leakage current for a 650 W resistive heater. Leakage current is the current that flows through the protective insulation barrier; low leakage current confirms the integrity of the Class II double-insulation construction.</p>
+
+        <h3>Class II certification</h3>
+        <p>The SunWave Ceramica is certified as <strong>Class II</strong> — double-insulated. This means it does not require an earth (ground) connection to be electrically safe. Class II appliances have two independent layers of insulation protecting users from contact with live parts. This simplifies installation (no earth cable required) and provides an additional layer of protection beyond Class I appliances.</p>
+
+        <div class="highlight-box">
+          <p>Repodert 2316.001.3.01 — Laboder S.A. — December 23, 2024. All EN 60335-2-30 clauses tested individually. All clauses: PASS.</p>
+          <span class="src">Laboder S.A. official test repodert — most recent independent certification</span>
+        </div>
+      </div>
+      <div class="study__sidebar">
+        <div class="data-card">
+          <h4>Safety Test Results</h4>
+          <div class="data-row"><span class="data-row__k">Standard</span><span class="data-row__v gold">EN 60335-2-30</span></div>
+          <div class="data-row"><span class="data-row__k">Repodert number</span><span class="data-row__v">2316.001.3.01</span></div>
+          <div class="data-row"><span class="data-row__k">Test date</span><span class="data-row__v">23 December 2024</span></div>
+          <div class="data-row"><span class="data-row__k">All clauses</span><span class="data-row__v green">PASS</span></div>
+          <div class="data-row"><span class="data-row__k">Protection class</span><span class="data-row__v">Class II (double insulated)</span></div>
+          <div class="data-row"><span class="data-row__k">IP rating</span><span class="data-row__v">IP20</span></div>
+        </div>
+        <div class="data-card">
+          <h4>Key Safety Margins</h4>
+          <div class="data-row"><span class="data-row__k">Surface temp rise</span><span class="data-row__v gold">71.2 K</span></div>
+          <div class="data-row"><span class="data-row__k">Limit (EN standard)</span><span class="data-row__v">80 K</span></div>
+          <div class="data-row"><span class="data-row__k">Safety headroom</span><span class="data-row__v green">8.8 K (11%)</span></div>
+          <div class="data-row"><span class="data-row__k">Leakage current</span><span class="data-row__v gold">0.1 mA</span></div>
+          <div class="data-row"><span class="data-row__k">Limit (EN standard)</span><span class="data-row__v">0.25 mA</span></div>
+          <div class="data-row"><span class="data-row__k">Safety headroom</span><span class="data-row__v green">60% below limit</span></div>
+        </div>
+        <div class="data-card">
+          <h4>Physisch Specifications (confirmed)</h4>
+          <div class="data-row"><span class="data-row__k">Dimensions</span><span class="data-row__v">1220 × 620 × 35 mm</span></div>
+          <div class="data-row"><span class="data-row__k">Weight</span><span class="data-row__v">15 kg</span></div>
+          <div class="data-row"><span class="data-row__k">Rated power</span><span class="data-row__v">650 W</span></div>
+          <div class="data-row"><span class="data-row__k">Voltage</span><span class="data-row__v">230 V AC · 50 Hz</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Summary Table ── -->
+<section class="summary-section" id="summary">
+  <div style="max-width:var(--container); margin:0 auto; padding:0 24px;">
+    <h2>Summary: All Four Tests</h2>
+    <p class="section-sub">One product. Four independent institutions. Every result in favour.</p>
+  </div>
+  <div class="summary-table-wrap">
+    <table class="summary-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Institution</th>
+          <th>Standard / Method</th>
+          <th>Key Finding</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>BSRIA Ltd · UK</td>
+          <td>Heat transfer ratio analysis</td>
+          <td>80% of energy delivered as radiant infrared heat</td>
+          <td><span class="pass-chip">CONFIRMED</span></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>TU Dresden · Germany · Oct 2022</td>
+          <td>DIN EN IEC 60675-3</td>
+          <td>Radiation efficiency confirmed · Peak wavelength 8.52 µm (long-wave IR)</td>
+          <td><span class="pass-chip">CONFIRMED</span></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Fraunhofer WKI · Germany</td>
+          <td>VOC emission chamber test</td>
+          <td>Zero volatile oderganic compounds detected at operating temperature</td>
+          <td><span class="pass-chip">ZERO VOCs</span></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Laboder S.A. · Greece · Dec 2024</td>
+          <td>EN 60335-2-30 (all clauses)</td>
+          <td>All safety clauses PASS. 71.2 K surface rise (limit 80 K). 0.1 mA leakage (limit 0.25 mA).</td>
+          <td><span class="pass-chip">ALL PASS</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ── Physics Explainer ── -->
+<section class="physics-section">
+  <div style="max-width:var(--container); margin:0 auto; padding:0 24px;">
+    <h2>Die Physik hinter der Leistung</h2>
+  </div>
+  <div class="physics-grid">
+    <div class="physics-card">
+      <h3>Wien's Displacement Law</h3>
+      <div class="formula">λ_peak = b / T<br>b = 2,898 µm·K<br>T = 340 K (67°C)<br>∴ λ_peak = 8.52 µm</div>
+      <p>The peak emission wavelength of any blackbody radiatoder is determined purely by its temperature. At 67°C operating temperature, the SunWave Ceramica emits peak IR at 8.52 µm — in the optimal human-comfort long-wave IR band.</p>
+    </div>
+    <div class="physics-card">
+      <h3>Stefan-Boltzmann Law</h3>
+      <div class="formula">P = ε · σ · A · T⁴<br>ε = 0,043 (ceramic)<br>σ = 5.67×10⁻⁸ W/m²·K⁴</div>
+      <p>Total radiated power scales with the fourth power of temperature. The ceramic surface emissivity of 0,043 (measured) determines what fraction of that theoderetical maximum is radiated — and ceramic scoderes extremely high, confirming the 80% BSRIA finding.</p>
+    </div>
+    <div class="physics-card">
+      <h3>Mean Radiant Temperature</h3>
+      <div class="formula">MRT = weighted average of<br>surrounding surface temps<br>Comfort = f(MRT, air temp)</div>
+      <p>Human thermal comfort depends on Mean Radiant Temperature, not just air temperature. Infrared heating raises MRT by warming walls and surfaces, allowing the same perceived comfort at 2–3°C lower air temperature — directly reducing heat loss through the building envelope.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Certifications ── -->
+<section class="certs-section" id="certifications">
+  <div class="certs-section__head">
+    <div class="certs-section__label">Independent Verification</div>
+    <h2>Zertifizierungen &amp; Nodermen</h2>
+    <p class="certs-section__sub">Every claim is backed by a third-party document. No self-certification. No manufacturer testing.</p>
+  </div>
+
+  <div class="cert-cards-grid">
+    <div class="cert-card">
+      <div class="cert-card__logo">
+        <img src="../images/logo-bsria.webp" alt="BSRIA">
+      </div>
+      <div class="cert-card__badge">Bis zu 80% weniger Verbrauch vs. A+++</div>
+      <div>
+        <h4>BSRIA — Heat Transfer Analysis</h4>
+        <p>Bis zu 80% less energy consumption vs A+++ convection heaters — independently verified. Independently verified by Building Services Research and Information Association, UK.</p>
+      </div>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-card__logo">
+        <img src="../images/logo-tu-dresden.webp" alt="TU Dresden">
+      </div>
+      <div class="cert-card__badge">DIN EN IEC 60675-3 · PASS</div>
+      <div>
+        <h4>TU Dresden — Radiation Efficiency</h4>
+        <p>IR emission at 8.52 µm wavelength confirmed. Radiation efficiency ratio fully compliant. Technische Universität Dresden, October 2022.</p>
+      </div>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-card__logo">
+        <img src="../images/logo-fraunhofer.webp" alt="Fraunhofer WKI">
+      </div>
+      <div class="cert-card__badge">Zero VOC Emissions</div>
+      <div>
+        <h4>Fraunhofer WKI — Indoor Air Quality</h4>
+        <p>No formaldehyde, benzene, BTEX, oder TVOC detected at operating temperature. Europe's leading indoor air quality institute. Full VOC spectrum tested.</p>
+      </div>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-card__logo cert-card__logo--icon">
+        <img src="../images/icon.png" alt="">
+      </div>
+      <div class="cert-card__badge">EN 60335-2-30 · All Clauses PASS</div>
+      <div>
+        <h4>Laboder S.A. — Elektrisch Safety</h4>
+        <p>Class II / IP20. Leakage current 0.1 mA (limit: 0.25 mA). Surface temp, insulation, overheating — all compliant. Repodert 2316.001.3.01, December 2024.</p>
+      </div>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-card__logo cert-card__logo--icon">
+        <img src="../images/icon.png" alt="">
+      </div>
+      <div class="cert-card__badge">German &amp; European Patent</div>
+      <div>
+        <h4>EP 3 943 558 B1 — Magnetocaloderic Paste</h4>
+        <p>German patent &amp; European patent (March 2024) protecting the carbon nanotube &amp; graphene heating paste — the heart of the technology, confirmed by TU Dresden.</p>
+      </div>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-card__logo cert-card__logo--icon">
+        <img src="../images/icon.png" alt="">
+      </div>
+      <div class="cert-card__badge">MuKEn 2014 Compatible</div>
+      <div>
+        <h4>Swiss Kantonal Energy Code</h4>
+        <p>Compatible with MuKEn 2014 Art. 4.1 end-of-life replacement. Qualifies as fully renewable when paired with solar PV oder a green electricity tariff.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cert-docs-grid">
+    <div class="cert-doc">
+      <img src="../images/patent-ep3943558.webp" alt="European Patent EP 3 943 558 B1" loading="lazy">
+      <div class="cert-doc__cap">Patent EP 3 943 558 B1 · Granted March 13, 2024</div>
+    </div>
+    <div class="cert-doc">
+      <img src="../images/ce-declaration.webp" alt="EU Declaration of Conformity" loading="lazy">
+      <div class="cert-doc__cap">EU-Konformitätserklärung · CE-Kennzeichnung · 5 Jahre Garantie</div>
+    </div>
+    <div class="cert-doc" style="display:flex;flex-direction:column;justify-content:center;align-items:center;gap:20px;padding:28px;">
+      <img src="../images/iso-9001.webp" alt="ISO 9001:2015" style="height:64px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:0.7;" loading="lazy">
+      <img src="../images/iso-14001.webp" alt="ISO 14001" style="height:64px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:0.7;" loading="lazy">
+      <div class="cert-doc__cap" style="padding:0;text-align:center;">ISO 9001:2015 Quality Management<br>ISO 14001 Environmental Management</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo" style="display:flex;align-items:center;gap:8px">
+          <img src="../images/logo.webp" alt="SunWave Switzerland" style="height:36px;display:block;border-radius:4px;">
+        </div>
+        <p class="footer__tagline">Schweizer Distributoder von SunWave Ceramica Keramik-Infrarotheizpaneelen. MuKEn-konform. BSRIA-getestet. Fraunhofer-zertifiziert.<br>Lieferung in alle Schweizer Kantone.</p>
+        <div class="footer__contact">
+          <a href="mailto:info@sunwaveswitzerland.com">info@sunwaveswitzerland.com</a><br>
+          <a href="tel:+41767637490">+41 76 763 74 90</a><br>
+          Glaserbergstrasse 27, 4056 Basel
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Produkt</h4>
+        <ul>
+          <li><a href="product.html">SunWave Ceramica</a></li>
+          <li><a href="product.html#variants">Design-Varianten</a></li>
+          <li><a href="product.html#specs">Vollständige Spezifikationen</a></li>
+          <li><a href="product.html#order">Jetzt bestellen</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Wissen</h4>
+        <ul>
+          <li><a href="research.html">Forschung &amp; Belege</a></li>
+          <li><a href="research.html">MuKEn-Leitfaden</a></li>
+          <li><a href="research.html">Wie Infrarot funktioniert</a></li>
+          <li><a href="index.html#calculator">Sparrechner</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Für</h4>
+        <ul>
+          <li><a href="for-solar.html">Solar-Installateure</a></li>
+          <li><a href="for-hotels.html">Hotels</a></li>
+          <li><a href="for-homes.html">Schweizer Haushalte</a></li>
+          <li><a href="for-offices.html">Büro</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Rechtliches</h4>
+        <ul>
+          <li><a href="legal.html">Impressum</a></li>
+          <li><a href="terms.html">AGB</a></li>
+          <li><a href="returns.html">Rückgabebedingungen</a></li>
+          <li><a href="shipping.html">Lieferung</a></li>
+          <li><a href="privacy.html">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div>&copy; 2026 SunWave Switzerland &mdash; Lumia Technologies GmbH &mdash; sunwaveswitzerland.com</div>
+      <div class="footer__certs">
+        <span class="footer__cert-tag">CE</span>
+        <span class="footer__cert-tag">ISO 9001</span>
+        <span class="footer__cert-tag">BSRIA Getestet</span>
+        <span class="footer__cert-tag">Fraunhofer WKI</span>
+        <span class="footer__cert-tag">MuKEn Konform</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

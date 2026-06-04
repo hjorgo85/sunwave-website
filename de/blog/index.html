@@ -1,0 +1,423 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-59C235NYBZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-59C235NYBZ');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="../../images/logo.webp">
+  <title>Infrarotheizung Blog | SunWave Switzerland</title>
+  <meta name="description" content="Expertenbeiträge zur Infrarotheizung in der Schweiz: MuKEn 2014-Konformität, Solar-PV-Kombination, unabhängige Labortestergebnisse und Gas vs. Infrarot Kostenvergleiche.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    .blog-hero {
+      padding: 140px 0 80px;
+      background: var(--dark);
+      text-align: center;
+    }
+    .blog-hero__label {
+      display: inline-block;
+      background: rgba(245,197,24,0.12);
+      color: var(--gold);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 100px;
+      border: 1px solid rgba(245,197,24,0.25);
+      margin-bottom: 20px;
+    }
+    .blog-hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .blog-hero h1 span { color: var(--gold); }
+    .blog-hero p {
+      max-width: 600px;
+      margin: 0 auto;
+      color: rgba(255,255,255,0.65);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .blog-main {
+      background: var(--off-white);
+      padding: 80px 0 120px;
+    }
+    .blog-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    .blog-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    }
+    .blog-card--featured {
+      grid-column: 1 / -1;
+      flex-direction: row;
+    }
+    .blog-card__img {
+      background: var(--dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      flex-shrink: 0;
+    }
+    .blog-card--featured .blog-card__img {
+      width: 380px;
+      min-height: 300px;
+    }
+    .blog-card:not(.blog-card--featured) .blog-card__img {
+      height: 180px;
+    }
+    .blog-card__body {
+      padding: 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card__tag {
+      display: inline-block;
+      background: rgba(245,197,24,0.1);
+      color: #a07800;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 14px;
+    }
+    .blog-card h2 {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--dark);
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+    .blog-card--featured h2 {
+      font-size: 1.5rem;
+    }
+    .blog-card p {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      flex: 1;
+    }
+    .blog-card__meta {
+      font-size: 0.78rem;
+      color: #999;
+      margin-bottom: 16px;
+    }
+    .blog-card__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--dark);
+      text-decoration: none;
+      border-bottom: 2px solid var(--gold);
+      padding-bottom: 2px;
+      transition: color 0.2s;
+    }
+    .blog-card__link:hover { color: var(--gold); }
+
+    @media (max-width: 768px) {
+      .blog-grid { grid-template-columns: 1fr; }
+      .blog-card--featured { flex-direction: column; }
+      .blog-card--featured .blog-card__img { width: 100%; min-height: 180px; }
+    }
+  </style>
+  <link rel="canonical" href="https://sunwaveswitzerland.com/de/blog/">
+  <meta property="og:title" content="Infrarotheizung Blog | SunWave Switzerland">
+  <meta property="og:description" content="Expertenbeiträge zur Infrarotheizung in der Schweiz: MuKEn 2014-Konformität, Solar-PV-Kombination, unabhängige Labortestergebnisse und Gas vs. Infrarot Kostenvergleiche.">
+  <meta property="og:url" content="https://sunwaveswitzerland.com/de/blog/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://sunwaveswitzerland.com/images/hero-banner-2.webp">
+  <meta property="og:site_name" content="SunWave Switzerland">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Infrarotheizung Blog | SunWave Switzerland">
+  <meta name="twitter:description" content="Expertenbeiträge zur Infrarotheizung in der Schweiz: MuKEn 2014-Konformität, Solar-PV-Kombination, unabhängige Labortestergebnisse und Gas vs. Infrarot Kostenvergleiche.">
+  <meta name="twitter:image" content="https://sunwaveswitzerland.com/images/hero-banner-2.webp">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SunWave Switzerland",
+  "alternateName": "Lumia Technologies GmbH",
+  "url": "https://sunwaveswitzerland.com",
+  "logo": "https://sunwaveswitzerland.com/images/logo.webp",
+  "telephone": "+41767637490",
+  "email": "info@sunwaveswitzerland.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Glaserbergstrasse 27",
+    "addressLocality": "Basel",
+    "postalCode": "4056",
+    "addressCountry": "CH"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "SunWave Switzerland — Infrared Heating Blog",
+  "url": "https://sunwaveswitzerland.com/blog/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "SunWave Switzerland",
+    "url": "https://sunwaveswitzerland.com"
+  }
+}
+  </script>
+  <link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/blog/index.html">
+  <link rel="alternate" hreflang="de" href="https://sunwaveswitzerland.com/de/blog/index.html">
+  <link rel="alternate" hreflang="x-default" href="https://sunwaveswitzerland.com/blog/index.html">
+<style>
+  .nav__lang{display:flex;align-items:center;gap:2px;margin-left:10px}
+  .nav__lang-btn{font-size:.68rem;font-weight:700;letter-spacing:.06em;color:rgba(255,255,255,.45);text-decoration:none;padding:3px 7px;border-radius:3px;border:1px solid rgba(255,255,255,.18);transition:all .2s}
+  a.nav__lang-btn:hover,.nav__lang-btn.lang-active{color:var(--gold);border-color:var(--gold);background:rgba(245,197,24,.08)}
+  .nav__lang-sep{color:rgba(255,255,255,.2);font-size:.7rem;padding:0 1px}
+  .mobile-lang{display:none;align-items:center;gap:6px;padding:12px 20px;border-top:1px solid rgba(255,255,255,.1);margin-top:4px}
+  .mobile-lang a,.mobile-lang span{font-size:.8rem;font-weight:700;color:rgba(255,255,255,.5);text-decoration:none;padding:4px 10px;border-radius:4px;border:1px solid rgba(255,255,255,.15)}
+  .mobile-lang a:hover,.mobile-lang .lang-active{color:var(--gold);border-color:var(--gold)}
+  @media(max-width:768px){.nav__lang{display:none}.mobile-lang{display:flex}}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="../index.html" class="nav__logo">
+      <img src="../../images/logo.webp" alt="SunWave Switzerland" style="height:44px;display:block;border-radius:6px;">
+    </a>
+    <div class="nav__links">
+      <a href="../product.html">Das Paneel</a>
+      <a href="../research.html">Forschung</a>
+      <div class="nav__drop">
+        <button class="nav__drop-btn">Für &#9662;</button>
+        <div class="nav__drop-menu" id="nav-drop-menu">
+          <a href="../for-solar.html">Solar-Installateure</a>
+          <a href="../for-hotels.html">Hotels &amp; Gastronomie</a>
+          <a href="../for-homes.html">Schweizer Haushalte</a>
+          <a href="../for-offices.html">Büro &amp; Gewerbe</a>
+        </div>
+      </div>
+      <a href="../index.html#calculator">Rechner</a>
+      <a href="../index.html">Blog</a>
+      <a href="../contact.html">Kontakt</a>
+    </div>
+    <div class="nav__right">
+      <a href="../product.html" class="nav__order-btn">Jetzt bestellen</a>
+      <div class="nav__lang">
+        <a href="../../blog/index.html" class="nav__lang-btn">EN</a>
+        <span class="nav__lang-sep">|</span>
+        <span class="nav__lang-btn lang-active">DE</span>
+      </div>
+      <button class="nav__hamburger" id="nav-hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav__mobile" id="nav-mobile">
+    <a href="../product.html">Das Paneel</a>
+    <a href="../research.html">Forschung</a>
+    <a href="../for-solar.html">Solar-Installateure</a>
+    <a href="../for-hotels.html">Hotels &amp; Gastronomie</a>
+    <a href="../for-homes.html">Schweizer Haushalte</a>
+    <a href="../for-offices.html">Büro &amp; Gewerbe</a>
+    <a href="../index.html#calculator">Rechner</a>
+    <a href="../index.html">Blog</a>
+    <a href="../contact.html">Kontakt</a>
+    <a href="../product.html" class="nav__mobile-order">Jetzt bestellen</a>
+  </div>
+  <div class="mobile-lang">
+    <a href="../../blog/index.html">EN</a>
+    <span class="lang-active">DE</span>
+  </div>
+</nav>
+
+<!-- ── Hero ── -->
+<section class="blog-hero">
+  <div class="blog-hero__label">SunWave Wissensbasis</div>
+  <h1>Infrared Heating <span>Insights</span></h1>
+  <p>Independent research, Swiss regulations, real energy numbers — everything you need to make an informed heating decision.</p>
+</section>
+
+<!-- ── Blog Posts ── -->
+<section class="blog-main">
+  <div class="blog-container">
+    <div class="blog-grid">
+
+      <!-- Featured Post -->
+      <article class="blog-card blog-card--featured">
+        <div class="blog-card__img" style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%)">
+          <img src="../../images/panel-sage.webp" alt="SunWave Ceramica panel" style="width:100%;height:100%;object-fit:cover;opacity:0.7">
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Schweizer Voderschriften</span>
+          <h2>MuKEn 2014: Why Switzerland Is Fürcing Gas Boiler Replacements — and What to Use Instead</h2>
+          <div class="blog-card__meta">Mai 2025 · 8 Min. Lesezeit</div>
+          <p>Switzerland's cantonal energy code is requiring end-of-life gas boilers to be replaced with renewable systems. We explain exactly which cantons have adopted the rules, what Article 4.1 requires, and why ceramic infrared panels qualify as a compliant replacement when paired with solar oder a green electricity tariff.</p>
+          <a href="muken-2014-boiler-replacement-switzerland.html" class="blog-card__link">Artikel lesen →</a>
+        </div>
+      </article>
+
+      <!-- Post 2 -->
+      <article class="blog-card">
+        <div class="blog-card__img" style="background:linear-gradient(135deg,#1e3a2f 0%,#2d5a3d 100%)">
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Solar + Heating</span>
+          <h2>Why Swiss Solar-Installateure Are Adding Infrared Heating to Every PV Proposal</h2>
+          <div class="blog-card__meta">April 2025 · 6 Min. Lesezeit</div>
+          <p>A 650 W panel draws power at exactly the rate solar produces it in winter. We walk through the load-matching maths, self-consumption uplift, and why thermal mass stoderage makes infrared the ideal PV companion load.</p>
+          <a href="solar-infrared-heating-switzerland.html" class="blog-card__link">Artikel lesen →</a>
+        </div>
+      </article>
+
+      <!-- Post 3 -->
+      <article class="blog-card">
+        <div class="blog-card__img" style="background:linear-gradient(135deg,#1a1a2e 0%,#2d1b69 100%)">
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Test Results</span>
+          <h2>TU Dresden's DIN EN IEC 60675-3 Test: What the Numbers Actually Mean</h2>
+          <div class="blog-card__meta">März 2025 · 7 Min. Lesezeit</div>
+          <p>Germany's most prestigious technical university tested the SunWave Ceramica to the international infrared heater standard. We decode every figure — radiation efficiency, peak wavelength 8.52 µm, and why the result matters modere than any marketing claim.</p>
+          <a href="tu-dresden-infrared-test-results.html" class="blog-card__link">Artikel lesen →</a>
+        </div>
+      </article>
+
+      <!-- Post 4 -->
+      <article class="blog-card">
+        <div class="blog-card__img" style="background:linear-gradient(135deg,#2a1810 0%,#5c3317 100%)">
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Produktwissenschaft</span>
+          <h2>Ceramic vs Aluminium Infrared Panels: The Fraunhofer WKI Study Explained</h2>
+          <div class="blog-card__meta">Februar 2025 · 6 Min. Lesezeit</div>
+          <p>Europe's leading wood and materials research institute tested ceramic panels for volatile oderganic compound emissions. What they found — and what it means for your indoor air quality — is not what aluminium panel manufacturers want you to know.</p>
+          <a href="ceramic-vs-aluminium-infrared-panels.html" class="blog-card__link">Artikel lesen →</a>
+        </div>
+      </article>
+
+      <!-- Post 5 -->
+      <article class="blog-card">
+        <div class="blog-card__img" style="background:linear-gradient(135deg,#0d2137 0%,#1a4a6e 100%)">
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Cost Comparison</span>
+          <h2>Gas vs Infrared Heating in Switzerland: A Full Cost Breakdown for 2025</h2>
+          <div class="blog-card__meta">Januar 2025 · 9 Min. Lesezeit</div>
+          <p>Using the independent academic research on infrared heating technology and current Swiss energy prices, we calculate the real annual heating cost per square metre for gas and infrared — including capital cost, maintenance, and the 66% energy reduction finding.</p>
+          <a href="gas-vs-infrared-heating-cost-switzerland.html" class="blog-card__link">Artikel lesen →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo" style="display:flex;align-items:center;gap:8px">
+          <img src="../../images/logo.webp" alt="SunWave Switzerland" style="height:36px;display:block;border-radius:4px;">
+        </div>
+        <p class="footer__tagline">Schweizer Distributoder von SunWave Ceramica Keramik-Infrarotheizpaneelen. MuKEn-konform. BSRIA-getestet. Fraunhofer-zertifiziert.<br>Lieferung in alle Schweizer Kantone.</p>
+        <div class="footer__contact">
+          <a href="mailto:info@sunwaveswitzerland.com">info@sunwaveswitzerland.com</a><br>
+          <a href="tel:+41767637490">+41 76 763 74 90</a><br>
+          Glaserbergstrasse 27, 4056 Basel
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Produkt</h4>
+        <ul>
+          <li><a href="../../product.html">SunWave Ceramica</a></li>
+          <li><a href="../product.html#variants">Design-Varianten</a></li>
+          <li><a href="../product.html#specs">Vollständige Spezifikationen</a></li>
+          <li><a href="../product.html#order">Jetzt bestellen</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Wissen</h4>
+        <ul>
+          <li><a href="../../research.html">Forschung &amp; Belege</a></li>
+          <li><a href="../../research.html">MuKEn-Leitfaden</a></li>
+          <li><a href="../../research.html">Wie Infrarot funktioniert</a></li>
+          <li><a href="../../index.html#calculator">Sparrechner</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Für</h4>
+        <ul>
+          <li><a href="../../for-solar.html">Solar-Installateure</a></li>
+          <li><a href="../../for-hotels.html">Hotels</a></li>
+          <li><a href="../../for-homes.html">Schweizer Haushalte</a></li>
+          <li><a href="../../for-offices.html">Büro</a></li>
+          <li><a href="../../contact.html">Kontakt</a></li>
+          <li><a href="../index.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Rechtliches</h4>
+        <ul>
+          <li><a href="../../legal.html">Impressum</a></li>
+          <li><a href="../../terms.html">AGB</a></li>
+          <li><a href="../../returns.html">Rückgabebedingungen</a></li>
+          <li><a href="../../shipping.html">Lieferung</a></li>
+          <li><a href="../../privacy.html">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div>&copy; 2026 SunWave Switzerland &mdash; Lumia Technologies GmbH &mdash; sunwaveswitzerland.com</div>
+      <div class="footer__certs">
+        <span class="footer__cert-tag">CE</span>
+        <span class="footer__cert-tag">ISO 9001</span>
+        <span class="footer__cert-tag">BSRIA Getestet</span>
+        <span class="footer__cert-tag">Fraunhofer WKI</span>
+        <span class="footer__cert-tag">MuKEn Konform</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../../js/main.js"></script>
+</body>
+</html>

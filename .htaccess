@@ -1,0 +1,40 @@
+# Disable LiteSpeed cache entirely for this domain
+<IfModule LiteSpeed>
+    CacheLookup off
+</IfModule>
+
+# Correct MIME types
+AddType application/xml .xml
+AddType text/plain .txt
+
+# Force correct headers for robots.txt and sitemap - bypass all caching
+<FilesMatch "^(robots\.txt|sitemap\.xml|sitemap\.php)$">
+    <IfModule mod_headers.c>
+        Header always set Content-Type "text/plain" env=IS_ROBOTS
+        Header always set Cache-Control "no-cache, no-store, must-revalidate"
+        Header always set X-LiteSpeed-Cache-Control "no-store"
+        Header always set Pragma "no-cache"
+    </IfModule>
+</FilesMatch>
+
+<Files "sitemap.xml">
+    <IfModule mod_headers.c>
+        Header always set Content-Type "application/xml; charset=UTF-8"
+    </IfModule>
+</Files>
+
+# No-cache for HTML only
+<FilesMatch "\.(html|htm|php)$">
+    <IfModule mod_headers.c>
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires 0
+    </IfModule>
+</FilesMatch>
+
+# Cache static assets for 30 days
+<FilesMatch "\.(webp|jpg|jpeg|png|gif|svg|css|js|woff2|woff)$">
+    <IfModule mod_headers.c>
+        Header set Cache-Control "public, max-age=2592000"
+    </IfModule>
+</FilesMatch>

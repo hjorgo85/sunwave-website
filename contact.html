@@ -2,10 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-59C235NYBZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-59C235NYBZ');
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="images/logo.png">
-  <title>Contact SunWave Switzerland — Get a Quote or Ask a Question</title>
-  <meta name="description" content="Contact SunWave Switzerland for a personalised heating quote, panel count calculation, installer referral, or any question about the SunWave Ceramica infrared heating panel.">
+  <link rel="icon" type="image/png" href="images/logo.webp">
+  <title>Contact SunWave Switzerland — Get a Free Quote</title>
+  <meta name="description" content="Request a personalised infrared heating quote for your Swiss home, hotel or office. Panel count, annual saving estimate, and payback period — sent within 24 hours.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -195,13 +203,62 @@
       .contact-sidebar { flex-direction: column; }
     }
   </style>
+  <link rel="canonical" href="https://sunwaveswitzerland.com/contact.html">
+  <meta property="og:title" content="Contact SunWave Switzerland — Get a Free Quote">
+  <meta property="og:description" content="Request a personalised infrared heating quote for your Swiss home, hotel or office. Panel count, annual saving estimate, and payback period — sent within 24 hours.">
+  <meta property="og:url" content="https://sunwaveswitzerland.com/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://sunwaveswitzerland.com/images/hero-banner-1.webp">
+  <meta property="og:site_name" content="SunWave Switzerland">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact SunWave Switzerland — Get a Free Quote">
+  <meta name="twitter:description" content="Request a personalised infrared heating quote for your Swiss home, hotel or office. Panel count, annual saving estimate, and payback period — sent within 24 hours.">
+  <meta name="twitter:image" content="https://sunwaveswitzerland.com/images/hero-banner-1.webp">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SunWave Switzerland",
+  "alternateName": "Lumia Technologies GmbH",
+  "url": "https://sunwaveswitzerland.com",
+  "logo": "https://sunwaveswitzerland.com/images/logo.webp",
+  "telephone": "+41767637490",
+  "email": "info@sunwaveswitzerland.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Glaserbergstrasse 27",
+    "addressLocality": "Basel",
+    "postalCode": "4056",
+    "addressCountry": "CH"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact SunWave Switzerland",
+  "url": "https://sunwaveswitzerland.com/contact.html",
+  "description": "Request a free personalised heating quote from SunWave Switzerland."
+}
+  </script>
+<style>
+  .nav__lang{display:flex;align-items:center;gap:2px;margin-left:10px}
+  .nav__lang-btn{font-size:.68rem;font-weight:700;letter-spacing:.06em;color:rgba(255,255,255,.45);text-decoration:none;padding:3px 7px;border-radius:3px;border:1px solid rgba(255,255,255,.18);transition:all .2s}
+  a.nav__lang-btn:hover,.nav__lang-btn.lang-active{color:var(--gold);border-color:var(--gold);background:rgba(245,197,24,.08)}
+  .nav__lang-sep{color:rgba(255,255,255,.2);font-size:.7rem;padding:0 1px}
+  .mobile-lang{display:none;align-items:center;gap:6px;padding:12px 20px;border-top:1px solid rgba(255,255,255,.1);margin-top:4px}
+  .mobile-lang a,.mobile-lang span{font-size:.8rem;font-weight:700;color:rgba(255,255,255,.5);text-decoration:none;padding:4px 10px;border-radius:4px;border:1px solid rgba(255,255,255,.15)}
+  .mobile-lang a:hover,.mobile-lang .lang-active{color:var(--gold);border-color:var(--gold)}
+  @media(max-width:768px){.nav__lang{display:none}.mobile-lang{display:flex}}
+</style>
 </head>
 <body>
 
 <nav class="nav" id="nav">
   <div class="nav__inner">
     <a href="index.html" class="nav__logo">
-      <img src="images/logo.png" alt="SunWave Switzerland" style="height:44px;display:block;border-radius:6px;">
+      <img src="images/logo.webp" alt="SunWave Switzerland" style="height:44px;display:block;border-radius:6px;">
     </a>
     <div class="nav__links">
       <a href="product.html">The Panel</a>
@@ -221,6 +278,11 @@
     </div>
     <div class="nav__right">
       <a href="product.html" class="nav__order-btn">Order Now</a>
+      <div class="nav__lang">
+        <span class="nav__lang-btn lang-active">EN</span>
+        <span class="nav__lang-sep">|</span>
+        <a href="de/contact.html" class="nav__lang-btn">DE</a>
+      </div>
       <button class="nav__hamburger" id="nav-hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -237,6 +299,10 @@
     <a href="blog/index.html">Blog</a>
     <a href="contact.html">Contact</a>
     <a href="product.html" class="nav__mobile-order">Order Now</a>
+  </div>
+  <div class="mobile-lang">
+    <span class="lang-active">EN</span>
+    <a href="de/contact.html">DE</a>
   </div>
 </nav>
 
@@ -400,30 +466,31 @@
     <div class="footer__grid">
       <div class="footer__brand">
         <div class="footer__logo" style="display:flex;align-items:center;gap:8px">
-          <img src="images/logo.png" alt="SunWave Switzerland" style="height:36px;display:block;border-radius:4px;">
+          <img src="images/logo.webp" alt="SunWave Switzerland" style="height:36px;display:block;border-radius:4px;">
         </div>
         <p class="footer__tagline">Swiss distributor of SunWave Ceramica ceramic infrared heating panels. MuKEn-compliant. BSRIA-tested. Fraunhofer-certified.<br>Delivering to all Swiss cantons.</p>
         <div class="footer__contact">
           <a href="mailto:info@sunwaveswitzerland.com">info@sunwaveswitzerland.com</a><br>
-          <a href="tel:+41000000000">+41 (0)00 000 00 00</a>
+          <a href="tel:+41767637490">+41 76 763 74 90</a><br>
+          Glaserbergstrasse 27, 4056 Basel
         </div>
       </div>
       <div class="footer__col">
         <h4>Product</h4>
         <ul>
           <li><a href="product.html">SunWave Ceramica</a></li>
+          <li><a href="product.html#variants">Design Variants</a></li>
+          <li><a href="product.html#specs">Full Specifications</a></li>
           <li><a href="product.html#order">Order Now</a></li>
-          <li><a href="index.html#calculator">Savings Calculator</a></li>
-          <li><a href="contact.html">Get a Quote</a></li>
         </ul>
       </div>
       <div class="footer__col">
-        <h4>Research</h4>
+        <h4>Learn</h4>
         <ul>
-          <li><a href="research.html">All Test Reports</a></li>
-          <li><a href="research.html#bsria">BSRIA Report</a></li>
-          <li><a href="research.html#certifications">Certifications</a></li>
-          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="research.html">Research &amp; Evidence</a></li>
+          <li><a href="research.html">MuKEn Guide</a></li>
+          <li><a href="research.html">How Infrared Works</a></li>
+          <li><a href="index.html#calculator">Savings Calculator</a></li>
         </ul>
       </div>
       <div class="footer__col">
@@ -434,11 +501,22 @@
           <li><a href="for-homes.html">Swiss Homes</a></li>
           <li><a href="for-offices.html">Offices</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="legal.html">Legal Notice</a></li>
+          <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="returns.html">Returns Policy</a></li>
+          <li><a href="shipping.html">Shipping</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
         </ul>
       </div>
     </div>
     <div class="footer__bottom">
-      <div>&copy; 2026 SunWave Switzerland &mdash; sunwaveswitzerland.com</div>
+      <div>&copy; 2026 SunWave Switzerland &mdash; Lumia Technologies GmbH &mdash; sunwaveswitzerland.com</div>
       <div class="footer__certs">
         <span class="footer__cert-tag">CE</span>
         <span class="footer__cert-tag">ISO 9001</span>
@@ -470,9 +548,39 @@
 
   function submitContactForm(e) {
     e.preventDefault();
-    document.getElementById('contact-form').style.display = 'none';
-    document.getElementById('form-success').style.display = 'block';
-    window.scrollTo({ top: document.querySelector('.contact-form-card').offsetTop - 100, behavior: 'smooth' });
+    const btn = document.querySelector('.form-submit');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    const form = document.getElementById('contact-form');
+    const data = new FormData();
+    data.append('name',    document.getElementById('cf-name').value);
+    data.append('email',   document.getElementById('cf-email').value);
+    data.append('phone',   document.getElementById('cf-phone').value);
+    data.append('canton',  document.getElementById('cf-canton').value);
+    data.append('type',    document.getElementById('cf-type').value);
+    data.append('area',    document.getElementById('cf-area').value);
+    data.append('system',  document.getElementById('cf-system').value);
+    data.append('message', document.getElementById('cf-message').value);
+
+    fetch('send-mail.php', { method: 'POST', body: data })
+      .then(r => r.json())
+      .then(res => {
+        if (res.success) {
+          form.style.display = 'none';
+          document.getElementById('form-success').style.display = 'block';
+          window.scrollTo({ top: document.querySelector('.contact-form-card').offsetTop - 100, behavior: 'smooth' });
+        } else {
+          btn.disabled = false;
+          btn.textContent = 'Send Quote Request';
+          alert('Something went wrong. Please email us directly at info@sunwaveswitzerland.com');
+        }
+      })
+      .catch(() => {
+        btn.disabled = false;
+        btn.textContent = 'Send Quote Request';
+        alert('Something went wrong. Please email us directly at info@sunwaveswitzerland.com');
+      });
   }
 </script>
 </body>
