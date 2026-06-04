@@ -1,4 +1,4 @@
-name: Deploy to FTP
+name: Deploy to cPanel
 
 on:
   push:
@@ -9,20 +9,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: 165.140.68.97
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /
-          protocol: ftp
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
-            **/*.py
-            **/audit.py
-            **/fix_all.py
+      - name: Trigger cPanel Git Deployment
+        run: |
+          curl -s -X POST \
+            "https://165.140.68.97:2083/execute/VersionControlDeployment/create" \
+            -k \
+            -H "Authorization: cpanel sealifee:${{ secrets.CPANEL_API_TOKEN }}" \
+            --data-urlencode "repository_root=/home/sealifee/repositories/sunwave-git"
