@@ -66,11 +66,51 @@
   </url>
   <url>
     <loc>https://sunwaveswitzerland.com/blog/</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/blog/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://sunwaveswitzerland.com/de/blog/"/>
+  </url>
+  <url>
+    <loc>https://sunwaveswitzerland.com/blog/infrared-heating-switzerland-guide.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/blog/infrared-heating-switzerland-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sunwaveswitzerland.com/de/blog/infrarotheizung-schweiz-ratgeber.html"/>
+  </url>
+  <url>
+    <loc>https://sunwaveswitzerland.com/blog/electric-heating-ban-switzerland.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/blog/electric-heating-ban-switzerland.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sunwaveswitzerland.com/de/blog/elektroheizung-verbot-schweiz.html"/>
+  </url>
+  <url>
+    <loc>https://sunwaveswitzerland.com/blog/replace-gas-heating-switzerland.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/blog/replace-gas-heating-switzerland.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sunwaveswitzerland.com/de/blog/gasheizung-ersetzen-schweiz.html"/>
+  </url>
+  <url>
+    <loc>https://sunwaveswitzerland.com/blog/infrared-heating-ceiling-mount-switzerland.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/blog/infrared-heating-ceiling-mount-switzerland.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sunwaveswitzerland.com/de/blog/infrarotheizung-decke-schweiz.html"/>
+  </url>
+  <url>
+    <loc>https://sunwaveswitzerland.com/blog/infrared-heater-bathroom-switzerland.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/blog/infrared-heater-bathroom-switzerland.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sunwaveswitzerland.com/de/blog/infrarotheizung-badezimmer-schweiz.html"/>
   </url>
   <url>
     <loc>https://sunwaveswitzerland.com/blog/muken-2014-boiler-replacement-switzerland.html</loc>
@@ -218,11 +258,51 @@
   </url>
   <url>
     <loc>https://sunwaveswitzerland.com/de/blog/</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/blog/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://sunwaveswitzerland.com/de/blog/"/>
+  </url>
+  <url>
+    <loc>https://sunwaveswitzerland.com/de/blog/infrarotheizung-schweiz-ratgeber.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/blog/infrared-heating-switzerland-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sunwaveswitzerland.com/de/blog/infrarotheizung-schweiz-ratgeber.html"/>
+  </url>
+  <url>
+    <loc>https://sunwaveswitzerland.com/de/blog/elektroheizung-verbot-schweiz.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/blog/electric-heating-ban-switzerland.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sunwaveswitzerland.com/de/blog/elektroheizung-verbot-schweiz.html"/>
+  </url>
+  <url>
+    <loc>https://sunwaveswitzerland.com/de/blog/gasheizung-ersetzen-schweiz.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/blog/replace-gas-heating-switzerland.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sunwaveswitzerland.com/de/blog/gasheizung-ersetzen-schweiz.html"/>
+  </url>
+  <url>
+    <loc>https://sunwaveswitzerland.com/de/blog/infrarotheizung-decke-schweiz.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/blog/infrared-heating-ceiling-mount-switzerland.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sunwaveswitzerland.com/de/blog/infrarotheizung-decke-schweiz.html"/>
+  </url>
+  <url>
+    <loc>https://sunwaveswitzerland.com/de/blog/infrarotheizung-badezimmer-schweiz.html</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/blog/infrared-heater-bathroom-switzerland.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sunwaveswitzerland.com/de/blog/infrarotheizung-badezimmer-schweiz.html"/>
   </url>
   <url>
     <loc>https://sunwaveswitzerland.com/de/blog/muken-2014-boiler-replacement-switzerland.html</loc>
