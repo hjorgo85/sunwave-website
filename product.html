@@ -1345,7 +1345,7 @@
 
   function pdOrder() {
     const finish = document.getElementById('pd-finish-name').textContent;
-    window.location.href = 'checkout.php?qty=' + pdQty + '&finish=' + encodeURIComponent(finish) + '&lang=en';
+    window.location.href = 'contact.html?product=' + encodeURIComponent('SunWave Ceramica') + '&qty=' + pdQty + '&finish=' + encodeURIComponent(finish);
   }
 
   /* Quantity updater (order section) */
@@ -1375,7 +1375,7 @@
       'timber-stone': 'Timber Stone'
     };
     const qty = document.getElementById('qty-input')?.value || 1;
-    window.location.href = 'checkout.php?qty=' + qty + '&finish=' + encodeURIComponent(variantNames[variant] || variant) + '&lang=en';
+    window.location.href = 'contact.html?product=' + encodeURIComponent('SunWave Ceramica') + '&qty=' + qty + '&finish=' + encodeURIComponent(variantNames[variant] || variant);
   }
 
   /* ── Gallery swipe + dot navigation ── */
