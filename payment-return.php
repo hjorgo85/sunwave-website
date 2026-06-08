@@ -37,7 +37,7 @@ if ($mollie_key && $payment_id) {
             'email'   => $m['email']  ?? '',
             'finish'  => $m['finish'] ?? '',
             'qty'     => $m['qty']    ?? 1,
-            'total'   => (490 * ($m['qty'] ?? 1)) + 35,
+            'total'   => (550 * ($m['qty'] ?? 1)) + 35,
             'order_id'=> $order_id,
         ];
     }

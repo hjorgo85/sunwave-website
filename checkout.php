@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 ? 'Bitte füllen Sie alle Pflichtfelder aus.'
                 : 'Please fill in all required fields.';
         } else {
-            $subtotal  = 490 * $qty;
+            $subtotal  = 550 * $qty;
             $shipping  = 35;
             $total     = $subtotal + $shipping;
             $order_id  = 'SW-' . date('Ymd') . '-' . strtoupper(substr(uniqid(), -5));
@@ -85,7 +85,7 @@ $finish = htmlspecialchars($_GET['finish'] ?? $_POST['finish'] ?? 'Imperial Marb
 $lang   = (($_GET['lang'] ?? $_POST['lang'] ?? 'en') === 'de') ? 'de' : 'en';
 $is_de  = ($lang === 'de');
 
-$subtotal = 490 * $qty;
+$subtotal = 550 * $qty;
 $shipping = 35;
 $total    = $subtotal + $shipping;
 
@@ -117,7 +117,7 @@ $txt = $is_de ? [
     'methods'     => 'TWINT · PostFinance · Visa · Mastercard · Apple Pay',
     'back'        => '← Zurück zum Produkt',
     'incl_thermo' => 'inkl. WLAN-Thermostat · 5 Jahre Garantie',
-    'per_panel'   => 'CHF 490 × ' . $qty,
+    'per_panel'   => 'CHF 550 × ' . $qty,
 ] : [
     'page_title'  => 'Checkout — SunWave Switzerland',
     'heading'     => 'Checkout',
@@ -142,7 +142,7 @@ $txt = $is_de ? [
     'methods'     => 'TWINT · PostFinance · Visa · Mastercard · Apple Pay',
     'back'        => '← Back to product',
     'incl_thermo' => 'incl. WiFi thermostat · 5-year warranty',
-    'per_panel'   => 'CHF 490 × ' . $qty,
+    'per_panel'   => 'CHF 550 × ' . $qty,
 ];
 ?>
 <!DOCTYPE html>
