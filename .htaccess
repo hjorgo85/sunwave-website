@@ -1,3 +1,7 @@
+# Redirect /shop to product page
+RedirectMatch 301 ^/shop/?$ /product.html
+RedirectMatch 301 ^/de/shop/?$ /de/product.html
+
 # Disable LiteSpeed cache entirely for this domain
 <IfModule LiteSpeed>
     CacheLookup off

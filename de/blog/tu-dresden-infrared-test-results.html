@@ -46,6 +46,13 @@
     .article-cta { background: var(--dark); border-radius: 20px; padding: 48px; text-align: center; margin-top: 60px; }
     .article-cta h3 { font-size: 1.4rem; font-weight: 800; color: #fff; margin-bottom: 12px; }
     .article-cta p { color: rgba(255,255,255,0.65); margin-bottom: 28px; }
+    .related-articles { background: #f9f9f9; border-radius: 16px; padding: 32px; margin-top: 48px; }
+    .related-articles h3 { font-size: 1rem; font-weight: 800; color: var(--dark); margin: 0 0 16px; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.78rem; }
+    .related-list { list-style: none; padding: 0; margin: 0; }
+    .related-list li { padding: 10px 0; border-bottom: 1px solid #eee; }
+    .related-list li:last-child { border-bottom: none; }
+    .related-list a { color: var(--dark); font-weight: 600; font-size: 0.95rem; text-decoration: none; }
+    .related-list a:hover { color: var(--gold); }
     .btn-gold { display: inline-flex; align-items: center; gap: 8px; background: var(--gold); color: var(--dark); font-weight: 700; font-size: 1rem; padding: 14px 32px; border-radius: 8px; text-decoration: none; }
     .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--gold); font-size: 0.88rem; font-weight: 600; text-decoration: none; margin-bottom: 32px; }
   </style>
@@ -83,7 +90,7 @@
   {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "TU Dresden DIN EN IEC 60675-3 Test: What the Results Mean",
+  "headline": "TU-Dresden-Test nach DIN EN IEC 60675-3: Was die Ergebnisse bedeuten",
   "datePublished": "2025-03-01",
   "author": {
     "@type": "Organization",
@@ -121,7 +128,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "TU Dresden DIN EN IEC 60675-3 Infrared Test Results",
+      "name": "TU-Dresden-Testergebnisse nach DIN EN IEC 60675-3",
       "item": "https://sunwaveswitzerland.com/blog/tu-dresden-infrared-test-results.html"
     }
   ]
@@ -196,121 +203,132 @@
 
 <section class="article-hero">
   <div class="article-hero__inner">
-    <a href="../index.html" class="article-hero__tag">← Test Results</a>
-    <h1>TU Dresden's DIN EN IEC 60675-3 Test: What the Numbers Actually Mean</h1>
+    <a href="../index.html" class="article-hero__tag">← Testergebnisse</a>
+    <h1>Der TU-Dresden-Test nach DIN EN IEC 60675-3: Was die Zahlen wirklich bedeuten</h1>
     <div class="article-hero__meta">
       <span>März 2025</span>
       <span>7 Min. Lesezeit</span>
-      <span>Laboratodery Testing · Physics</span>
+      <span>Labortests · Physik</span>
     </div>
   </div>
 </section>
 
 <section class="article-body">
   <div class="article-body__inner">
-    <a href="../index.html" class="back-link">← Back to Blog</a>
+    <a href="../index.html" class="back-link">← Zurück zum Blog</a>
 
     <div class="logo-strip">
       <img src="../../images/logo-tu-dresden.webp" alt="TU Dresden" style="height:48px;width:auto;object-fit:contain;">
-      <span style="font-size:0.85rem;color:#666;">Technische Universität Dresden — Energy Efficiency Department · October 2022</span>
+      <span style="font-size:0.85rem;color:#666;">Technische Universität Dresden — Fachgebiet Energieeffizienz · Oktober 2022</span>
     </div>
 
-    <p>Technische Universität Dresden — TU Dresden — is one of Germany's oldest and most respected technical universities, founded in 1828. The Energy Efficiency Department tested the SunWave Ceramica in October 2022 accoderding to <strong>DIN EN IEC 60675-3</strong>, the European and international standard that governs how radiation efficiency is measured and Berichted for infrared heaters.</p>
+    <p>Die Technische Universität Dresden — TU Dresden — ist eine der ältesten und renommiertesten technischen Universitäten Deutschlands, gegründet 1828. Das Fachgebiet Energieeffizienz testete die SunWave Ceramica im Oktober 2022 nach <strong>DIN EN IEC 60675-3</strong>, der europäischen und internationalen Norm, die festlegt, wie die Strahlungseffizienz von Infrarotheizgeräten gemessen und ausgewiesen wird.</p>
 
-    <p>Most infrared panel marketing relies on vague claims about "far infrared" oder "healthy wavelengths." The TU Dresden test replaces marketing language with measured data. This article decodes every figure in the Bericht.</p>
+    <p>Das Marketing der meisten Infrarotpaneele stützt sich auf vage Behauptungen über „Ferninfrarot" oder „gesunde Wellenlängen". Der TU-Dresden-Test ersetzt Marketingsprache durch gemessene Daten. Dieser Artikel erklärt jede einzelne Zahl im Bericht.</p>
 
-    <h2>What is DIN EN IEC 60675-3?</h2>
+    <h2>Was ist DIN EN IEC 60675-3?</h2>
 
-    <p>IEC 60675 is the International Electrotechnical Commission's standard series for household and similar electrical appliances — specifically for measuring the performance of electric radiant heating panels and associated equipment. Part 3, adopted in Europe as DIN EN IEC 60675-3, applies specifically to infrared heaters and defines:</p>
+    <p>IEC 60675 ist die Normenreihe der Internationalen Elektrotechnischen Kommission für Haushaltsgeräte und ähnliche elektrische Geräte — speziell zur Messung der Leistung elektrischer Strahlungsheizgeräte und zugehöriger Ausrüstung. Teil 3, in Europa als DIN EN IEC 60675-3 übernommen, gilt speziell für Infrarotheizgeräte und legt fest:</p>
 
     <ul style="margin:0 0 20px 24px;line-height:1.9;color:#333;">
-      <li>How radiation efficiency must be measured (test chamber dimensions, measurement points, temperature conditions)</li>
-      <li>How to calculate the ratio of radiated power to total electrical input power</li>
-      <li>How to characterise the spectral emission (the wavelength at which the panel emits)</li>
-      <li>Repoderting requirements for compliance claims</li>
+      <li>wie die Strahlungseffizienz zu messen ist (Abmessungen der Prüfkammer, Messpunkte, Temperaturbedingungen),</li>
+      <li>wie das Verhältnis von abgestrahlter Leistung zu gesamter elektrischer Eingangsleistung berechnet wird,</li>
+      <li>wie die spektrale Emission charakterisiert wird (die Wellenlänge, bei der das Paneel strahlt),</li>
+      <li>welche Angaben für Konformitätsaussagen erforderlich sind.</li>
     </ul>
 
-    <p>The standard exists precisely because informal claims about infrared panels are almost impossible to compare. By forcing measurements to a defined protocol, DIN EN IEC 60675-3 allows direct comparison between products and between manufacturer claims and Laboratodery reality.</p>
+    <p>Die Norm existiert genau deshalb, weil informelle Aussagen über Infrarotpaneele kaum vergleichbar sind. Indem sie Messungen auf ein festgelegtes Protokoll verpflichtet, ermöglicht DIN EN IEC 60675-3 den direkten Vergleich zwischen Produkten sowie zwischen Herstellerangaben und Laborrealität.</p>
 
-    <h2>The Key Results from TU Dresden</h2>
+    <h2>Die wichtigsten Ergebnisse der TU Dresden</h2>
 
     <div class="result-card">
-      <h4>TU Dresden Test Results — SunWave Ceramica · October 2022</h4>
-      <div class="result-row"><span class="k">Radiation efficiency</span><span class="v gold">Bestätigt nach DIN EN IEC 60675-3</span></div>
-      <div class="result-row"><span class="k">Peak emission wavelength</span><span class="v gold">8.52 µm (long-wave infrared)</span></div>
-      <div class="result-row"><span class="k">Operating temperature</span><span class="v">~67°C surface temperature</span></div>
-      <div class="result-row"><span class="k">Emission band</span><span class="v">Long-wave infrared (LWIR)</span></div>
-      <div class="result-row"><span class="k">Standard</span><span class="v">DIN EN IEC 60675-3</span></div>
-      <div class="result-row"><span class="k">Institution</span><span class="v">TU Dresden Energy Efficiency Dept.</span></div>
-      <div class="result-row"><span class="k">Result</span><span class="v green">CONFIRMED</span></div>
+      <h4>TU-Dresden-Testergebnisse — SunWave Ceramica · Oktober 2022</h4>
+      <div class="result-row"><span class="k">Strahlungseffizienz</span><span class="v gold">Bestätigt nach DIN EN IEC 60675-3</span></div>
+      <div class="result-row"><span class="k">Maximale Emissionswellenlänge</span><span class="v gold">8,52 µm (langwelliges Infrarot)</span></div>
+      <div class="result-row"><span class="k">Betriebstemperatur</span><span class="v">~67 °C Oberflächentemperatur</span></div>
+      <div class="result-row"><span class="k">Emissionsband</span><span class="v">Langwelliges Infrarot (LWIR)</span></div>
+      <div class="result-row"><span class="k">Norm</span><span class="v">DIN EN IEC 60675-3</span></div>
+      <div class="result-row"><span class="k">Institution</span><span class="v">TU Dresden, Fachgebiet Energieeffizienz</span></div>
+      <div class="result-row"><span class="k">Ergebnis</span><span class="v green">BESTÄTIGT</span></div>
     </div>
 
-    <h2>What Does "Peak Wavelength 8.52 µm" Mean?</h2>
+    <h2>Was bedeutet „maximale Wellenlänge 8,52 µm"?</h2>
 
-    <p>Every warm object emits infrared radiation. The wavelength at which it emits most intensely depends on its temperature — this is described by Wien's Displacement Law:</p>
+    <p>Jeder warme Körper strahlt Infrarotstrahlung ab. Die Wellenlänge, bei der die Abstrahlung am stärksten ist, hängt von seiner Temperatur ab — beschrieben durch das Wiensche Verschiebungsgesetz:</p>
 
     <div class="formula-box">
       λ_peak = b / T<br>
-      <span class="comment">where b = 2,898 µm·K (Wien's displacement constant)</span><br>
-      <span class="comment">and T = absolute temperature in Kelvin</span><br><br>
-      At T = 340 K (67°C):<br>
-      λ_peak = 2,898 / 340 = <strong>8.52 µm</strong>
+      <span class="comment">wobei b = 2'898 µm·K (Wiensche Verschiebungskonstante)</span><br>
+      <span class="comment">und T = absolute Temperatur in Kelvin</span><br><br>
+      Bei T = 340 K (67 °C):<br>
+      λ_peak = 2'898 / 340 = <strong>8,52 µm</strong>
     </div>
 
-    <p>The SunWave Ceramica operates at approximately 67°C surface temperature — and at that temperature, Wien's law predicts a peak emission wavelength of exactly 8.52 µm. TU Dresden's measurement confirmed this prediction.</p>
+    <p>Die SunWave Ceramica arbeitet bei einer Oberflächentemperatur von etwa 67 °C — und bei dieser Temperatur sagt das Wiensche Gesetz eine maximale Emissionswellenlänge von exakt 8,52 µm voraus. Die Messung der TU Dresden bestätigte genau diese Vorhersage.</p>
 
-    <h3>Why 8.52 µm matters</h3>
+    <h3>Warum 8,52 µm wichtig ist</h3>
 
-    <p>The infrared spectrum is divided into near-infrared (0.75–1.4 µm), shodert-wave IR (1.4–3 µm), medium-wave IR (3–8 µm), and long-wave IR (8–15 µm). Human bodies absoderb and re-emit IR most efficiently in the 8–14 µm range — sometimes called the "human comfort band."</p>
+    <p>Das Infrarotspektrum gliedert sich in Nahinfrarot (0,75–1,4 µm), kurzwelliges IR (1,4–3 µm), mittelwelliges IR (3–8 µm) und langwelliges IR (8–15 µm). Der menschliche Körper nimmt Infrarotstrahlung im Bereich von 8–14 µm am effizientesten auf und strahlt sie wieder ab — manchmal als „Wohlfühlband des Menschen" bezeichnet.</p>
 
-    <p>At 8.52 µm, the SunWave Ceramica emits squarely in this long-wave band. This means the radiation is directly absorbiert by the occupants and building surfaces rather than passing through them (near-IR risk) oder heating the air (convective systems). The result is a direct coupling between the panel's output and human thermal perception.</p>
+    <p>Mit 8,52 µm strahlt die SunWave Ceramica genau in diesem langwelligen Band. Das bedeutet, die Strahlung wird direkt von Personen und Gebäudeoberflächen aufgenommen, statt sie zu durchdringen (Risiko bei Nahinfrarot) oder lediglich die Luft zu erwärmen (konvektive Systeme). Das Ergebnis ist eine direkte Kopplung zwischen der Abstrahlung des Paneels und der menschlichen Wärmewahrnehmung.</p>
 
     <div class="callout">
-      <p>Kurzwellig infrared heaters (quartz tubes, halogen strips) emit at 1–3 µm and can cause discomfort oder skin damage at close range. Long-wave ceramic panels at 8.52 µm emit at body temperature analogues — the same band as human skin — and pose no photobiological risk.</p>
+      <p>Kurzwellige Infrarotstrahler (Quarzröhren, Halogenstrahler) emittieren bei 1–3 µm und können aus der Nähe Unbehagen oder Hautschäden verursachen. Langwellige Keramikpaneele bei 8,52 µm strahlen im selben Band wie die menschliche Haut — also bei „Körpertemperatur-Wellenlängen" — und stellen kein photobiologisches Risiko dar.</p>
     </div>
 
-    <h2>Understanding Radiation Efficiency</h2>
+    <h2>Strahlungseffizienz verstehen</h2>
 
-    <p>Radiation efficiency is the ratio of energy delivered as electromagnetic radiation (infrared) to total electrical input power. The remaining energy is delivered as convection (warm air rising from the panel surface).</p>
+    <p>Die Strahlungseffizienz ist das Verhältnis von Energie, die als elektromagnetische Strahlung (Infrarot) abgegeben wird, zur gesamten elektrischen Eingangsleistung. Die übrige Energie wird als Konvektion abgegeben (warme Luft, die von der Paneeloberfläche aufsteigt).</p>
 
-    <p>The TU Dresden test, combined with the BSRIA heat transfer ratio analysis, establishes that the SunWave Ceramica delivers 80% of its energy as radiation and 20% as convection — which is why BSRIA concluded it uses up to 80% less energy than A+++ convection heaters. To understand why this ratio matters:</p>
-
-    <ul style="margin:0 0 20px 24px;line-height:1.9;color:#333;">
-      <li><strong>Convective heat</strong> warms air → air rises → heat escapes through ventilation and infiltration</li>
-      <li><strong>Radiant heat</strong> warms surfaces and bodies directly → surfaces re-radiate and retain warmth → less heat lost through ventilation</li>
-    </ul>
-
-    <p>In a modern Swiss building with obligatorisch controlled ventilation (MINERGIE standard oder similar), convective heat is continuously lost through the ventilation system. Radiant heat, by contrast, is absorbiert by the building mass and re-radiated over hours — dramatically reducing the continuous energy input required to maintain comfort.</p>
-
-    <h2>How TU Dresden's Test Differs from Marketing Claims</h2>
-
-    <p>Many infrared panel manufacturers claim "90% radiation efficiency" oder "far infrared" emission without citing any standard oder testing protocol. The difference between a marketing claim and a DIN EN IEC 60675-3 result:</p>
+    <p>Der TU-Dresden-Test bestätigt zusammen mit der BSRIA-Analyse des Wärmeübertragungsverhältnisses, dass die SunWave Ceramica 80 % ihrer Energie als Strahlung und 20 % als Konvektion abgibt — weshalb BSRIA zu dem Schluss kam, dass sie bis zu 80 % weniger Energie verbraucht als A+++-Konvektionsheizungen. Warum dieses Verhältnis wichtig ist:</p>
 
     <ul style="margin:0 0 20px 24px;line-height:1.9;color:#333;">
-      <li><strong>Marketing claim</strong>: measured by the manufacturer in unspecified conditions, unreproducible</li>
-      <li><strong>DIN EN IEC 60675-3</strong>: standardised test chamber, defined measurement positions, independent accredited Laboratodery, reproducible protocol</li>
+      <li><strong>Konvektive Wärme</strong> erwärmt Luft → die Luft steigt auf → Wärme entweicht über Lüftung und Undichtigkeiten</li>
+      <li><strong>Strahlungswärme</strong> erwärmt Oberflächen und Körper direkt → Oberflächen strahlen die Wärme zurück und speichern sie → weniger Wärmeverlust über die Lüftung</li>
     </ul>
 
-    <p>The TU Dresden result is the only way to make a verifiable comparison between the SunWave Ceramica and competing products — and it is the basis on which architects, energy consultants, and procurement teams should evaluate infrared heating claims.</p>
+    <p>In einem modernen Schweizer Gebäude mit obligatorischer kontrollierter Lüftung (MINERGIE-Standard oder ähnlich) geht konvektive Wärme fortlaufend über das Lüftungssystem verloren. Strahlungswärme hingegen wird von der Gebäudemasse aufgenommen und über Stunden wieder abgegeben — was den fortlaufenden Energiebedarf zur Aufrechterhaltung des Komforts drastisch reduziert.</p>
 
-    <h2>The Connection to the 66% Energy Saving</h2>
+    <h2>Wie sich der TU-Dresden-Test von Marketingaussagen unterscheidet</h2>
 
-    <p>TU Dresden's radiation efficiency confirmation and peak wavelength measurement provide the physical mechanism that explains the independent academic research finding (66% less energy than gas). The chain of reasoning:</p>
+    <p>Viele Hersteller von Infrarotpaneelen behaupten „90 % Strahlungseffizienz" oder „Ferninfrarot"-Emission, ohne sich auf eine Norm oder ein Prüfprotokoll zu berufen. Der Unterschied zwischen einer Marketingaussage und einem Ergebnis nach DIN EN IEC 60675-3:</p>
+
+    <ul style="margin:0 0 20px 24px;line-height:1.9;color:#333;">
+      <li><strong>Marketingaussage</strong>: vom Hersteller unter nicht spezifizierten Bedingungen gemessen, nicht reproduzierbar</li>
+      <li><strong>DIN EN IEC 60675-3</strong>: genormte Prüfkammer, festgelegte Messpositionen, unabhängiges akkreditiertes Labor, reproduzierbares Protokoll</li>
+    </ul>
+
+    <p>Das Ergebnis der TU Dresden ist die einzige Möglichkeit, einen verifizierbaren Vergleich zwischen der SunWave Ceramica und konkurrierenden Produkten zu ziehen — und die Grundlage, auf der Architekten, Energieberater und Einkaufsteams Aussagen zu Infrarotheizungen bewerten sollten.</p>
+
+    <h2>Der Zusammenhang mit den 66 % Energieersparnis</h2>
+
+    <p>Die Bestätigung der Strahlungseffizienz und die Messung der maximalen Wellenlänge durch die TU Dresden liefern den physikalischen Mechanismus, der das Ergebnis der unabhängigen akademischen Forschung erklärt (66 % weniger Energie als Gas). Die Argumentationskette:</p>
 
     <ol style="margin:0 0 20px 28px;line-height:1.9;color:#333;">
-      <li>80% radiation fraction (BSRIA heat transfer ratio) means most energy goes to surfaces, not air — resulting in up to 80% weniger Verbrauch vs. A+++ convection heaters</li>
-      <li>8.52 µm peak (TU Dresden) means optimal coupling to human thermal comfort receptoders</li>
-      <li>Lower air temperature required for equivalent perceived warmth (Mean Radiant Temperature effect)</li>
-      <li>Lower air temperature → less heat loss through ventilation and fabric → less energy input required</li>
-      <li>Result: 71.21 kWh/m²·yr vs 212 kWh/m²·yr for gas (unabhängige akademische Forschung — Infrarottechnologie) → 66% saving</li>
+      <li>80 % Strahlungsanteil (BSRIA-Wärmeübertragungsverhältnis) bedeutet, dass der Grossteil der Energie an Oberflächen statt an die Luft geht — daraus resultiert ein bis zu 80 % geringerer Verbrauch gegenüber A+++-Konvektionsheizungen</li>
+      <li>Das Maximum bei 8,52 µm (TU Dresden) bedeutet optimale Kopplung an die menschlichen Wärmerezeptoren</li>
+      <li>Geringere Lufttemperatur für gleiches Wärmeempfinden nötig (Effekt der mittleren Strahlungstemperatur)</li>
+      <li>Geringere Lufttemperatur → weniger Wärmeverlust über Lüftung und Gebäudehülle → geringerer Energiebedarf</li>
+      <li>Ergebnis: 71,21 kWh/m²·Jahr gegenüber 212 kWh/m²·Jahr bei Gas (unabhängige akademische Forschung — Infrarottechnologie) → 66 % Ersparnis</li>
     </ol>
 
-    <p>The TU Dresden test is not a standalone finding — it is one piece of a complete, independently verified scientific account of why ceramic infrared heating saves energy.</p>
+    <p>Der TU-Dresden-Test steht nicht für sich allein — er ist ein Baustein einer vollständigen, unabhängig verifizierten wissenschaftlichen Erklärung dafür, warum keramische Infrarotheizung Energie spart.</p>
 
     <div class="article-cta">
-      <h3>Read All Five Unabhängige Prüfberichte</h3>
-      <p>BSRIA · TU Dresden · Fraunhofer WKI · Labor S.A. — full details of every study.</p>
-      <a href="../../research.html" class="btn-gold">View Forschung Page</a>
+      <h3>Lesen Sie alle fünf unabhängigen Prüfberichte</h3>
+      <p>BSRIA · TU Dresden · Fraunhofer WKI · Labor S.A. — alle Details zu jeder Studie.</p>
+      <a href="../../research.html" class="btn-gold">Zur Forschungsseite</a>
+    </div>
+
+    <div class="related-articles">
+      <h3>Weitere Artikel</h3>
+      <ul class="related-list">
+        <li><a href="ceramic-vs-aluminium-infrared-panels.html">Keramik vs. Aluminium Infrarotpaneele: Die Fraunhofer-WKI-Studie erklärt</a></li>
+        <li><a href="solar-infrared-heating-switzerland.html">Solar + Infrarotheizung: Die perfekte PV-Kombination</a></li>
+        <li><a href="infrarotheizung-schweiz-ratgeber.html">Infrarotheizung Schweiz: Der vollständige Ratgeber 2026</a></li>
+        <li><a href="gas-vs-infrared-heating-cost-switzerland.html">Gas vs. Infrarotheizung in der Schweiz: Die vollständige Kostenanalyse für 2025</a></li>
+        <li><a href="muken-2014-boiler-replacement-switzerland.html">MuKEn 2014: Warum die Schweiz Gasheizungsersatz vorschreibt — und was Sie stattdessen einsetzen sollten</a></li>
+      </ul>
     </div>
   </div>
 </section>

@@ -44,6 +44,13 @@
     .article-cta { background: var(--dark); border-radius: 20px; padding: 48px; text-align: center; margin-top: 60px; }
     .article-cta h3 { font-size: 1.4rem; font-weight: 800; color: #fff; margin-bottom: 12px; }
     .article-cta p { color: rgba(255,255,255,0.65); margin-bottom: 28px; }
+    .related-articles { background: #f9f9f9; border-radius: 16px; padding: 32px; margin-top: 48px; }
+    .related-articles h3 { font-size: 1rem; font-weight: 800; color: var(--dark); margin: 0 0 16px; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.78rem; }
+    .related-list { list-style: none; padding: 0; margin: 0; }
+    .related-list li { padding: 10px 0; border-bottom: 1px solid #eee; }
+    .related-list li:last-child { border-bottom: none; }
+    .related-list a { color: var(--dark); font-weight: 600; font-size: 0.95rem; text-decoration: none; }
+    .related-list a:hover { color: var(--gold); }
     .btn-gold { display: inline-flex; align-items: center; gap: 8px; background: var(--gold); color: var(--dark); font-weight: 700; font-size: 1rem; padding: 14px 32px; border-radius: 8px; text-decoration: none; }
     .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--gold); font-size: 0.88rem; font-weight: 600; text-decoration: none; margin-bottom: 32px; }
   </style>
@@ -81,7 +88,7 @@
   {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Solar + Infrared Heating in Switzerland: The Perfect PV Load",
+  "headline": "Solar + Infrarotheizung in der Schweiz: Die perfekte PV-Last",
   "datePublished": "2025-04-01",
   "author": {
     "@type": "Organization",
@@ -119,7 +126,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Solar + Infrared Heating in Switzerland",
+      "name": "Solar + Infrarotheizung in der Schweiz",
       "item": "https://sunwaveswitzerland.com/blog/solar-infrared-heating-switzerland.html"
     }
   ]
@@ -194,98 +201,109 @@
 
 <section class="article-hero">
   <div class="article-hero__inner">
-    <a href="../index.html" class="article-hero__tag">← Solar + Heating</a>
-    <h1>Why Swiss Solar-Installateure Are Adding Infrared Heating to Every PV Proposal</h1>
+    <a href="../index.html" class="article-hero__tag">← Solar + Heizung</a>
+    <h1>Warum Schweizer Solar-Installateure Infrarotheizung in jedes PV-Angebot aufnehmen</h1>
     <div class="article-hero__meta">
       <span>April 2025</span>
       <span>6 Min. Lesezeit</span>
-      <span>Solar PV · Load Management</span>
+      <span>Solar-PV · Lastmanagement</span>
     </div>
   </div>
 </section>
 
 <section class="article-body">
   <div class="article-body__inner">
-    <a href="../index.html" class="back-link">← Back to Blog</a>
+    <a href="../index.html" class="back-link">← Zurück zum Blog</a>
 
-    <p>The economics of residential solar PV in Switzerland depend heavily on self-consumption: electricity you use directly from your panels avoids the full grid purchase price (~CHF 0.28/kWh), whereas electricity you Einspeisung to the grid earns you only the feed-in tariff (~CHF 0.06–0.10/kWh). Maximising what you use from your own roof is the single most effective way to improve PV returns.</p>
+    <p>Die Wirtschaftlichkeit privater Solar-PV-Anlagen in der Schweiz hängt massgeblich vom Eigenverbrauch ab: Strom, den Sie direkt von Ihren Paneelen beziehen, vermeidet den vollen Netzbezugspreis (~CHF 0.28/kWh), während eingespeister Strom nur die Einspeisevergütung erzielt (~CHF 0.06–0.10/kWh). Den Eigenverbrauch vom eigenen Dach zu maximieren, ist der wirksamste Hebel, um die PV-Rendite zu verbessern.</p>
 
-    <p>For Swiss solar installers, infrared heating panels are emerging as the ideal companion load for PV installations — and the maths behind this are surprisingly straightforward.</p>
+    <p>Für Schweizer Solar-Installateure entwickeln sich Infrarotheizpaneele zur idealen Begleitlast für PV-Anlagen — und die Rechnung dahinter ist überraschend einfach.</p>
 
     <div class="stat-bar">
-      <div class="stat-box"><div class="stat-box__val">650 W</div><div class="stat-box__label">Per panel draw — matches winter PV output</div></div>
-      <div class="stat-box"><div class="stat-box__val">66%</div><div class="stat-box__label">Less energy than gas (unabhängige akademische Forschung — Infrarottechnologie)</div></div>
-      <div class="stat-box"><div class="stat-box__val">CHF 0.05</div><div class="stat-box__label">Effective cost per kWh with solar self-consumption</div></div>
+      <div class="stat-box"><div class="stat-box__val">650 W</div><div class="stat-box__label">Leistungsaufnahme pro Paneel — passt zur winterlichen PV-Produktion</div></div>
+      <div class="stat-box"><div class="stat-box__val">66 %</div><div class="stat-box__label">Weniger Energie als Gas (unabhängige akademische Forschung — Infrarottechnologie)</div></div>
+      <div class="stat-box"><div class="stat-box__val">CHF 0.05</div><div class="stat-box__label">Effektive Kosten pro kWh bei Solar-Eigenverbrauch</div></div>
     </div>
 
-    <h2>The Load-Matching Problem with Solar PV</h2>
+    <h2>Das Problem der Lastanpassung bei Solar-PV</h2>
 
-    <p>Solar panels produce most of their energy in summer — typically 60–70% of annual output occurs between April and September. Winter, when heating demand peaks, is precisely when PV output is lowest. A south-facing 10 kWp system in Zürich might produce 1,000–1,500 W on a clear winter day, dropping to near zero on overcast days.</p>
+    <p>Solaranlagen produzieren den Grossteil ihrer Energie im Sommer — typischerweise entfallen 60–70 % der Jahresproduktion auf die Monate April bis September. Ausgerechnet im Winter, wenn der Heizbedarf am höchsten ist, ist die PV-Produktion am niedrigsten. Eine südausgerichtete 10-kWp-Anlage in Zürich liefert an einem klaren Wintertag vielleicht 1'000–1'500 W, an bewölkten Tagen sinkt die Leistung nahezu auf null.</p>
 
-    <p>Most PV loads in a Swiss home — washing machines, dishwashers, EV chargers — operate intermittently and at high power. An 1,800 W washing machine running for 1 hour uses mehr electricity than a 650 W infrared panel running for 2.5 hours. The difference is timing control: infrared panels can be thermostated to run continuously during daylight hours, soaking up every watt of winter solar output.</p>
+    <p>Die meisten PV-Lasten in einem Schweizer Haushalt — Waschmaschinen, Geschirrspüler, E-Auto-Ladestationen — laufen unregelmässig und mit hoher Leistung. Eine 1'800-W-Waschmaschine, die 1 Stunde läuft, verbraucht mehr Strom als ein 650-W-Infrarotpaneel, das 2,5 Stunden läuft. Der Unterschied liegt in der zeitlichen Steuerbarkeit: Infrarotpaneele lassen sich per Thermostat so steuern, dass sie durchgehend während der Tagesstunden laufen und jedes Watt der winterlichen Solarproduktion aufnehmen.</p>
 
-    <h2>Why 650 W Woderks With Solar</h2>
+    <h2>Warum 650 W ideal zu Solar passen</h2>
 
-    <p>The SunWave Ceramica draws exactly 650 W — this is not an accident. In a typical Swiss residential building, a winter solar PV installation produces between 500 W and 1,500 W during daylight hours depending on conditions. A single panel can be matched to this range:</p>
+    <p>Die SunWave Ceramica nimmt exakt 650 W auf — das ist kein Zufall. In einem typischen Schweizer Wohngebäude produziert eine winterliche Solar-PV-Anlage je nach Bedingungen zwischen 500 W und 1'500 W während der Tagesstunden. Ein einzelnes Paneel lässt sich genau auf diesen Bereich abstimmen:</p>
 
     <ul style="margin:0 0 20px 24px;line-height:1.9;color:#333;">
-      <li>On a sunny winter day (1,500 W output): one panel running plus other small loads</li>
-      <li>On a cloudy winter day (500–650 W output): one panel running entirely on solar</li>
-      <li>With 6–8 panels in a house: can absoderb the full output of a 5–8 kWp system during winter daytime</li>
+      <li>An einem sonnigen Wintertag (1'500 W Produktion): ein Paneel läuft, plus weitere kleine Verbraucher</li>
+      <li>An einem bewölkten Wintertag (500–650 W Produktion): ein Paneel läuft vollständig auf Solarstrom</li>
+      <li>Mit 6–8 Paneelen in einem Haus: kann die gesamte Produktion einer 5–8-kWp-Anlage tagsüber im Winter aufnehmen</li>
     </ul>
 
-    <p>The 650 W draw also means panels cycle on and off through a thermostat naturally, automatically load-matching to available solar output when combined with a smart energy management system oder simple timer-based scheduling.</p>
+    <p>Die Leistungsaufnahme von 650 W bedeutet zudem, dass sich Paneele über das Thermostat ganz natürlich ein- und ausschalten — kombiniert mit einem intelligenten Energiemanagementsystem oder einfacher zeitgesteuerter Programmierung passen sie sich automatisch an die verfügbare Solarproduktion an.</p>
 
-    <h2>Thermal Mass Lager: The Hidden Advantage</h2>
+    <h2>Thermische Speichermasse: Der versteckte Vorteil</h2>
 
-    <p>When a solar panel charges a battery, the battery captures energy for later use. When a ceramic infrared panel heats a room, it does something similar — but through physics rather than electrochemistry.</p>
+    <p>Wenn ein Solarpaneel eine Batterie lädt, speichert die Batterie Energie für später. Wenn ein keramisches Infrarotpaneel einen Raum erwärmt, geschieht etwas Ähnliches — allerdings durch Physik statt durch Elektrochemie.</p>
 
-    <p>Infrared radiation heats the building fabric: walls, Boden, furniture, and ceiling. These surfaces have significant thermal mass and retain warmth for 2–4 hours after the panel switches off. Running infrared panels during peak solar hours — say 10:00–15:00 in winter — charges the building's thermal mass with solar energy, which then slowly releases heat through the evening.</p>
+    <p>Infrarotstrahlung erwärmt die Gebäudesubstanz: Wände, Boden, Möbel und Decke. Diese Oberflächen besitzen eine erhebliche thermische Masse und halten die Wärme noch 2–4 Stunden, nachdem das Paneel abgeschaltet hat. Betreibt man Infrarotpaneele während der Spitzenstunden der Solarproduktion — etwa 10:00–15:00 Uhr im Winter —, lädt man die thermische Masse des Gebäudes mit Solarenergie auf, die dann über den Abend hinweg langsam wieder abgegeben wird.</p>
 
     <div class="callout">
-      <p>A ceramic infrared panel running on noon solar electricity effectively "speichert" that energy as heat in the building mass for several hours — without a battery, without losses, and without electrochemical degradation over time.</p>
+      <p>Ein keramisches Infrarotpaneel, das mittags mit Solarstrom betrieben wird, speichert diese Energie effektiv als Wärme in der Gebäudemasse — für mehrere Stunden, ganz ohne Batterie, ohne Verluste und ohne elektrochemische Alterung.</p>
     </div>
 
-    <h2>The MuKEn 2014 Compliance Angle</h2>
+    <h2>Der MuKEn-2014-Konformitätsaspekt</h2>
 
-    <p>Swiss solar installers increasingly find that their clients are under cantonal pressure to replace end-of-life gas boilers with renewable heating systems (see our <a href="muken-2014-boiler-replacement-switzerland.html" style="color:var(--gold);">MuKEn 2014 article</a>). An infrared heating installation powered by an on-site solar PV system is fully MuKEn-compliant: the electricity is generated from a renewable source and consumed on-site.</p>
+    <p>Schweizer Solar-Installateure stellen zunehmend fest, dass ihre Kunden unter kantonalem Druck stehen, Gasheizungen am Ende ihrer Lebensdauer durch erneuerbare Heizsysteme zu ersetzen (siehe unseren Artikel <a href="muken-2014-boiler-replacement-switzerland.html" style="color:var(--gold);">zu MuKEn 2014</a>). Eine Infrarotheizanlage, die von einer Solar-PV-Anlage vor Ort versorgt wird, ist vollständig MuKEn-konform: Der Strom stammt aus einer erneuerbaren Quelle und wird vor Ort verbraucht.</p>
 
-    <p>This creates a compelling combined proposal for solar installers: a PV system with infrared heating satisfies both the client's desire to reduce energy bills and the legal requirement to move away from fossil heating.</p>
+    <p>Das ergibt ein überzeugendes Gesamtangebot für Solar-Installateure: Eine PV-Anlage mit Infrarotheizung erfüllt sowohl den Wunsch des Kunden, die Energiekosten zu senken, als auch die gesetzliche Pflicht, von fossiler Heizung wegzukommen.</p>
 
-    <h2>The Partnership Oppodertunity for Solar-Installateure</h2>
+    <h2>Die Partnerschaftschance für Solar-Installateure</h2>
 
-    <p>Swiss solar installers who add infrared heating to their proposals Bericht two clear benefits:</p>
+    <p>Schweizer Solar-Installateure, die Infrarotheizung in ihre Angebote aufnehmen, profitieren von zwei klaren Vorteilen:</p>
 
-    <h3>Higher average contract value</h3>
-    <p>A 5 kWp PV system costs approximately CHF 12,000–16,000 installed. Adding 6–8 infrared heating panels (contact us for installer pricing) adds meaningfully to the contract value — a 15–25% uplift for modest additional installation complexity (panels are wall-mounted with standard electrical connections).</p>
+    <h3>Höherer durchschnittlicher Auftragswert</h3>
+    <p>Eine 5-kWp-PV-Anlage kostet installiert etwa CHF 12'000–16'000. Die Ergänzung um 6–8 Infrarotheizpaneele (kontaktieren Sie uns für Installateur-Konditionen) erhöht den Auftragswert spürbar — ein Plus von 15–25 % bei überschaubarem zusätzlichem Installationsaufwand (die Paneele werden wandmontiert mit Standard-Elektroanschlüssen installiert).</p>
 
-    <h3>Better client outcomes = better referrals</h3>
-    <p>A client who installs solar PV and keeps a gas boiler self-consumes perhaps 30–35% of their solar output. A client who also installs infrared heating can self-consume 55–70% of their solar output in winter. The improved bill outcome leads to stronger satisfaction and better referral rates.</p>
+    <h3>Bessere Kundenergebnisse = bessere Weiterempfehlungen</h3>
+    <p>Ein Kunde, der eine Solaranlage installiert und seine Gasheizung behält, verbraucht vielleicht 30–35 % seiner Solarproduktion selbst. Ein Kunde, der zusätzlich Infrarotheizung installiert, kann im Winter 55–70 % seiner Solarproduktion selbst nutzen. Das bessere Ergebnis bei der Stromrechnung führt zu höherer Zufriedenheit und besseren Weiterempfehlungsraten.</p>
 
     <table class="data-table">
       <thead>
-        <tr><th>Scenario</th><th>Self-consumption</th><th>Annual grid cost</th></tr>
+        <tr><th>Szenario</th><th>Eigenverbrauch</th><th>Jährliche Netzkosten</th></tr>
       </thead>
       <tbody>
-        <tr><td>PV only, no load change</td><td>30–35%</td><td>Baseline</td></tr>
-        <tr><td>PV + EV charger</td><td>40–50%</td><td>−15 to −25%</td></tr>
-        <tr><td>PV + infrared heating (6 panels)</td><td>55–70%</td><td>−35 to −50%</td></tr>
-        <tr><td>PV + infrared + battery</td><td>75–90%</td><td>−55 to −70%</td></tr>
+        <tr><td>Nur PV, keine Laständerung</td><td>30–35 %</td><td>Basiswert</td></tr>
+        <tr><td>PV + E-Auto-Ladestation</td><td>40–50 %</td><td>−15 bis −25 %</td></tr>
+        <tr><td>PV + Infrarotheizung (6 Paneele)</td><td>55–70 %</td><td>−35 bis −50 %</td></tr>
+        <tr><td>PV + Infrarot + Batterie</td><td>75–90 %</td><td>−55 bis −70 %</td></tr>
       </tbody>
     </table>
 
-    <p>The table above uses indicative figures for a typical 5 kWp system in Central Switzerland. Actual results depend on system size, consumption profile, and occupancy patterns.</p>
+    <p>Die obige Tabelle verwendet Richtwerte für eine typische 5-kWp-Anlage in der Zentralschweiz. Die tatsächlichen Ergebnisse hängen von Anlagengrösse, Verbrauchsprofil und Nutzungsverhalten ab.</p>
 
-    <h2>How to Propose the Combination</h2>
+    <h2>Wie Sie die Kombination anbieten</h2>
 
-    <p>SunWave Switzerland woderks directly with solar installers. We provide pre-calculated panel counts and savings estimates for your clients' projects, co-branded technical documentation for client presentations, and dedicated terms for installer partnerships — contact us to discuss.</p>
+    <p>SunWave Switzerland arbeitet direkt mit Solar-Installateuren zusammen. Wir liefern vorab berechnete Paneelanzahlen und Einsparschätzungen für die Projekte Ihrer Kunden, co-gebrandete technische Unterlagen für Kundenpräsentationen sowie eigene Konditionen für Installateur-Partnerschaften — kontaktieren Sie uns für Details.</p>
 
-    <p>The typical proposal format: include a line item for infrared heating panels in the PV proposal, with an estimated payback period that reflects both the solar and heating savings. Most clients find the combined payback period shoderter than PV alone once the avoided gas costs are included.</p>
+    <p>Das typische Angebotsformat: Nehmen Sie einen Posten für Infrarotheizpaneele in das PV-Angebot auf, mit einer geschätzten Amortisationszeit, die sowohl die Solar- als auch die Heizungseinsparungen berücksichtigt. Die meisten Kunden stellen fest, dass die kombinierte Amortisationszeit kürzer ausfällt als bei PV allein, sobald die vermiedenen Gaskosten eingerechnet werden.</p>
 
     <div class="article-cta">
-      <h3>Become a SunWave Solar Partner</h3>
-      <p>We Support Swiss solar installers with pre-sales calculations, installer pricing, and co-branded materials.</p>
-      <a href="../../for-solar.html" class="btn-gold">Wissen About Partnership</a>
+      <h3>Werden Sie SunWave Solar-Partner</h3>
+      <p>Wir unterstützen Schweizer Solar-Installateure mit Vorverkaufsberechnungen, Installateur-Konditionen und co-gebrandeten Materialien.</p>
+      <a href="../../for-solar.html" class="btn-gold">Mehr über die Partnerschaft erfahren</a>
+    </div>
+
+    <div class="related-articles">
+      <h3>Weitere Artikel</h3>
+      <ul class="related-list">
+        <li><a href="muken-2014-boiler-replacement-switzerland.html">MuKEn 2014: Warum die Schweiz Gasheizungsersatz vorschreibt — und was Sie stattdessen einsetzen sollten</a></li>
+        <li><a href="tu-dresden-infrared-test-results.html">Der TU-Dresden-Test nach DIN EN IEC 60675-3: Was die Zahlen wirklich bedeuten</a></li>
+        <li><a href="ceramic-vs-aluminium-infrared-panels.html">Keramik vs. Aluminium Infrarotpaneele: Die Fraunhofer-WKI-Studie erklärt</a></li>
+        <li><a href="gasheizung-ersetzen-schweiz.html">Gasheizung ersetzen in der Schweiz: Die besten Alternativen im Vergleich</a></li>
+        <li><a href="infrarotheizung-schweiz-ratgeber.html">Infrarotheizung Schweiz: Der vollständige Ratgeber 2026</a></li>
+      </ul>
     </div>
   </div>
 </section>
