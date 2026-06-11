@@ -88,24 +88,24 @@
 
 <nav class="nav" id="nav">
   <div class="nav__inner">
-    <a href="../../index.html" class="nav__logo"><img src="../../images/logo.webp" alt="SunWave Switzerland" style="height:44px;display:block;border-radius:6px;"></a>
+    <a href="../index.html" class="nav__logo"><img src="../../images/logo.webp" alt="SunWave Switzerland" style="height:44px;display:block;border-radius:6px;"></a>
     <div class="nav__links">
-      <a href="../../product.html">Das Paneel</a>
-      <a href="../../research.html">Forschung</a>
-      <div class="nav__drop"><button class="nav__drop-btn" aria-haspopup="true" aria-expanded="false" aria-controls="nav-drop-menu">Für &#9662;</button><div class="nav__drop-menu" id="nav-drop-menu"><a href="../../for-solar.html">Solar-Installateure</a><a href="../../for-hotels.html">Hotels &amp; Gastronomie</a><a href="../../for-homes.html">Schweizer Haushalte</a><a href="../../for-offices.html">Büros &amp; Gewerbe</a></div></div>
-      <a href="../../index.html#calculator">Rechner</a>
+      <a href="../product.html">Das Paneel</a>
+      <a href="../research.html">Forschung</a>
+      <div class="nav__drop"><button class="nav__drop-btn" aria-haspopup="true" aria-expanded="false" aria-controls="nav-drop-menu">Für &#9662;</button><div class="nav__drop-menu" id="nav-drop-menu"><a href="../for-solar.html">Solar-Installateure</a><a href="../for-hotels.html">Hotels &amp; Gastronomie</a><a href="../for-homes.html">Schweizer Haushalte</a><a href="../for-offices.html">Büros &amp; Gewerbe</a></div></div>
+      <a href="../index.html#calculator">Rechner</a>
       <a href="index.html">Blog</a>
-      <a href="../../contact.html">Kontakt</a>
+      <a href="../contact.html">Kontakt</a>
     </div>
     <div class="nav__right">
-      <a href="../../product.html" class="nav__order-btn">Jetzt kaufen</a>
+      <a href="../product.html" class="nav__order-btn">Jetzt kaufen</a>
       <div class="nav__lang"><a href="../../blog/replace-gas-heating-switzerland.html" class="nav__lang-btn">EN</a><span class="nav__lang-sep">|</span><span class="nav__lang-btn lang-active">DE</span></div>
       <button class="nav__hamburger" id="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
   <div class="nav__mobile" id="nav-mobile">
-    <a href="../../product.html">Das Paneel</a><a href="../../research.html">Forschung</a><a href="../../for-solar.html">Solar-Installateure</a><a href="../../for-hotels.html">Hotels &amp; Gastronomie</a><a href="../../for-homes.html">Schweizer Haushalte</a><a href="../../for-offices.html">Büros &amp; Gewerbe</a><a href="../../index.html#calculator">Rechner</a><a href="index.html">Blog</a><a href="../../contact.html">Kontakt</a>
-    <a href="../../product.html" class="nav__mobile-order">Jetzt kaufen</a>
+    <a href="../product.html">Das Paneel</a><a href="../research.html">Forschung</a><a href="../for-solar.html">Solar-Installateure</a><a href="../for-hotels.html">Hotels &amp; Gastronomie</a><a href="../for-homes.html">Schweizer Haushalte</a><a href="../for-offices.html">Büros &amp; Gewerbe</a><a href="../index.html#calculator">Rechner</a><a href="index.html">Blog</a><a href="../contact.html">Kontakt</a>
+    <a href="../product.html" class="nav__mobile-order">Jetzt kaufen</a>
   </div>
   <div class="mobile-lang"><a href="../../blog/replace-gas-heating-switzerland.html">EN</a><span class="lang-active">DE</span></div>
 </nav>
@@ -383,7 +383,7 @@
     <div class="article-cta">
       <h3>Bereit für den Heizungsersatz?</h3>
       <p>Entdecken Sie das SunWave Ceramica Paneel — 6mm Feinsteinzeug, 250/350W, CE-zertifiziert, 5 Jahre Garantie. Ab CHF 550 pro Paneel inkl. Thermostat und kostenloser Beratung.</p>
-      <a href="../../product.html" class="btn-gold">Zum SunWave Ceramica Paneel &#8594;</a>
+      <a href="../product.html" class="btn-gold">Zum SunWave Ceramica Paneel &#8594;</a>
     </div>
 
   </div>
@@ -391,11 +391,73 @@
 
 </main>
 
-<script>
-const nav=document.getElementById('nav');window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>50));
-const hamburger=document.getElementById('nav-hamburger');const mobileNav=document.getElementById('nav-mobile');if(hamburger&&mobileNav){hamburger.addEventListener('click',()=>{hamburger.classList.toggle('active');mobileNav.classList.toggle('active')});}
-const dropBtn=document.querySelector('.nav__drop-btn');const dropMenu=document.getElementById('nav-drop-menu');if(dropBtn&&dropMenu){dropBtn.addEventListener('click',e=>{e.stopPropagation();const isOpen=dropMenu.classList.toggle('open');dropBtn.setAttribute('aria-expanded',isOpen)});document.addEventListener('click',()=>{dropMenu.classList.remove('open');dropBtn.setAttribute('aria-expanded','false')});document.addEventListener('keydown',e=>{if(e.key==='Escape'){dropMenu.classList.remove('open');dropBtn.setAttribute('aria-expanded','false')}});}
-</script>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo" style="display:flex;align-items:center;gap:8px">
+          <img src="../../images/logo.webp" alt="SunWave Switzerland" style="height:36px;display:block;border-radius:4px;">
+        </div>
+        <p class="footer__tagline">Schweizer Distributor von SunWave Ceramica Keramik-Infrarotheizpaneelen. MuKEn-konform. BSRIA-getestet. Fraunhofer-zertifiziert.<br>Lieferung in alle Schweizer Kantone.</p>
+        <div class="footer__contact">
+          <a href="mailto:info@sunwaveswitzerland.com">info@sunwaveswitzerland.com</a><br>
+          <a href="tel:+41767637490">+41 76 763 74 90</a><br>
+          Glaserbergstrasse 27, 4056 Basel
+        </div>
+      </div>
+      <div class="footer__col">
+        <h3>Produkt</h3>
+        <ul>
+          <li><a href="../product.html">SunWave Ceramica</a></li>
+          <li><a href="../product.html#variants">Design-Varianten</a></li>
+          <li><a href="../product.html#specs">Vollständige Spezifikationen</a></li>
+          <li><a href="../product.html#variants">Jetzt bestellen</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3>Wissen</h3>
+        <ul>
+          <li><a href="../research.html">Forschung &amp; Belege</a></li>
+          <li><a href="../research.html">MuKEn-Leitfaden</a></li>
+          <li><a href="../research.html">Wie Infrarot funktioniert</a></li>
+          <li><a href="../index.html#calculator">Sparrechner</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3>Für</h3>
+        <ul>
+          <li><a href="../for-solar.html">Solar-Installateure</a></li>
+          <li><a href="../for-hotels.html">Hotels</a></li>
+          <li><a href="../for-homes.html">Schweizer Haushalte</a></li>
+          <li><a href="../for-offices.html">Büro</a></li>
+          <li><a href="../contact.html">Kontakt</a></li>
+          <li><a href="index.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3>Rechtliches</h3>
+        <ul>
+          <li><a href="../legal.html">Impressum</a></li>
+          <li><a href="../terms.html">AGB</a></li>
+          <li><a href="../returns.html">Rückgabebedingungen</a></li>
+          <li><a href="../shipping.html">Lieferung</a></li>
+          <li><a href="../privacy.html">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div>&copy; 2026 SunWave Switzerland &mdash; Lumia Technologies GmbH &mdash; sunwaveswitzerland.com</div>
+      <div class="footer__certs">
+        <span class="footer__cert-tag">CE</span>
+        <span class="footer__cert-tag">ISO 9001</span>
+        <span class="footer__cert-tag">BSRIA Getestet</span>
+        <span class="footer__cert-tag">Fraunhofer WKI</span>
+        <span class="footer__cert-tag">MuKEn Konform</span>
+      </div>
+    </div>
+  </div>
+</footer>
 
+<script src="../../js/main.js"></script>
 </body>
 </html>
