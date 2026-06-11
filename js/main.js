@@ -73,14 +73,63 @@ window.addEventListener('scroll', () => {
   });
 })();
 
-/* ── Dropdown hover intent ── */
+/* ── Dropdown hover intent + keyboard/ARIA support ── */
 document.querySelectorAll('.nav__drop').forEach(drop => {
+  const btn = drop.querySelector('.nav__drop-btn');
   const menu = drop.querySelector('.nav__drop-menu');
   let closeTimer;
-  drop.addEventListener('mouseenter', () => { clearTimeout(closeTimer); menu.classList.add('open'); });
-  drop.addEventListener('mouseleave', () => { closeTimer = setTimeout(() => menu.classList.remove('open'), 220); });
+
+  function openMenu() {
+    clearTimeout(closeTimer);
+    menu.classList.add('open');
+    btn?.setAttribute('aria-expanded', 'true');
+  }
+  function closeMenu() {
+    menu.classList.remove('open');
+    btn?.setAttribute('aria-expanded', 'false');
+  }
+  function scheduleClose() {
+    closeTimer = setTimeout(closeMenu, 220);
+  }
+
+  drop.addEventListener('mouseenter', openMenu);
+  drop.addEventListener('mouseleave', scheduleClose);
   menu.addEventListener('mouseenter', () => clearTimeout(closeTimer));
-  menu.addEventListener('mouseleave', () => { closeTimer = setTimeout(() => menu.classList.remove('open'), 220); });
+  menu.addEventListener('mouseleave', scheduleClose);
+
+  btn?.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    menu.classList.contains('open') ? closeMenu() : openMenu();
+  });
+
+  btn?.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeMenu();
+      btn.focus();
+    } else if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      openMenu();
+      menu.querySelector('a')?.focus();
+    }
+  });
+
+  menu.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeMenu();
+      btn?.focus();
+    }
+  });
+});
+
+// Close nav dropdowns on outside click
+document.addEventListener('click', (e) => {
+  document.querySelectorAll('.nav__drop').forEach(drop => {
+    if (!drop.contains(e.target)) {
+      drop.querySelector('.nav__drop-menu')?.classList.remove('open');
+      drop.querySelector('.nav__drop-btn')?.setAttribute('aria-expanded', 'false');
+    }
+  });
 });
 
 /* ── FAQ accordion ── */
