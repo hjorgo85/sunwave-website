@@ -6,3 +6,4 @@ deployment:
     - /bin/cp -R . $DEPLOYPATH
     - /usr/bin/rsync -a --delete images/ $DEPLOYPATH/images/
     - /bin/rm -rf $DEPLOYPATH/.git $DEPLOYPATH/.github $DEPLOYPATH/*.py
+    - /bin/rm -f $DEPLOYPATH/sitemap.php $DEPLOYPATH/de/sitemap.php
