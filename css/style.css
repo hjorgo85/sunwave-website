@@ -676,6 +676,13 @@ body { scroll-padding-top: 72px; }
 .divider { height: 1px; background: rgba(255,255,255,0.08); margin: 40px 0; }
 .divider--light { background: var(--gray-200); }
 
+/* Wide tables: scroll horizontally instead of overflowing the page */
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 28px 0; }
+.table-scroll table { margin: 0; }
+@media (max-width: 600px) {
+  .table-scroll table { min-width: 480px; }
+}
+
 /* ── Responsive ── */
 @media (max-width: 1024px) {
   .audience-grid { grid-template-columns: repeat(2, 1fr); }
