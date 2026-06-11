@@ -85,6 +85,7 @@
       width: 38px; height: 38px; cursor: pointer; transition: background 0.15s; font-family: inherit; line-height: 1;
     }
     .pd-qty__btn:hover { background: #e4ddd5; }
+    .pd-qty__btn:disabled { opacity: 0.4; cursor: not-allowed; background: #f2ede7; }
     .pd-qty__val {
       min-width: 40px; height: 38px; display: flex; align-items: center;
       justify-content: center; font-size: 0.95rem; font-weight: 700; color: #1a1a24;
@@ -772,7 +773,7 @@
         <span class="pd-price">CHF 550</span>
         <span class="pd-price-note">per panel &middot; incl. VAT &middot; thermostat required &amp; included</span>
       </div>
-      <div class="pd-delivery">+ CHF 35 delivery (Swiss Post PostPac Priority)</div>
+      <div class="pd-delivery" id="pd-shipping-line">+ CHF 35 delivery (Swiss Post PostPac Priority)</div>
 
       <hr class="pd-divider">
 
@@ -801,20 +802,20 @@
       </div>
 
       <div class="pd-option">
-        <div class="pd-option__label">Quantity</div>
+        <div class="pd-option__label">Quantity <span style="font-weight:400;color:#888">(max. 5 panels per order)</span></div>
         <div style="display:flex;align-items:center">
           <div class="pd-qty">
-            <button class="pd-qty__btn" onclick="pdUpdateQty(-1)">&#8722;</button>
+            <button class="pd-qty__btn" id="pd-qty-minus" onclick="pdUpdateQty(-1)">&#8722;</button>
             <span class="pd-qty__val" id="pd-qty">1</span>
-            <button class="pd-qty__btn" onclick="pdUpdateQty(1)">+</button>
+            <button class="pd-qty__btn" id="pd-qty-plus" onclick="pdUpdateQty(1)">+</button>
           </div>
           <span class="pd-qty__hint" id="pd-coverage">covers 12&ndash;15 m&sup2;</span>
         </div>
       </div>
 
       <div class="pd-total">
-        <span class="pd-total__label">Total (incl. VAT)</span>
-        <span class="pd-total__price" id="pd-total-price">CHF 550</span>
+        <span class="pd-total__label">Total (incl. VAT &amp; delivery)</span>
+        <span class="pd-total__price" id="pd-total-price">CHF 585</span>
       </div>
 
       <button class="pd-cta" onclick="pdOrder()">Request a Quote</button>
@@ -1193,15 +1194,37 @@
   /* Quantity updater (top section) */
   let pdQty = 1;
   function pdUpdateQty(delta) {
-    pdQty = Math.max(1, Math.min(50, pdQty + delta));
+    pdQty = Math.max(1, Math.min(5, pdQty + delta));
     document.getElementById('pd-qty').textContent = pdQty;
     document.getElementById('pd-coverage').textContent = 'covers ' + (pdQty * 12) + '–' + (pdQty * 15) + ' m²';
-    document.getElementById('pd-total-price').textContent = 'CHF ' + (pdQty * 550).toLocaleString('de-CH');
+    const shipping = pdQty < 5 ? pdQty * 35 : 0;
+    const total = pdQty * 550 + shipping;
+    const shippingLine = document.getElementById('pd-shipping-line');
+    if (shippingLine) {
+      shippingLine.textContent = shipping > 0
+        ? '+ CHF ' + shipping + ' delivery (Swiss Post PostPac Priority)'
+        : 'FREE delivery (Swiss Post PostPac Priority)';
+    }
+    document.getElementById('pd-total-price').textContent = 'CHF ' + total.toLocaleString('de-CH');
+    const minusBtn = document.getElementById('pd-qty-minus');
+    const plusBtn = document.getElementById('pd-qty-plus');
+    if (minusBtn) minusBtn.disabled = pdQty <= 1;
+    if (plusBtn) plusBtn.disabled = pdQty >= 5;
   }
+  pdUpdateQty(0);
 
   function pdOrder() {
     const finish = document.getElementById('pd-finish-name').textContent;
-    window.location.href = 'contact.html?product=' + encodeURIComponent('SunWave Ceramica') + '&qty=' + pdQty + '&finish=' + encodeURIComponent(finish);
+    const shipping = pdQty < 5 ? pdQty * 35 : 0;
+    const total = pdQty * 550 + shipping;
+    const params = new URLSearchParams({
+      product: 'SunWave Ceramica',
+      finish: finish,
+      qty: pdQty,
+      shipping: shipping,
+      total: total
+    });
+    window.location.href = 'contact.html?' + params.toString();
   }
 
   /* ── Gallery swipe + dot navigation ── */

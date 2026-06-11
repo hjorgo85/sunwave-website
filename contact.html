@@ -202,6 +202,53 @@
       .form-row { grid-template-columns: 1fr; }
       .contact-sidebar { flex-direction: column; }
     }
+
+    /* Order summary */
+    .order-summary {
+      display: none;
+      background: var(--off-white);
+      border: 1.5px solid #e8e3db;
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-bottom: 24px;
+    }
+    .order-summary__title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+    .order-summary__row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: #555;
+      padding: 4px 0;
+    }
+    .order-summary__row strong { color: var(--dark); }
+    .order-summary__row--total {
+      border-top: 1px solid #e0dbd2;
+      margin-top: 6px;
+      padding-top: 8px;
+      font-weight: 800;
+      color: var(--dark);
+    }
+
+    /* Property details */
+    .form-section-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #999;
+      margin: 28px 0 12px;
+    }
+    .form-optional {
+      font-weight: 400;
+      text-transform: none;
+      letter-spacing: 0;
+      color: #aaa;
+    }
   </style>
   <link rel="canonical" href="https://sunwaveswitzerland.com/contact.html">
   <link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/contact.html">
@@ -315,6 +362,19 @@
       <p class="form-sub">We reply within 24 hours, typically much sooner.</p>
 
       <form id="contact-form" onsubmit="submitContactForm(event)">
+        <div class="order-summary" id="order-summary">
+          <div class="order-summary__title">Your panel selection</div>
+          <div class="order-summary__row"><span>Product</span><strong id="os-product"></strong></div>
+          <div class="order-summary__row"><span>Finish</span><strong id="os-finish"></strong></div>
+          <div class="order-summary__row"><span>Quantity</span><strong id="os-qty"></strong></div>
+          <div class="order-summary__row"><span>Delivery</span><strong id="os-shipping"></strong></div>
+          <div class="order-summary__row order-summary__row--total"><span>Total (incl. VAT)</span><strong id="os-total"></strong></div>
+          <input type="hidden" id="cf-order-product">
+          <input type="hidden" id="cf-order-finish">
+          <input type="hidden" id="cf-order-qty">
+          <input type="hidden" id="cf-order-shipping">
+          <input type="hidden" id="cf-order-total">
+        </div>
         <div class="form-row">
           <div class="form-group">
             <label for="cf-name">Name <span>*</span></label>
@@ -396,6 +456,24 @@
               <option>District heating</option>
               <option>No heating (new build)</option>
             </select>
+          </div>
+        </div>
+
+        <div class="form-section-label">Property details <span class="form-optional">(optional)</span></div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cf-property-type">Property type</label>
+            <select class="form-select" id="cf-property-type">
+              <option value="">Select...</option>
+              <option>House</option>
+              <option>Apartment / flat</option>
+              <option>Office / commercial</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cf-rooms">Number of rooms to heat</label>
+            <input class="form-input" type="number" id="cf-rooms" min="1" placeholder="e.g. 3">
           </div>
         </div>
 
@@ -527,20 +605,34 @@
 
 <script src="js/main.js"></script>
 <script>
-  /* Pre-fill from URL params (from product page order button) */
+  /* Pre-fill order summary from URL params (from product page order button) */
   (function() {
     const p = new URLSearchParams(window.location.search);
-    if (p.get('product')) {
-      const msg = document.getElementById('cf-message');
-      if (msg) {
-        const parts = [];
-        if (p.get('product')) parts.push('Product: ' + p.get('product'));
-        if (p.get('finish')) parts.push('Finish: ' + p.get('finish'));
-        if (p.get('qty')) parts.push('Quantity: ' + p.get('qty'));
-        if (p.get('thermostat') === 'basic') parts.push('Add smart thermostat: Yes');
-        msg.value = parts.join('\n');
-      }
-    }
+    if (!p.get('product')) return;
+
+    const setText = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
+    const setHidden = (id, val) => { const el = document.getElementById(id); if (el) el.value = val; };
+
+    const product  = p.get('product')  || '';
+    const finish   = p.get('finish')   || '';
+    const qty      = p.get('qty')      || '';
+    const shipping = p.get('shipping');
+    const total    = p.get('total');
+
+    setText('os-product', product);
+    setText('os-finish', finish);
+    setText('os-qty', qty);
+    setText('os-shipping', shipping === '0' ? 'Free' : (shipping !== null ? 'CHF ' + shipping : '—'));
+    setText('os-total', total !== null ? 'CHF ' + Number(total).toLocaleString('de-CH') : '—');
+
+    setHidden('cf-order-product', product);
+    setHidden('cf-order-finish', finish);
+    setHidden('cf-order-qty', qty);
+    setHidden('cf-order-shipping', shipping || '');
+    setHidden('cf-order-total', total || '');
+
+    const summary = document.getElementById('order-summary');
+    if (summary) summary.style.display = 'block';
   })();
 
   function submitContactForm(e) {
@@ -558,7 +650,14 @@
     data.append('type',    document.getElementById('cf-type').value);
     data.append('area',    document.getElementById('cf-area').value);
     data.append('system',  document.getElementById('cf-system').value);
+    data.append('property_type', document.getElementById('cf-property-type').value);
+    data.append('rooms',   document.getElementById('cf-rooms').value);
     data.append('message', document.getElementById('cf-message').value);
+    data.append('order_product',  document.getElementById('cf-order-product').value);
+    data.append('order_finish',   document.getElementById('cf-order-finish').value);
+    data.append('order_qty',      document.getElementById('cf-order-qty').value);
+    data.append('order_shipping', document.getElementById('cf-order-shipping').value);
+    data.append('order_total',    document.getElementById('cf-order-total').value);
 
     fetch('send-mail.php', { method: 'POST', body: data })
       .then(r => r.json())

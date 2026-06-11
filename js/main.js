@@ -183,7 +183,7 @@ function swCalc() {
   const curCost    = curEnergy * (fuelIsElec ? elecRate : fuelRate) + boilerService;
   const saving     = curCost - irCost;
   const panels     = Math.ceil(area / 13);
-  const capital    = panels * 490;
+  const capital    = panels * 550;
   const payback    = saving > 0 ? (capital / saving).toFixed(1) : '—';
   const co2Saving  = Math.round(curEnergy * (fuelIsElec ? 0.035 : 0.202) - irEnergy * 0.035);
 
