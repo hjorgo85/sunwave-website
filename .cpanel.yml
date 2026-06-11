@@ -4,3 +4,4 @@ deployment:
     - export DEPLOYPATH=/home/sealifee/sunwaveswitzerland.com/
     - /usr/local/cpanel/3rdparty/bin/git pull origin main
     - /bin/cp -R . $DEPLOYPATH
+    - /bin/rm -rf $DEPLOYPATH/.git $DEPLOYPATH/.github $DEPLOYPATH/*.py

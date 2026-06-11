@@ -26,8 +26,15 @@ if (empty($payment['status'])) { http_response_code(200); exit; }
 $status = $payment['status'];
 $meta   = $payment['metadata'] ?? [];
 
+// Prevent duplicate order emails if this webhook is replayed for the same payment
+$flag_dir = dirname($_SERVER['DOCUMENT_ROOT']) . '/mollie_processed';
+if (!is_dir($flag_dir)) @mkdir($flag_dir, 0700);
+$flag_file = $flag_dir . '/' . preg_replace('/[^a-zA-Z0-9_]/', '', $payment_id);
+if (file_exists($flag_file)) { http_response_code(200); exit; }
+
 // Send email notification when payment is paid
 if ($status === 'paid') {
+    @touch($flag_file);
     $order_id = $meta['order_id']  ?? $payment_id;
     $name     = $meta['name']      ?? 'N/A';
     $email    = $meta['email']     ?? 'N/A';
