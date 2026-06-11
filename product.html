@@ -92,6 +92,15 @@
       border-left: 1.5px solid #d4cfc7; border-right: 1.5px solid #d4cfc7;
     }
     .pd-qty__hint { margin-left: 10px; font-size: 0.76rem; color: #727272; align-self: center; }
+    /* Extra panel finishes */
+    .pd-extra-finish-rows { display: flex; flex-direction: column; gap: 8px; }
+    .pd-extra-finish-row { display: flex; align-items: center; gap: 10px; }
+    .pd-extra-finish-row__label { font-size: 0.8rem; font-weight: 600; color: #555; min-width: 64px; flex-shrink: 0; }
+    .pd-extra-finish-row select {
+      flex: 1; padding: 8px 10px; border: 1.5px solid #d4cfc7; border-radius: 4px;
+      font-size: 0.85rem; font-family: inherit; color: #1a1a24; background: #fff; cursor: pointer;
+    }
+    .pd-extra-finish-row select:focus { outline: none; border-color: var(--gold); }
     /* Total */
     .pd-total {
       display: flex; justify-content: space-between; align-items: center;
@@ -813,6 +822,11 @@
         </div>
       </div>
 
+      <div class="pd-option" id="pd-extra-finishes" style="display:none">
+        <div class="pd-option__label">Finish for additional panels</div>
+        <div id="pd-extra-finish-rows" class="pd-extra-finish-rows"></div>
+      </div>
+
       <div class="pd-total">
         <span class="pd-total__label">Total (incl. VAT &amp; delivery)</span>
         <span class="pd-total__price" id="pd-total-price">CHF 585</span>
@@ -1197,25 +1211,69 @@
     pdQty = Math.max(1, Math.min(5, pdQty + delta));
     document.getElementById('pd-qty').textContent = pdQty;
     document.getElementById('pd-coverage').textContent = 'covers ' + (pdQty * 12) + '–' + (pdQty * 15) + ' m²';
-    const shipping = pdQty < 5 ? pdQty * 35 : 0;
+    const shipping = Math.min(pdQty * 35, 100);
     const total = pdQty * 550 + shipping;
     const shippingLine = document.getElementById('pd-shipping-line');
     if (shippingLine) {
-      shippingLine.textContent = shipping > 0
-        ? '+ CHF ' + shipping + ' delivery (Swiss Post PostPac Priority)'
-        : 'FREE delivery (Swiss Post PostPac Priority)';
+      shippingLine.textContent = '+ CHF ' + shipping + ' delivery (Swiss Post PostPac Priority)';
     }
     document.getElementById('pd-total-price').textContent = 'CHF ' + total.toLocaleString('de-CH');
     const minusBtn = document.getElementById('pd-qty-minus');
     const plusBtn = document.getElementById('pd-qty-plus');
     if (minusBtn) minusBtn.disabled = pdQty <= 1;
     if (plusBtn) plusBtn.disabled = pdQty >= 5;
+    updateExtraFinishRows();
   }
   pdUpdateQty(0);
 
+  /* Per-panel finish selection for additional panels (qty > 1) */
+  function updateExtraFinishRows() {
+    const wrap = document.getElementById('pd-extra-finishes');
+    const rows = document.getElementById('pd-extra-finish-rows');
+    if (!wrap || !rows) return;
+    const needed = pdQty - 1;
+    if (needed <= 0) {
+      wrap.style.display = 'none';
+      rows.innerHTML = '';
+      return;
+    }
+    const finishNames = Array.from(document.querySelectorAll('.pd-swatch')).map(s => s.dataset.finish);
+    const existing = Array.from(rows.querySelectorAll('select')).map(s => s.value);
+    rows.innerHTML = '';
+    for (let i = 0; i < needed; i++) {
+      const row = document.createElement('div');
+      row.className = 'pd-extra-finish-row';
+      const label = document.createElement('span');
+      label.className = 'pd-extra-finish-row__label';
+      label.textContent = 'Panel ' + (i + 2);
+      const select = document.createElement('select');
+      select.className = 'pd-extra-finish-select';
+      finishNames.forEach(name => {
+        const opt = document.createElement('option');
+        opt.value = name;
+        opt.textContent = name;
+        select.appendChild(opt);
+      });
+      select.value = existing[i] || document.getElementById('pd-finish-name').textContent;
+      row.appendChild(label);
+      row.appendChild(select);
+      rows.appendChild(row);
+    }
+    wrap.style.display = 'block';
+  }
+
   function pdOrder() {
-    const finish = document.getElementById('pd-finish-name').textContent;
-    const shipping = pdQty < 5 ? pdQty * 35 : 0;
+    const finishCounts = {};
+    const primaryFinish = document.getElementById('pd-finish-name').textContent;
+    finishCounts[primaryFinish] = (finishCounts[primaryFinish] || 0) + 1;
+    document.querySelectorAll('.pd-extra-finish-select').forEach(sel => {
+      finishCounts[sel.value] = (finishCounts[sel.value] || 0) + 1;
+    });
+    const finish = Object.entries(finishCounts)
+      .map(([name, count]) => count > 1 ? count + '× ' + name : name)
+      .join(', ');
+
+    const shipping = Math.min(pdQty * 35, 100);
     const total = pdQty * 550 + shipping;
     const params = new URLSearchParams({
       product: 'SunWave Ceramica',
