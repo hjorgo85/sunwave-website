@@ -347,117 +347,12 @@
       color: rgba(255,255,255,0.6);
       margin-bottom: 48px;
     }
-    .order-grid {
+    .order-info {
       max-width: var(--container);
       margin: 0 auto;
       padding: 0 24px;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: start;
-    }
-    .order-config {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 6px;
-      padding: 36px;
-    }
-    .order-config h3 {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 24px;
-    }
-    .config-row {
-      margin-bottom: 20px;
-    }
-    .config-row label {
-      display: block;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: rgba(255,255,255,0.7);
-      margin-bottom: 8px;
-    }
-    .config-select {
-      width: 100%;
-      padding: 12px 16px;
-      border-radius: 4px;
-      border: 1px solid rgba(255,255,255,0.15);
-      background: rgba(255,255,255,0.07);
-      color: #fff;
-      font-size: 0.9rem;
-      font-family: inherit;
-      appearance: none;
-      cursor: pointer;
-    }
-    .config-select option {
-      background: #1a1a24;
-      color: #fff;
-    }
-    .qty-row {
-      display: flex;
-      align-items: center;
-      gap: 0;
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 4px;
-      overflow: hidden;
-      width: fit-content;
-    }
-    .qty-btn {
-      background: rgba(255,255,255,0.07);
-      border: none;
-      color: #fff;
-      font-size: 1.3rem;
-      width: 44px;
-      height: 44px;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .qty-btn:hover { background: rgba(255,255,255,0.15); }
-    .qty-display {
-      background: transparent;
-      border: none;
-      color: #fff;
-      font-size: 1.1rem;
-      font-weight: 700;
-      width: 56px;
-      text-align: center;
-      font-family: inherit;
-    }
-    .order-total {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 24px 0 20px;
-      padding: 16px 0;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-    .order-total__label { font-size: 0.9rem; color: rgba(255,255,255,0.6); }
-    .order-total__price { font-size: 1.8rem; font-weight: 800; color: var(--gold); }
-    .order-btn {
-      width: 100%;
-      padding: 18px;
-      background: var(--gold);
-      color: var(--dark);
-      font-size: 1.05rem;
-      font-weight: 800;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-family: inherit;
-      transition: background 0.2s, transform 0.2s;
-    }
-    .order-btn:hover { background: var(--gold-hover); transform: translateY(-1px); }
-    .order-note {
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.47);
-      text-align: center;
-      margin-top: 12px;
-    }
-    .order-info {
-      display: flex;
-      flex-direction: column;
+      grid-template-columns: repeat(4, 1fr);
       gap: 20px;
     }
     .order-info-card {
@@ -563,7 +458,7 @@
     @media (max-width: 1024px) {
       .specs-grid { grid-template-columns: 1fr 1fr; }
       .perf-cards { grid-template-columns: 1fr 1fr; }
-      .order-grid { grid-template-columns: 1fr; }
+      .order-info { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 768px) {
       .specs-grid { grid-template-columns: 1fr; }
@@ -576,6 +471,7 @@
     }
     @media (max-width: 640px) {
       .perf-cards { grid-template-columns: 1fr; }
+      .order-info { grid-template-columns: 1fr; }
     }
     @media (max-width: 480px) {
       .pd-thumbs { display: none; }
@@ -1107,87 +1003,49 @@
   </div>
 </section>
 
-<!-- ── Order Section ── -->
-<section class="order-section" id="order">
+<!-- ── What's Included ── -->
+<section class="order-section" id="included">
   <div style="max-width:var(--container); margin:0 auto; padding:0 24px;">
-    <h2>Configure Your Order</h2>
+    <h2>What You Get</h2>
     <p class="section-sub">All prices in CHF including VAT · CHF 35 shipping within Switzerland</p>
   </div>
-  <div class="order-grid">
-    <div class="order-config">
-      <h3>SunWave Ceramica · 60 × 120 cm · 650 W</h3>
-
-      <div class="config-row">
-        <label for="order-variant">Finish</label>
-        <select class="config-select" id="order-variant">
-          <option value="imperial-marble">Imperial Marble — classic white marble veining</option>
-          <option value="alpine-white">Alpine White — clean, bright neutral</option>
-          <option value="tuscan-sand">Tuscan Sand — warm earthy tone, textured</option>
-          <option value="nordic-slate">Nordic Slate — deep charcoal, contemporary</option>
-          <option value="sandstone-edge">Sandstone Edge — warm sandy stone</option>
-          <option value="desert-flow">Desert Flow — rich terracotta warmth</option>
-          <option value="ivory-cloud">Ivory Cloud — soft cream, timeless</option>
-          <option value="walnut-stone">Walnut Stone — deep walnut brown</option>
-          <option value="timber-stone">Timber Stone — natural timber tones</option>
-        </select>
-      </div>
-
-      <div class="config-row">
-        <label for="qty-input">Quantity</label>
-        <div class="qty-row">
-          <button class="qty-btn" id="qty-minus" onclick="updateQty(-1)">−</button>
-          <input class="qty-display" id="qty-input" type="number" value="1" min="1" max="50" readonly>
-          <button class="qty-btn" id="qty-plus" onclick="updateQty(1)">+</button>
-        </div>
-      </div>
-
-      <div class="order-total">
-        <span class="order-total__label">Total (incl. VAT · thermostat required &amp; included)</span>
-        <span class="order-total__price" id="order-price">CHF 550</span>
-      </div>
-
-      <button class="order-btn" onclick="submitOrder()">Request a Quote</button>
-      <p class="order-note">Submitting a quote request is not a binding order. We'll confirm availability and shipping timeline within 24 hours.</p>
+  <div class="order-info">
+    <div class="order-info-card">
+      <h4>What's in the box</h4>
+      <ul>
+        <li>SunWave Ceramica panel (your chosen finish)</li>
+        <li>Smart WiFi thermostat</li>
+        <li>Wall mounting bracket + hardware</li>
+        <li>Cable with Schuko plug (Type F) — 10 mm exit from wall</li>
+        <li>Installation guide (DE/FR/EN)</li>
+        <li>Warranty card</li>
+      </ul>
     </div>
-
-    <div class="order-info">
-      <div class="order-info-card">
-        <h4>What's in the box</h4>
-        <ul>
-          <li>SunWave Ceramica panel (your chosen finish)</li>
-          <li>Smart WiFi thermostat</li>
-          <li>Wall mounting bracket + hardware</li>
-          <li>Cable with Schuko plug (Type F) — 10 mm exit from wall</li>
-          <li>Installation guide (DE/FR/EN)</li>
-          <li>Warranty card</li>
-        </ul>
-      </div>
-      <div class="order-info-card">
-        <h4>Delivery & shipping</h4>
-        <ul>
-          <li>CHF 35 delivery within Switzerland (Swiss Post PostPac Priority)</li>
-          <li>Typically ships within 3–5 business days</li>
-          <li>Carefully packed — arrives undamaged or replaced free</li>
-          <li>Delivery to all Swiss cantons including Ticino</li>
-        </ul>
-      </div>
-      <div class="order-info-card">
-        <h4>Guarantee & returns</h4>
-        <ul>
-          <li>5-year warranty (parts and labour)</li>
-          <li>30-day money-back satisfaction guarantee</li>
-          <li>No questions asked — if unhappy, return for full refund</li>
-          <li>Panels do not degrade — 30+ year design life</li>
-        </ul>
-      </div>
-      <div class="order-info-card">
-        <h4>Need more than 5 panels?</h4>
-        <ul>
-          <li>Volume pricing available for installers and hotels</li>
-          <li>Installation network across Switzerland</li>
-          <li>Contact us to discuss your project</li>
-        </ul>
-      </div>
+    <div class="order-info-card">
+      <h4>Delivery & shipping</h4>
+      <ul>
+        <li>CHF 35 delivery within Switzerland (Swiss Post PostPac Priority)</li>
+        <li>Typically ships within 3–5 business days</li>
+        <li>Carefully packed — arrives undamaged or replaced free</li>
+        <li>Delivery to all Swiss cantons including Ticino</li>
+      </ul>
+    </div>
+    <div class="order-info-card">
+      <h4>Guarantee & returns</h4>
+      <ul>
+        <li>5-year warranty (parts and labour)</li>
+        <li>30-day money-back satisfaction guarantee</li>
+        <li>No questions asked — if unhappy, return for full refund</li>
+        <li>Panels do not degrade — 30+ year design life</li>
+      </ul>
+    </div>
+    <div class="order-info-card">
+      <h4>Need more than 5 panels?</h4>
+      <ul>
+        <li>Volume pricing available for installers and hotels</li>
+        <li>Installation network across Switzerland</li>
+        <li>Contact us to discuss your project</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -1253,7 +1111,7 @@
           <li><a href="product.html">SunWave Ceramica</a></li>
           <li><a href="product.html#variants">Design Variants</a></li>
           <li><a href="product.html#specs">Full Specifications</a></li>
-          <li><a href="product.html#order">Order Now</a></li>
+          <li><a href="product.html#variants">Order Now</a></li>
         </ul>
       </div>
       <div class="footer__col">
@@ -1344,36 +1202,6 @@
   function pdOrder() {
     const finish = document.getElementById('pd-finish-name').textContent;
     window.location.href = 'contact.html?product=' + encodeURIComponent('SunWave Ceramica') + '&qty=' + pdQty + '&finish=' + encodeURIComponent(finish);
-  }
-
-  /* Quantity updater (order section) */
-  function updateQty(delta) {
-    const input = document.getElementById('qty-input');
-    if (!input) return;
-    let qty = parseInt(input.value) + delta;
-    if (qty < 1) qty = 1;
-    if (qty > 50) qty = 50;
-    input.value = qty;
-    updatePrice();
-  }
-  function updatePrice() {
-    const qty = parseInt(document.getElementById('qty-input')?.value) || 1;
-    const el = document.getElementById('order-price');
-    if (el) el.textContent = 'CHF ' + (qty * 550).toLocaleString('de-CH');
-  }
-  document.getElementById('qty-input')?.addEventListener('change', updatePrice);
-
-  function submitOrder() {
-    const variant = document.getElementById('order-variant')?.value || 'white';
-    const variantNames = {
-      'imperial-marble': 'Imperial Marble', 'alpine-white': 'Alpine White',
-      'tuscan-sand': 'Tuscan Sand', 'nordic-slate': 'Nordic Slate',
-      'sandstone-edge': 'Sandstone Edge', 'desert-flow': 'Desert Flow',
-      'ivory-cloud': 'Ivory Cloud', 'walnut-stone': 'Walnut Stone',
-      'timber-stone': 'Timber Stone'
-    };
-    const qty = document.getElementById('qty-input')?.value || 1;
-    window.location.href = 'contact.html?product=' + encodeURIComponent('SunWave Ceramica') + '&qty=' + qty + '&finish=' + encodeURIComponent(variantNames[variant] || variant);
   }
 
   /* ── Gallery swipe + dot navigation ── */
