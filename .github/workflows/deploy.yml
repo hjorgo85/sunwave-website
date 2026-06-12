@@ -11,8 +11,17 @@ jobs:
     steps:
       - name: Trigger cPanel Git Deployment
         run: |
-          curl -s -X POST \
-            "https://165.140.68.97:2083/execute/VersionControlDeployment/create" \
-            -k \
-            -H "Authorization: cpanel sealifee:${{ secrets.CPANEL_API_TOKEN }}" \
-            --data-urlencode "repository_root=/home/sealifee/repositories/sunwave-git"
+          url="https://165.140.68.97:2083/execute/VersionControlDeployment/create?repository_root=/home/sealifee/repositories/sunwave-git"
+          for i in 1 2 3; do
+            response=$(curl -s -X POST -k \
+              -H "Authorization: cpanel sealifee:${{ secrets.CPANEL_API_TOKEN }}" \
+              "$url")
+            echo "$response"
+            if echo "$response" | grep -q '"status":1'; then
+              exit 0
+            fi
+            echo "Attempt $i failed, retrying in 5s..."
+            sleep 5
+          done
+          echo "cPanel deployment trigger failed after 3 attempts"
+          exit 1
