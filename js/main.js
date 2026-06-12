@@ -163,56 +163,6 @@ function initVariantSelector() {
 }
 initVariantSelector();
 
-/* ── Savings calculator ── */
-function swCalc() {
-  const area     = parseFloat(document.getElementById('sw-area')?.value) || 80;
-  const system   = document.getElementById('sw-system')?.value || 'gas';
-  const elecRate = parseFloat(document.getElementById('sw-elec')?.value) || 0.29;
-  const fuelRate = parseFloat(document.getElementById('sw-fuel')?.value) || 0.13;
-  const insul    = document.getElementById('sw-insul')?.value || 'good';
-
-  const energyIR = { excellent: 55, good: 71.21, average: 95, poor: 130 };
-  const energyCurrent = { gas: 208.73, gas_condensing: 187.8, oil: 210, electric: 200 };
-  const insulMult = { excellent: 0.77, good: 1.0, average: 1.33, poor: 1.83 };
-  const fuelIsElec = system === 'electric';
-  const boilerService = (system === 'gas' || system === 'gas_condensing' || system === 'oil') ? 400 : 0;
-
-  const irEnergy   = energyIR[insul] * area;
-  const curEnergy  = (energyCurrent[system] || 208.73) * insulMult[insul] * area;
-  const irCost     = irEnergy * elecRate;
-  const curCost    = curEnergy * (fuelIsElec ? elecRate : fuelRate) + boilerService;
-  const saving     = curCost - irCost;
-  const panels     = Math.ceil(area / 13);
-  const capital    = panels * 550;
-  const payback    = saving > 0 ? (capital / saving).toFixed(1) : '—';
-  const co2Saving  = Math.round(curEnergy * (fuelIsElec ? 0.035 : 0.202) - irEnergy * 0.035);
-
-  const fmtChf = n => 'CHF ' + Math.round(n).toLocaleString('de-CH');
-
-  const setEl = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
-  setEl('res-saving', saving > 0 ? fmtChf(saving) + '/yr' : '—');
-  setEl('res-payback', saving > 0 ? payback + ' yrs' : '—');
-  setEl('res-co2', co2Saving > 0 ? co2Saving + ' kg' : '—');
-
-  const results = document.getElementById('calc-results');
-  if (results) results.classList.add('show');
-}
-
-/* Bind system change to update fuel hint */
-document.getElementById('sw-system')?.addEventListener('change', function() {
-  const fuelInput = document.getElementById('sw-fuel');
-  const fuelLabel = document.getElementById('sw-fuel-label');
-  if (!fuelInput) return;
-  const map = { gas: '0.13', gas_condensing: '0.13', oil: '0.10', electric: '—' };
-  const labelMap = { gas: 'Gas price (CHF/kWh)', gas_condensing: 'Gas price (CHF/kWh)', oil: 'Oil price (CHF/kWh)', electric: 'Same as electricity' };
-  fuelInput.value = map[this.value] || '0.12';
-  if (fuelLabel) fuelLabel.textContent = labelMap[this.value] || 'Fuel price (CHF/kWh)';
-  swCalc();
-});
-
-/* Auto-run calculator on page load */
-if (document.getElementById('sw-area')) swCalc();
-
 /* ── Smooth anchor scroll with nav offset ── */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
