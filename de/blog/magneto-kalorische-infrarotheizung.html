@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-59C235NYBZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-59C235NYBZ');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="../../images/logo.webp">
+  <title>Magneto-kalorische Infrarotheizung: Die Technologie hinter SunWave Ceramica | SunWave</title>
+  <meta name="description" content="Magneto-kalorische Infrarotheizung erklärt: das patentierte Heizelement (EP 3 123 483 B1) im SunWave Ceramica Paneel — Aufbau, Funktionsweise und TU-Dresden-Messdaten.">
+  <meta name="keywords" content="Magneto-kalorische Infrarotheizung, SunWave Ceramica Technologie, magnetokalorischer Effekt Heizung">
+  <link rel="canonical" href="https://sunwaveswitzerland.com/de/blog/magneto-kalorische-infrarotheizung.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    .article-hero { padding: 140px 0 80px; background: var(--dark); }
+    .article-hero__inner { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+    .article-hero__tag { display: inline-block; background: rgba(245,197,24,0.12); color: var(--gold); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 6px 18px; border-radius: 100px; border: 1px solid rgba(245,197,24,0.25); margin-bottom: 20px; text-decoration: none; }
+    .article-hero__img { width: 100%; height: 420px; object-fit: cover; border-radius: 16px; margin: 32px 0 0; }
+    .article-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; color: #fff; line-height: 1.2; margin-bottom: 20px; }
+    .article-hero__meta { color: rgba(255,255,255,0.5); font-size: 0.88rem; }
+    .article-hero__meta span { margin-right: 20px; }
+    .article-body { background: #fff; padding: 80px 0 120px; }
+    .article-body__inner { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+    .article-body p { font-size: 1rem; color: #333; line-height: 1.8; margin-bottom: 20px; }
+    .article-body h2 { font-size: 1.6rem; font-weight: 800; color: var(--dark); margin: 48px 0 16px; padding-top: 16px; border-top: 2px solid #f0f0f0; }
+    .article-body h3 { font-size: 1.15rem; font-weight: 700; color: var(--dark); margin: 28px 0 12px; }
+    .article-body img { width: 100%; border-radius: 12px; margin: 28px 0; }
+    .callout { background: rgba(245,197,24,0.08); border-left: 4px solid var(--gold); border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 28px 0; }
+    .callout p { margin: 0; font-weight: 500; color: #333; }
+    .callout strong { color: var(--dark); }
+    .cost-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 0.9rem; }
+    .cost-table th { background: var(--dark); color: var(--gold); padding: 12px 16px; text-align: left; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase; }
+    .cost-table td { padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #444; vertical-align: top; }
+    .cost-table tr:nth-child(even) td { background: #fafafa; }
+    .cost-table tr:last-child td { border-bottom: none; }
+    .cost-table .winner { color: #15803d; font-weight: 700; }
+    .layer-diagram { margin: 28px 0; border-radius: 12px; overflow: hidden; border: 1px solid #eee; }
+    .layer { padding: 18px 24px; display: flex; align-items: center; gap: 16px; border-bottom: 1px solid #eee; }
+    .layer:last-child { border-bottom: none; }
+    .layer__num { flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; background: var(--dark); color: var(--gold); font-weight: 800; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; }
+    .layer__content h3 { margin: 0 0 4px; font-size: 0.98rem; font-weight: 700; color: var(--dark); }
+    .layer__content p { margin: 0; font-size: 0.9rem; color: #555; line-height: 1.6; }
+    .layer--top { background: rgba(245,197,24,0.06); }
+    .stat-bar { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin: 32px 0; }
+    .stat-box { background: var(--dark); border-radius: 14px; padding: 24px; text-align: center; }
+    .stat-box__val { font-size: 1.8rem; font-weight: 800; color: var(--gold); }
+    .stat-box__label { font-size: 0.78rem; color: rgba(255,255,255,0.6); margin-top: 6px; line-height: 1.4; }
+    .faq { margin: 40px 0; }
+    .faq-item { border-bottom: 1px solid #eee; padding: 20px 0; }
+    .faq-item h3 { font-size: 1rem; font-weight: 700; color: var(--dark); margin: 0 0 10px; }
+    .faq-item p { font-size: 0.95rem; color: #555; line-height: 1.7; margin: 0; }
+    .article-cta { background: var(--dark); border-radius: 20px; padding: 48px; text-align: center; margin-top: 60px; }
+    .article-cta h3 { font-size: 1.4rem; font-weight: 800; color: #fff; margin-bottom: 12px; }
+    .article-cta p { color: rgba(255,255,255,0.65); margin-bottom: 28px; }
+    .btn-gold { display: inline-flex; align-items: center; gap: 8px; background: var(--gold); color: var(--dark); font-weight: 700; font-size: 1rem; padding: 14px 32px; border-radius: 8px; text-decoration: none; }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--gold); font-size: 0.88rem; font-weight: 600; text-decoration: none; margin-bottom: 32px; }
+    .related-articles { background: #f9f9f9; border-radius: 16px; padding: 32px; margin-top: 48px; }
+    .related-articles h3 { font-size: 0.78rem; font-weight: 800; color: var(--dark); margin: 0 0 16px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .related-list { list-style: none; padding: 0; margin: 0; }
+    .related-list li { padding: 10px 0; border-bottom: 1px solid #eee; }
+    .related-list li:last-child { border-bottom: none; }
+    .related-list a { color: var(--dark); font-weight: 600; font-size: 0.95rem; text-decoration: none; }
+    .related-list a:hover { color: var(--gold); }
+    @media(max-width:768px){.stat-bar{grid-template-columns:1fr}}
+  </style>
+  <meta property="og:title" content="Magneto-kalorische Infrarotheizung: Die Technologie hinter SunWave Ceramica | SunWave">
+  <meta property="og:description" content="Magneto-kalorische Infrarotheizung erklärt: das patentierte Heizelement (EP 3 123 483 B1) im SunWave Ceramica Paneel — Aufbau, Funktionsweise und TU-Dresden-Messdaten.">
+  <meta property="og:url" content="https://sunwaveswitzerland.com/de/blog/magneto-kalorische-infrarotheizung.html">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://sunwaveswitzerland.com/images/de-art8-magneto-kalorische-technologie.webp">
+  <meta property="og:site_name" content="SunWave Switzerland">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Magneto-kalorische Infrarotheizung: Die Technologie hinter SunWave Ceramica | SunWave">
+  <meta name="twitter:description" content="Magneto-kalorische Infrarotheizung erklärt: das patentierte Heizelement (EP 3 123 483 B1) im SunWave Ceramica Paneel — Aufbau, Funktionsweise und TU-Dresden-Messdaten.">
+  <meta name="twitter:image" content="https://sunwaveswitzerland.com/images/de-art8-magneto-kalorische-technologie.webp">
+  <link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/blog/magneto-caloric-infrared-heating.html">
+  <link rel="alternate" hreflang="de" href="https://sunwaveswitzerland.com/de/blog/magneto-kalorische-infrarotheizung.html">
+  <link rel="alternate" hreflang="x-default" href="https://sunwaveswitzerland.com/blog/magneto-caloric-infrared-heating.html">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "SunWave Switzerland",
+    "alternateName": "Lumia Technologies GmbH",
+    "url": "https://sunwaveswitzerland.com",
+    "logo": "https://sunwaveswitzerland.com/images/logo.webp",
+    "telephone": "+41767637490",
+    "email": "info@sunwaveswitzerland.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Glaserbergstrasse 27",
+      "addressLocality": "Basel",
+      "postalCode": "4056",
+      "addressCountry": "CH"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Magneto-kalorische Infrarotheizung: Die Technologie hinter SunWave Ceramica erklärt",
+    "description": "Magneto-kalorische Infrarotheizung erklärt: das patentierte Heizelement (EP 3 123 483 B1) im SunWave Ceramica Paneel — Aufbau, Funktionsweise und TU-Dresden-Messdaten.",
+    "image": "https://sunwaveswitzerland.com/images/de-art8-magneto-kalorische-technologie.webp",
+    "datePublished": "2026-06-13",
+    "dateModified": "2026-06-13",
+    "author": {
+      "@type": "Organization",
+      "name": "SunWave Switzerland"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SunWave Switzerland",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://sunwaveswitzerland.com/images/logo.webp"
+      }
+    },
+    "url": "https://sunwaveswitzerland.com/de/blog/magneto-kalorische-infrarotheizung.html",
+    "inLanguage": "de-CH",
+    "keywords": "Magneto-kalorische Infrarotheizung, SunWave Ceramica Technologie, magnetokalorischer Effekt Heizung, Infrarotheizung Patent"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://sunwaveswitzerland.com/de/index.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://sunwaveswitzerland.com/de/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Magneto-kalorische Infrarotheizung: Die Technologie hinter SunWave Ceramica erklärt",
+        "item": "https://sunwaveswitzerland.com/de/blog/magneto-kalorische-infrarotheizung.html"
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Was bedeutet \"magneto-kalorisch\" bei einer Infrarotheizung?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Der Begriff bezieht sich auf das patentierte Heizelement im SunWave-Ceramica-Paneel (Patent EP 3 123 483 B1): eine magneto-kalorische Paste in Kombination mit einem leitfähigen PET-Fasergewebe, laminiert unter der 6 mm dicken Feinsteinzeug-Oberfläche. Diese Kombination verteilt die elektrisch erzeugte Wärme gleichmässig über die gesamte Paneelfläche, statt punktuelle Hitzepunkte wie bei einem einfachen Heizdraht zu erzeugen — Grundlage für die gleichmässige Strahlungswärme, die TU Dresden mit einer Betriebstemperatur von rund 67 °C und einer Spitzenwellenlänge von 8,52 µm gemessen hat."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ist die magnetokalorische Technologie patentiert?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Das Heizelement ist unter dem europäischen Patent EP 3 123 483 B1 geschützt, das die magneto-kalorische Paste in Kombination mit leitfähigem PET-Fasergewebe beschreibt. Die Lizenzrechte hält die Feegoo Lizenz GmbH; die Fertigung der SunWave-Ceramica-Paneele erfolgt durch die SunWave Heating Company SH.P.K. in Albanien unter ISO 9001, 14001, 45001 und 27001 sowie CE- und UKCA-Zertifizierung."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Macht die Technologie das Paneel sicherer oder effizienter?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Beides spielt eine Rolle. Die gleichmässige Flächenwärme vermeidet lokale Überhitzung — Labor S.A. (EN 60335-2-30) hat einen Oberflächentemperaturanstieg von 71,2 K gemessen, deutlich unter dem Grenzwert von 80 K, bei einem Ableitstrom von nur 0,1 mA (Grenzwert 0,25 mA) in Schutzklasse II mit doppelter Isolierung. Für die Effizienz gilt: Wie jede elektrische Widerstandsheizung wandelt das Paneel Strom nahezu 1:1 in Wärme um — die Technologie verändert diesen Grundwert nicht, sorgt aber für eine gleichmässigere und materialschonendere Wärmeabgabe über die Lebensdauer des Paneels."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Worin unterscheidet sich SunWave Ceramica von anderen Infrarotpaneelen am Markt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Zwei Punkte: Erstens das Oberflächenmaterial — 6 mm Feinsteinzeug (Porzellan) statt der bei vielen Wettbewerbern üblichen lackierten Aluminium- oder Glasoberfläche, was eine andere Wärmeabstrahlung und Haptik ergibt (siehe unser Artikel zu Feinsteinzeug). Zweitens das darunterliegende Heizelement: die patentierte magneto-kalorische Paste mit PET-Fasergewebe (EP 3 123 483 B1) statt eines einfachen freiliegenden Heizdrahts. Beide Aspekte zusammen liegen den drei unabhängigen Testergebnissen von TU Dresden, Fraunhofer WKI und Labor S.A. zugrunde, mit denen jedes SunWave-Ceramica-Paneel ausgeliefert wird."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Zum Inhalt springen</a>
+
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="../index.html" class="nav__logo"><img src="../../images/logo.webp" alt="SunWave Switzerland" style="height:44px;display:block;border-radius:6px;"></a>
+    <div class="nav__links">
+      <a href="../product.html">Das Paneel</a>
+      <a href="../research.html">Forschung</a>
+      <div class="nav__drop"><button class="nav__drop-btn" aria-haspopup="true" aria-expanded="false" aria-controls="nav-drop-menu">Für &#9662;</button><div class="nav__drop-menu" id="nav-drop-menu"><a href="../for-solar.html">Solar-Installateure</a><a href="../for-hotels.html">Hotels &amp; Gastronomie</a><a href="../for-homes.html">Schweizer Haushalte</a><a href="../for-offices.html">Büros &amp; Gewerbe</a></div></div>
+      <a href="../index.html#comparison">Passt es zu mir?</a>
+      <a href="index.html">Blog</a>
+      <a href="../contact.html">Kontakt</a>
+    </div>
+    <div class="nav__right">
+      <a href="../product.html" class="nav__order-btn">Jetzt kaufen</a>
+      <div class="nav__lang" hidden><a href="../../blog/magneto-caloric-infrared-heating.html" class="nav__lang-btn">EN</a><span class="nav__lang-sep">|</span><span class="nav__lang-btn lang-active">DE</span></div>
+      <button class="nav__hamburger" id="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav__mobile" id="nav-mobile">
+    <a href="../product.html">Das Paneel</a><a href="../research.html">Forschung</a><a href="../for-solar.html">Solar-Installateure</a><a href="../for-hotels.html">Hotels &amp; Gastronomie</a><a href="../for-homes.html">Schweizer Haushalte</a><a href="../for-offices.html">Büros &amp; Gewerbe</a><a href="../index.html#comparison">Passt es zu mir?</a><a href="index.html">Blog</a><a href="../contact.html">Kontakt</a>
+    <a href="../product.html" class="nav__mobile-order">Jetzt kaufen</a>
+  </div>
+  <div class="mobile-lang" hidden><a href="../../blog/magneto-caloric-infrared-heating.html">EN</a><span class="lang-active">DE</span></div>
+</nav>
+<main id="main-content">
+
+<!-- HERO -->
+<section class="article-hero">
+  <div class="article-hero__inner">
+    <a href="index.html" class="back-link">&#8592; Alle Artikel</a>
+    <a href="index.html" class="article-hero__tag">Technologie</a>
+    <h1>Magneto-kalorische Infrarotheizung: Die Technologie hinter SunWave Ceramica erklärt</h1>
+    <div class="article-hero__meta">
+      <span>13. Juni 2026</span>
+      <span>8 Min. Lesezeit</span>
+      <span>Technik &amp; Forschung</span>
+    </div>
+    <img src="../../images/de-art8-magneto-kalorische-technologie.webp" alt="Nahaufnahme der Keramikoberfläche eines SunWave-Ceramica-Infrarotpaneels mit warmem Strahlungsglühen, darunter sichtbare Schichten des Heizelements" class="article-hero__img" width="1200" height="800" loading="eager">
+  </div>
+</section>
+
+<!-- BODY -->
+<section class="article-body">
+  <div class="article-body__inner">
+
+    <p>„Magneto-kalorisch" ist ein Begriff, den man bei den meisten Infrarotheizungs-Anbietern nicht findet — aus gutem Grund: Die meisten Hersteller setzen auf einen einfachen, freiliegenden Heizdraht aus Nickel-Chrom hinter einer lackierten Aluminium- oder Glasplatte. Das SunWave-Ceramica-Paneel verwendet ein anderes, patentiertes Heizelement: eine magneto-kalorische Paste in Kombination mit einem leitfähigen PET-Fasergewebe, geschützt unter dem europäischen Patent EP 3 123 483 B1. Dieser Artikel erklärt, was hinter diesem Begriff steckt, wie das Heizelement aufgebaut ist und was die unabhängigen Messungen von TU Dresden dazu zeigen.</p>
+
+    <div class="stat-bar">
+      <div class="stat-box">
+        <div class="stat-box__val">EP 3 123 483 B1</div>
+        <div class="stat-box__label">Europäisches Patent für die magneto-kalorische Paste mit PET-Fasergewebe</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-box__val">67 °C</div>
+        <div class="stat-box__label">Gemessene Betriebstemperatur (TU Dresden, Okt. 2022) — Basis für die Strahlungsberechnung nach Wien'schem Gesetz</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-box__val">8,52 µm</div>
+        <div class="stat-box__label">Spitzenwellenlänge der Infrarotstrahlung, DIN EN IEC 60675-3 (TU Dresden)</div>
+      </div>
+    </div>
+
+    <h2>Was bedeutet „magnetokalorisch" überhaupt?</h2>
+
+    <p>Der magnetokalorische Effekt ist ein seit dem 19. Jahrhundert bekanntes physikalisches Phänomen: Bestimmte Materialien ändern ihre Temperatur, wenn sie einem sich verändernden Magnetfeld ausgesetzt werden. Am bekanntesten ist die Anwendung in der Magnetkühlung, wo dieser Effekt zur Kälteerzeugung ohne klassische Kompressorkühlmittel genutzt wird. Im SunWave-Ceramica-Heizelement wird ein verwandtes Materialprinzip in umgekehrter Anwendungsrichtung genutzt: Eine speziell formulierte Paste mit magnetokalorischen Eigenschaften wird mit einem leitfähigen Gewebe aus PET-Fasern (Polyethylenterephthalat) kombiniert. Fliesst Strom durch dieses Gewebe, entsteht Widerstandswärme — die magnetokalorische Paste trägt dazu bei, diese Wärme gleichmässig über die gesamte Fläche des Heizelements zu verteilen, statt sie an einzelnen Punkten zu konzentrieren, wie es bei einem freiliegenden Heizdraht der Fall wäre.</p>
+
+    <p>Das Ergebnis ist eine Heizfläche, die über ihre gesamte Ausdehnung eine sehr gleichmässige Temperatur erreicht — eine Voraussetzung dafür, dass die darüberliegende 6 mm starke Feinsteinzeug-Oberfläche ebenso gleichmässig strahlt, statt einzelne wärmere und kühlere Zonen aufzuweisen.</p>
+
+    <h2>Der Aufbau des SunWave-Ceramica-Paneels</h2>
+
+    <p>Ein SunWave-Ceramica-Paneel besteht aus mehreren funktional aufeinander abgestimmten Schichten. Von der Sichtseite nach innen:</p>
+
+    <div class="layer-diagram">
+      <div class="layer layer--top">
+        <div class="layer__num">1</div>
+        <div class="layer__content">
+          <h3>Feinsteinzeug-Oberfläche (6 mm)</h3>
+          <p>Porzellan-Feinsteinzeug als Sichtfläche und Strahlungsmedium — chemisch inert, kratzfest, in verschiedenen Designvarianten erhältlich. Details dazu in unserem Artikel zu <a href="/de/blog/feinsteinzeug-infrarotheizung.html">Feinsteinzeug-Infrarotpaneelen</a>.</p>
+        </div>
+      </div>
+      <div class="layer">
+        <div class="layer__num">2</div>
+        <div class="layer__content">
+          <h3>Heizelement: magneto-kalorische Paste + PET-Fasergewebe</h3>
+          <p>Das patentierte Element (EP 3 123 483 B1) — wandelt elektrischen Strom in Wärme um und verteilt sie gleichmässig über die gesamte Fläche.</p>
+        </div>
+      </div>
+      <div class="layer">
+        <div class="layer__num">3</div>
+        <div class="layer__content">
+          <h3>Isolierung &amp; Rückwand (Schutzklasse II)</h3>
+          <p>Doppelte Isolierung gemäss EN 60335-2-30, gemessener Ableitstrom 0,1 mA (Grenzwert 0,25 mA) — Labor S.A.</p>
+        </div>
+      </div>
+      <div class="layer">
+        <div class="layer__num">4</div>
+        <div class="layer__content">
+          <h3>Steuerungseinheit &amp; WLAN-Thermostat</h3>
+          <p>Inklusive im Lieferumfang ab CHF 550 — Fernsteuerung und Zeitprogramme per App.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Warum das für die Wärmeabstrahlung wichtig ist</h2>
+
+    <p>Eine gleichmässige Temperaturverteilung im Heizelement ist die Voraussetzung für das, was TU Dresden bei der Prüfung nach DIN EN IEC 60675-3 gemessen hat: eine Betriebstemperatur von rund 67 °C und eine daraus resultierende Spitzenwellenlänge der Infrarotstrahlung von 8,52 µm — berechnet nach dem Wien'schen Strahlungsgesetz, das den Zusammenhang zwischen der Temperatur eines Körpers und der Wellenlänge seiner maximalen Wärmestrahlung beschreibt. Diese Wellenlänge liegt im Bereich der langwelligen Infrarotstrahlung (fernes Infrarot), die von Wasser- und Gewebemolekülen besonders gut absorbiert wird — der physikalische Grund, warum sich Strahlungswärme von Infrarotpaneelen für den Menschen unmittelbar als angenehm warm anfühlt, ähnlich wie Sonnenwärme.</p>
+
+    <p>Ein Heizelement mit ungleichmässiger Temperaturverteilung würde dagegen Zonen mit unterschiedlichen Oberflächentemperaturen und damit unterschiedlichen Abstrahlcharakteristiken erzeugen — mit spürbaren „heissen" und „kühleren" Stellen auf der Paneeloberfläche.</p>
+
+    <h2>Heizdraht vs. magneto-kalorisches Element: der Unterschied im Überblick</h2>
+
+    <div class="table-scroll">
+    <table class="cost-table">
+      <thead>
+        <tr>
+          <th>Eigenschaft</th>
+          <th>Einfacher Heizdraht (Nickel-Chrom)</th>
+          <th>Magneto-kalorisches Element (SunWave)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Wärmeverteilung über die Fläche</td>
+          <td>punktuell, entlang des Drahtverlaufs</td>
+          <td class="winner">grossflächig gleichmässig</td>
+        </tr>
+        <tr>
+          <td>Typisches Trägermaterial</td>
+          <td>lackiertes Aluminium oder Glas</td>
+          <td class="winner">6 mm Feinsteinzeug (Porzellan)</td>
+        </tr>
+        <tr>
+          <td>Patentschutz</td>
+          <td>meist keiner (Standardkomponente)</td>
+          <td class="winner">EP 3 123 483 B1</td>
+        </tr>
+        <tr>
+          <td>Unabhängige Prüfung</td>
+          <td>variiert stark je Hersteller</td>
+          <td class="winner">TU Dresden, Fraunhofer WKI, Labor S.A.</td>
+        </tr>
+        <tr>
+          <td>Grundprinzip der Stromumwandlung</td>
+          <td>elektrischer Widerstand → Wärme</td>
+          <td>elektrischer Widerstand → Wärme (gleichmässiger verteilt)</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="callout">
+      <p><strong>Wichtig zur Einordnung:</strong> Die magneto-kalorische Technologie verändert nicht die grundlegende Physik elektrischer Widerstandsheizungen — aus 1 kWh Strom wird weiterhin rund 1 kWh Wärme, wie bei jeder Direktheizung. Der Unterschied liegt in der Qualität und Gleichmässigkeit der Wärmeabgabe sowie in der Materialbeanspruchung über die Lebensdauer des Paneels, nicht in einem grundsätzlich anderen Wirkungsgrad.</p>
+    </div>
+
+    <h2>Herstellung, Zertifizierung und Lizenzrechte</h2>
+
+    <p>Die Lizenzrechte am Patent EP 3 123 483 B1 hält die Feegoo Lizenz GmbH. Gefertigt werden die SunWave-Ceramica-Paneele von der SunWave Heating Company SH.P.K. in Albanien, unter den Zertifizierungen ISO 9001 (Qualitätsmanagement), ISO 14001 (Umweltmanagement), ISO 45001 (Arbeitssicherheit) und ISO 27001 (Informationssicherheit), sowie CE (Richtlinie 2014/35/EU, RoHS 2011/65/EU) und UKCA. Jedes Paneel wird mit 650 W Leistung, 6 mm Feinsteinzeug-Oberfläche, integriertem WLAN-Thermostat und 5 Jahren Garantie ausgeliefert — zum Einstiegspreis von CHF 550.</p>
+
+    <p>Mehr zu den unabhängigen Testergebnissen, die auf diesem Heizelement-Design basieren, finden Sie in unserem Artikel <a href="/de/blog/tu-dresden-infrared-test-results.html">TU Dresden Testergebnisse: Was die Messung wirklich zeigt</a> und auf unserer <a href="/de/research.html">Forschungsseite</a>.</p>
+
+    <h2>Häufig gestellte Fragen</h2>
+
+    <div class="faq">
+      <div class="faq-item">
+        <h3>Was bedeutet „magneto-kalorisch" bei einer Infrarotheizung?</h3>
+        <p>Der Begriff bezieht sich auf das patentierte Heizelement im SunWave-Ceramica-Paneel (Patent EP 3 123 483 B1): eine magneto-kalorische Paste in Kombination mit einem leitfähigen PET-Fasergewebe, laminiert unter der 6 mm dicken Feinsteinzeug-Oberfläche. Diese Kombination verteilt die elektrisch erzeugte Wärme gleichmässig über die gesamte Paneelfläche, statt punktuelle Hitzepunkte wie bei einem einfachen Heizdraht zu erzeugen — Grundlage für die gleichmässige Strahlungswärme, die TU Dresden mit einer Betriebstemperatur von rund 67 °C und einer Spitzenwellenlänge von 8,52 µm gemessen hat.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Ist die magnetokalorische Technologie patentiert?</h3>
+        <p>Ja. Das Heizelement ist unter dem europäischen Patent EP 3 123 483 B1 geschützt, das die magneto-kalorische Paste in Kombination mit leitfähigem PET-Fasergewebe beschreibt. Die Lizenzrechte hält die Feegoo Lizenz GmbH; die Fertigung der SunWave-Ceramica-Paneele erfolgt durch die SunWave Heating Company SH.P.K. in Albanien unter ISO 9001, 14001, 45001 und 27001 sowie CE- und UKCA-Zertifizierung.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Macht die Technologie das Paneel sicherer oder effizienter?</h3>
+        <p>Beides spielt eine Rolle. Die gleichmässige Flächenwärme vermeidet lokale Überhitzung — Labor S.A. (EN 60335-2-30) hat einen Oberflächentemperaturanstieg von 71,2 K gemessen, deutlich unter dem Grenzwert von 80 K, bei einem Ableitstrom von nur 0,1 mA (Grenzwert 0,25 mA) in Schutzklasse II mit doppelter Isolierung. Für die Effizienz gilt: Wie jede elektrische Widerstandsheizung wandelt das Paneel Strom nahezu 1:1 in Wärme um — die Technologie verändert diesen Grundwert nicht, sorgt aber für eine gleichmässigere und materialschonendere Wärmeabgabe über die Lebensdauer des Paneels.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Worin unterscheidet sich SunWave Ceramica von anderen Infrarotpaneelen am Markt?</h3>
+        <p>Zwei Punkte: Erstens das Oberflächenmaterial — 6 mm Feinsteinzeug (Porzellan) statt der bei vielen Wettbewerbern üblichen lackierten Aluminium- oder Glasoberfläche, was eine andere Wärmeabstrahlung und Haptik ergibt. Zweitens das darunterliegende Heizelement: die patentierte magneto-kalorische Paste mit PET-Fasergewebe (EP 3 123 483 B1) statt eines einfachen freiliegenden Heizdrahts. Beide Aspekte zusammen liegen den drei unabhängigen Testergebnissen von TU Dresden, Fraunhofer WKI und Labor S.A. zugrunde, mit denen jedes SunWave-Ceramica-Paneel ausgeliefert wird.</p>
+      </div>
+    </div>
+
+    <!-- Related Articles -->
+    <div class="related-articles">
+      <h3>Weitere Artikel</h3>
+      <ul class="related-list">
+        <li><a href="/de/blog/tu-dresden-infrared-test-results.html">TU Dresden Testergebnisse: Was die Messung wirklich zeigt</a></li>
+        <li><a href="/de/blog/ceramic-vs-aluminium-infrared-panels.html">Keramik vs. Aluminium: Welches Infrarotpaneel heizt besser?</a></li>
+        <li><a href="/de/blog/infrarotheizung-schweiz-ratgeber.html">Infrarotheizung Schweiz: Der vollständige Ratgeber 2026</a></li>
+        <li><a href="/de/blog/infrarotheizung-nachteile.html">Infrarotheizung Nachteile: Die ehrlichen Grenzen</a></li>
+      </ul>
+    </div>
+
+    <!-- CTA -->
+    <div class="article-cta">
+      <h3>Erleben Sie das Heizelement, das den Unterschied macht</h3>
+      <p>Das SunWave Ceramica Paneel: 650W, 6 mm Feinsteinzeug, patentiertes magneto-kalorisches Heizelement (EP 3 123 483 B1), unabhängig getestet von TU Dresden, Fraunhofer WKI und Labor S.A. Ab CHF 550, 5 Jahre Garantie.</p>
+      <a href="../product.html" class="btn-gold">Zum SunWave Ceramica Paneel &#8594;</a>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo" style="display:flex;align-items:center;gap:8px">
+          <img src="../../images/logo.webp" alt="SunWave Switzerland" style="height:36px;display:block;border-radius:4px;">
+        </div>
+        <p class="footer__tagline">Schweizer Distributor von SunWave Ceramica Keramik-Infrarotheizpaneelen. Geprüft von Fraunhofer WKI, TU Dresden und Labor S.A.<br>Lieferung in alle Schweizer Kantone.</p>
+        <div class="footer__contact">
+          <a href="mailto:info@sunwaveswitzerland.com">info@sunwaveswitzerland.com</a><br>
+          <a href="tel:+41767637490">+41 76 763 74 90</a><br>
+          Glaserbergstrasse 27, 4056 Basel
+        </div>
+      </div>
+      <div class="footer__col">
+        <h3>Produkt</h3>
+        <ul>
+          <li><a href="../product.html">SunWave Ceramica</a></li>
+          <li><a href="../product.html#variants">Design-Varianten</a></li>
+          <li><a href="../product.html#specs">Vollständige Spezifikationen</a></li>
+          <li><a href="../product.html#variants">Jetzt bestellen</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3>Wissen</h3>
+        <ul>
+          <li><a href="../research.html">Forschung &amp; Belege</a></li>
+          <li><a href="../research.html">Wie Infrarot funktioniert</a></li>
+          <li><a href="../index.html#comparison">Passt Infrarot zu mir?</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3>Für</h3>
+        <ul>
+          <li><a href="../for-solar.html">Solar-Installateure</a></li>
+          <li><a href="../for-hotels.html">Hotels</a></li>
+          <li><a href="../for-homes.html">Schweizer Haushalte</a></li>
+          <li><a href="../for-offices.html">Büro</a></li>
+          <li><a href="../contact.html">Kontakt</a></li>
+          <li><a href="index.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3>Rechtliches</h3>
+        <ul>
+          <li><a href="../legal.html">Impressum</a></li>
+          <li><a href="../terms.html">AGB</a></li>
+          <li><a href="../returns.html">Rückgabebedingungen</a></li>
+          <li><a href="../shipping.html">Lieferung</a></li>
+          <li><a href="../privacy.html">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div>&copy; 2026 SunWave Switzerland &mdash; Lumia Technologies GmbH &mdash; sunwaveswitzerland.com</div>
+      <div class="footer__certs">
+        <span class="footer__cert-tag">CE</span>
+        <span class="footer__cert-tag">ISO 9001</span>
+        <span class="footer__cert-tag">TU Dresden</span>
+        <span class="footer__cert-tag">Fraunhofer WKI</span>
+        <span class="footer__cert-tag">Labor S.A.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../../js/main.js"></script>
+</body>
+</html>
