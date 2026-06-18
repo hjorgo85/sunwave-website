@@ -480,4 +480,89 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://sunwaveswitzerland.com/de/privacy.html"/>
   </url>
+  <!-- MuKEn 2025 -->
+  <url>
+    <loc>https://sunwaveswitzerland.com/blog/muken-2025-switzerland.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/blog/muken-2025-switzerland.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sunwaveswitzerland.com/de/blog/muken-2025-schweiz.html"/>
+  </url>
+  <url>
+    <loc>https://sunwaveswitzerland.com/de/blog/muken-2025-schweiz.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/blog/muken-2025-switzerland.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sunwaveswitzerland.com/de/blog/muken-2025-schweiz.html"/>
+  </url>
+  <!-- Energiegesetz Kanton Zürich -->
+  <url>
+    <loc>https://sunwaveswitzerland.com/blog/energy-law-canton-zurich.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/blog/energy-law-canton-zurich.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sunwaveswitzerland.com/de/blog/energiegesetz-kanton-zuerich.html"/>
+  </url>
+  <url>
+    <loc>https://sunwaveswitzerland.com/de/blog/energiegesetz-kanton-zuerich.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/blog/energy-law-canton-zurich.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sunwaveswitzerland.com/de/blog/energiegesetz-kanton-zuerich.html"/>
+  </url>
+  <!-- Energiegesetz Schweiz -->
+  <url>
+    <loc>https://sunwaveswitzerland.com/blog/energy-law-switzerland.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/blog/energy-law-switzerland.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sunwaveswitzerland.com/de/blog/energiegesetz-schweiz.html"/>
+  </url>
+  <url>
+    <loc>https://sunwaveswitzerland.com/de/blog/energiegesetz-schweiz.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/blog/energy-law-switzerland.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sunwaveswitzerland.com/de/blog/energiegesetz-schweiz.html"/>
+  </url>
+  <!-- Elektrisch Heizen -->
+  <url>
+    <loc>https://sunwaveswitzerland.com/blog/electric-heating-options-switzerland.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/blog/electric-heating-options-switzerland.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sunwaveswitzerland.com/de/blog/elektrisch-heizen-schweiz.html"/>
+  </url>
+  <url>
+    <loc>https://sunwaveswitzerland.com/de/blog/elektrisch-heizen-schweiz.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/blog/electric-heating-options-switzerland.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sunwaveswitzerland.com/de/blog/elektrisch-heizen-schweiz.html"/>
+  </url>
+  <!-- Energieverbrauch Schweiz -->
+  <url>
+    <loc>https://sunwaveswitzerland.com/blog/energy-consumption-switzerland-heating.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/blog/energy-consumption-switzerland-heating.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sunwaveswitzerland.com/de/blog/energieverbrauch-schweiz-heizung.html"/>
+  </url>
+  <url>
+    <loc>https://sunwaveswitzerland.com/de/blog/energieverbrauch-schweiz-heizung.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sunwaveswitzerland.com/blog/energy-consumption-switzerland-heating.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sunwaveswitzerland.com/de/blog/energieverbrauch-schweiz-heizung.html"/>
+  </url>
 </urlset>
