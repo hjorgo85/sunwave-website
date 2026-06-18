@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Trigger cPanel Git Deployment
         run: |
-          url="https://165.140.68.97:2083/execute/VersionControlDeployment/create?repository_root=/home/sealifee/repositories/sunwave-git"
+          url="https://165.140.68.97:2083/execute/VersionControlDeployment/create?repository_root=/home/sealifee/repositories/sunwave-website"
           for i in 1 2 3; do
             response=$(curl -s -X POST -k \
               -H "Authorization: cpanel sealifee:${{ secrets.CPANEL_API_TOKEN }}" \
