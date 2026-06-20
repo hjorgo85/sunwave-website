@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-59C235NYBZ"></script>
+  <!-- Google tag (gtag.js) — deferred for performance -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -363,12 +362,12 @@
     <span class="evidence-strip__label">Independently tested by</span>
     <div class="evidence-strip__divider"></div>
     <div class="evidence-item">
-      <img src="images/logo-fraunhofer.webp" alt="Fraunhofer WKI" class="lab-logo-img" width="571" height="100">
+      <img src="images/logo-fraunhofer.webp" alt="Fraunhofer WKI" class="lab-logo-img" width="260" height="45" loading="lazy" decoding="async">
       <span class="evidence-item__report">MAIC-2022-2428</span>
     </div>
     <div class="evidence-strip__divider"></div>
     <div class="evidence-item">
-      <img src="images/logo-tu-dresden.webp" alt="TU Dresden" class="lab-logo-img" width="222" height="100" style="filter:brightness(0) invert(1);opacity:0.8">
+      <img src="images/logo-tu-dresden.webp" alt="TU Dresden" class="lab-logo-img" width="222" height="100" loading="lazy" decoding="async" style="filter:brightness(0) invert(1);opacity:0.8">
       <span class="evidence-item__report">DIN EN IEC 60675-3</span>
     </div>
     <div class="evidence-strip__divider"></div>
@@ -426,7 +425,7 @@
     <!-- Left: image + thumbnail strip -->
     <div class="hp-prod__visual">
       <img id="panel-main-photo" src="images/panel-imperial-marble.webp"
-           alt="SunWave Ceramica" class="hp-prod__main-img">
+           alt="SunWave Ceramica" class="hp-prod__main-img" width="525" height="735" loading="lazy" decoding="async">
       <div class="hp-prod__thumbs">
         <img src="images/panel-imperial-marble-thumb.webp" class="hp-prod__thumb active"
              onclick="switchPanelPhoto(this,'images/panel-imperial-marble.webp','Imperial Marble')" alt="Imperial Marble" title="Imperial Marble">
@@ -784,7 +783,7 @@
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="js/main.js" defer></script>
 <script>
 function switchPanelPhoto(thumb, src, label) {
   document.querySelectorAll('.hp-prod__thumb').forEach(t => t.classList.remove('active'));
@@ -794,6 +793,14 @@ function switchPanelPhoto(thumb, src, label) {
   const lbl = document.getElementById('panel-thumb-label');
   if (lbl) lbl.textContent = label;
 }
+</script>
+<script>
+window.addEventListener('load', function() {
+  var s = document.createElement('script');
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=G-59C235NYBZ';
+  s.async = true;
+  document.head.appendChild(s);
+});
 </script>
 </body>
 </html>
